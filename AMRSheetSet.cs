@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -36,9 +37,24 @@ namespace AMR.dynSSetMgr
             set => _curSheetSet.SetDesc(value);
         }
 
-        public AcSmSheet AddNewSheet(string name, string desc = "")
+        public AMRSheet AddNewSheet(string name, string desc = "")
         {
-            return _curSheetSet.AddNewSheet(name, desc);
+            AMRDatabase database = new AMRDatabase(_curSheetSet.GetDatabase());
+            AMRSheet retSheet = null;
+            database.LockDatabase(true);
+            try
+            {
+                retSheet = new AMRSheet(_curSheetSet.AddNewSheet(name, desc));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                database.LockDatabase(false);
+            }
+            return retSheet;
         }
         public void Clear()
         {

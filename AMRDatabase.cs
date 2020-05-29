@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -102,7 +103,7 @@ namespace AMR.dynSSetMgr
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Debug.WriteLine(ex.Message);
                 }
                 finally
                 {
@@ -289,7 +290,8 @@ namespace AMR.dynSSetMgr
         /// </summary>
         /// <param name="lockFlag">true to lock, false to unlock</param>
         /// <returns>Returns if the lock was successful.</returns>
-        private bool LockDatabase(bool lockFlag)
+        [IsVisibleInDynamoLibrary(false)]
+        public bool LockDatabase(bool lockFlag)
         {
             bool dbLock = false;
             // if the lockFlag is true, then attempt to lock the database, otherwise attempt to unlock it

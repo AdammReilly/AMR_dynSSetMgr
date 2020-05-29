@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using ACSMCOMPONENTS24Lib;
@@ -28,10 +25,12 @@ namespace AMR.dynSSetMgr
 
         }
         // sheet.GetDatabase();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetDatabase()
+        [IsVisibleInDynamoLibrary(true)]
+        public static AMRDatabase GetDatabase(AMRSheet sheet)
         {
-
+            if (sheet != null)
+            { return sheet.GetDatabase(); }
+            else { return null; }
         }
         // sheet.GetDesc();
         [IsVisibleInDynamoLibrary(true)]

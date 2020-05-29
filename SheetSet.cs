@@ -170,7 +170,7 @@ namespace AMR.dynSSetMgr
             AMRSheet newSheet;
             if (sheetSet != null)
             {
-                newSheet = new AMRSheet(sheetSet.AddNewSheet(name, desc));
+                newSheet = sheetSet.AddNewSheet(name, desc);
                 return newSheet;
             }
             else { return null; }

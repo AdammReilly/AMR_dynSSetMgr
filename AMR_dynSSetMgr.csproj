@@ -62,7 +62,6 @@
     <Compile Include="AMRSheetSet.cs" />
     <Compile Include="Database.cs" />
     <None Include="packages.config" />
-    <None Include="Sheet.cs" />
     <Compile Include="SheetSet.cs" />
     <Compile Include="SheetSetMgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Sheet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AMR_dynSSetMgr_DynamoCustomization.xml" />

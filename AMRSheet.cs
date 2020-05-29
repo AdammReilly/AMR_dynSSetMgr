@@ -34,5 +34,9 @@ namespace AMR.dynSSetMgr
             set => _curSheet.SetDesc(value);
         }
 
+        public AMRDatabase GetDatabase()
+        {
+            return new AMRDatabase(_curSheet.GetDatabase());
+        }
 	}
 }
