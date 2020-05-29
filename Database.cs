@@ -17,110 +17,110 @@ namespace AMR.dynSSetMgr
 
         // db.Clear();
         [IsVisibleInDynamoLibrary(true)]
-        public static void Clear(AMRDatabase amrDatabase)
+        public static void Clear(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.Clear();
+                database.Clear();
             }
         }
         // db.FindObject(hand);
         [IsVisibleInDynamoLibrary(true)]
-        public static IAcSmPersist FindObject(AMRDatabase amrDatabase, string hand)
+        public static IAcSmPersist FindObject(AMRDatabase database, string hand)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.FindObject(hand);
+                return database.FindObject(hand);
             }
             else
             { return null; }
         }
         // db.GetCustomPropertyBag();
         [IsVisibleInDynamoLibrary(true)]
-        public static void GetCustomPropertyBag(AMRDatabase amrDatabase)
+        public static void GetCustomPropertyBag(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.GetCustomPropertyBag();
+                database.GetCustomPropertyBag();
             }
         }
         // db.GetDatabase();
         [IsVisibleInDynamoLibrary(true)]
-        public static AcSmDatabase GetDatabase(AMRDatabase amrDatabase)
+        public static AcSmDatabase GetDatabase(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.Database;
+                return database.Database;
             }
             else { return null; }
         }
         // db.GetDbVersion();
         [IsVisibleInDynamoLibrary(true)]
-        public static string GetDatabaseVersion(AMRDatabase amrDatabase)
+        public static string GetDatabaseVersion(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.DatabaseVersion;
+                return database.DatabaseVersion;
             }
             else { return null; }
         }
         // db.GetDesc();
         [IsVisibleInDynamoLibrary(true)]
-        public static string GetDescription(AMRDatabase amrDatabase)
+        public static string GetDescription(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.Description;
+                return database.Description;
             }
             else { return null; }
         }
         // db.GetDirectlyOwnedObjects(out objects);
         [IsVisibleInDynamoLibrary(true)]
-        public static Array GetDirectlyOwnedObjects(AMRDatabase amrDatabase)
+        public static Array GetDirectlyOwnedObjects(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.GetDirectlyOwnedObjects();
+                return database.GetDirectlyOwnedObjects();
             }
             else { return null; }
         }
         // db.GetEnumerator();
         [IsVisibleInDynamoLibrary(true)]
-        public static IAcSmEnumPersist GetEnumerator(AMRDatabase amrDatabase)
+        public static IAcSmEnumPersist GetEnumerator(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.GetEnumerator;
+                return database.GetEnumerator;
             }
             else { return null; }
         }
         // db.GetFileName();
         [IsVisibleInDynamoLibrary(true)]
-        public static string GetFileName(AMRDatabase amrDatabase)
+        public static string GetFileName(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.FileName;
+                return database.FileName;
             }
             else { return null; }
         }
         // db.GetIsDirty();
         [IsVisibleInDynamoLibrary(true)]
-        public static bool GetIsDirty(AMRDatabase amrDatabase)
+        public static bool GetIsDirty(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.IsDirty;
+                return database.IsDirty;
             }
             else { return true; }
         }
         // db.GetIsTemporary();
         [IsVisibleInDynamoLibrary(true)]
-        public static bool GetIsTemporary(AMRDatabase amrDatabase)
+        public static bool GetIsTemporary(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.IsTemporary;
+                return database.IsTemporary;
             }
             else { return true; }
         }
@@ -128,11 +128,11 @@ namespace AMR.dynSSetMgr
         // db.GetLockStatus();
         // db.GetName();
         [IsVisibleInDynamoLibrary(true)]
-        public static string GetName(AMRDatabase amrDatabase)
+        public static string GetName(AMRDatabase database)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                return amrDatabase.Name;
+                return database.Name;
             }
             else { return null; }
         }
@@ -141,9 +141,9 @@ namespace AMR.dynSSetMgr
         // db.GetOwner();
         // db.GetSheetSet();
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRSheetSet GetSheetSet(AMRDatabase amrDatabase)
+        public static AMRSheetSet GetSheetSet(AMRDatabase database)
         {
-            return amrDatabase.SheetSet;
+            return database.SheetSet;
         }
         // db.GetTemplateDstFileName();
         // db.GetTypeName();
@@ -156,67 +156,67 @@ namespace AMR.dynSSetMgr
         // db.RegisterOwner(idcookie, pObject, pOwner);
         // db.Save(pFiler);
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase Save(AMRDatabase amrDatabase, AcSmDSTFiler pFiler)
+        public static AMRDatabase Save(AMRDatabase database, AcSmDSTFiler pFiler)
         {
-            if ((amrDatabase != null) && (pFiler != null))
+            if ((database != null) && (pFiler != null))
             {
-                amrDatabase.Save(pFiler);
-                return amrDatabase;
+                database.Save(pFiler);
+                return database;
             }
             else { return null; }
         }
         // db.SetDesc(desc);
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase SetDescription(AMRDatabase amrDatabase, string newDecription)
+        public static AMRDatabase SetDescription(AMRDatabase database, string newDecription)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.Description = newDecription;
-                return amrDatabase;
+                database.Description = newDecription;
+                return database;
             }
             else { return null; }
         }
         // db.SetFileName(newVal);
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase SetFileName(AMRDatabase amrDatabase, string filename)
+        public static AMRDatabase SetFileName(AMRDatabase database, string filename)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.FileName = filename;
-                return amrDatabase;
+                database.FileName = filename;
+                return database;
             }
             else { return null; }
         }
         // db.SetIsTemporary();
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase SetIsTemporary(AMRDatabase amrDatabase, bool isTemporary)
+        public static AMRDatabase SetIsTemporary(AMRDatabase database, bool isTemporary)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.IsTemporary = isTemporary;
-                return amrDatabase;
+                database.IsTemporary = isTemporary;
+                return database;
             }
             else { return null; }
         }
         // db.SetName(name);
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase SetName(AMRDatabase amrDatabase, string name = "")
+        public static AMRDatabase SetName(AMRDatabase database, string name = "")
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.Name = name;
-                return amrDatabase;
+                database.Name = name;
+                return database;
             }
             else { return null; }
         }
         // db.SetOwner(pOwner);
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase SetOwner(AMRDatabase amrDatabase, IAcSmPersist owner)
+        public static AMRDatabase SetOwner(AMRDatabase database, IAcSmPersist owner)
         {
-            if (amrDatabase != null)
+            if (database != null)
             {
-                amrDatabase.Owner = owner;
-                return amrDatabase;
+                database.Owner = owner;
+                return database;
             }
             else { return null; }
         }

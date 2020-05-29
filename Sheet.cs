@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using ACSMCOMPONENTS24Lib;
@@ -14,207 +15,208 @@ namespace AMR.dynSSetMgr
     [IsVisibleInDynamoLibrary(true)]
     public static class Sheet
     {
-        [IsVisibleInDynamoLibrary(false)]
-        public void test()
-        {
-            AcSmSheet sheet;
-            IAcSmSheet2 sheet2;
-        }
-
         // sheet.Clear();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void Clear()
         {
 
         }
         // sheet.GetCustomPropertyBag();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetCustomPropertyBag()
         {
 
         }
         // sheet.GetDatabase();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetDatabase()
         {
 
         }
         // sheet.GetDesc();
         [IsVisibleInDynamoLibrary(true)]
-        public static void GetDesc()
+        public static string GetDesc(AMRSheet sheet)
         {
-
+            if (sheet != null)
+            { return sheet.Description; }
+            else { return ""; }
         }
         // sheet.GetDirectlyOwnedObjects(out objects);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetDirectlyOwnedObjects()
         {
 
         }
         // sheet.GetDoNotPlot();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetDoNotPlot()
         {
 
         }
         // sheet.GetIsDirty();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetIsDirty()
         {
 
         }
         // sheet.GetLayout();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetLayout()
         {
 
         }
         // sheet.GetName();
-        [IsVisibleInDynamoLibrary(true)]
-        public static void GetName()
+        [IsVisibleInDynamoLibrary(false)]
+        public static string GetName(AMRSheet sheet)
         {
-
+            if (sheet != null)
+            { return sheet.Name; }
+            else { return ""; }
         }
         // sheet.GetNumber();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetNumber()
         {
 
         }
         // sheet.GetObjectId();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetObjectId()
         {
 
         }
         // sheet.GetOwner();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetOwner()
         {
 
         }
         // sheet.GetSheetViews();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetSheetViews()
         {
 
         }
         // sheet.GetTitle();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetTitle()
         {
 
         }
         // sheet.GetTypeName();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetTypeName()
         {
 
         }
         // sheet.InitNew(pOwner);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void InitNew()
         {
 
         }
         // sheet.Load(pFiler);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void Load()
         {
 
         }
         // sheet.Save(pFiler);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void Save()
         {
 
         }
         // sheet.SetDesc(desc);
-        [IsVisibleInDynamoLibrary(true)]
-        public static void SetDesc()
+        [IsVisibleInDynamoLibrary(false)]
+        public static AMRSheet SetDesc(AMRSheet sheet, string description)
         {
-
+            if (sheet != null)
+            { sheet.Description = description; }
+            return sheet;
         }
         // sheet.SetDoNotPlot(doNotPlot);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetDoNotPlot()
         {
 
         }
         // sheet.SetLayout(pLayoutRef);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetLayout()
         {
 
         }
         // sheet.SetName(name);
-        [IsVisibleInDynamoLibrary(true)]
-        public static void SetName()
+        [IsVisibleInDynamoLibrary(false)]
+        public static AMRSheet SetName(AMRSheet sheet, string name)
         {
-
+            if (sheet != null)
+            { sheet.Name = name; }
+            return sheet;
         }
         // sheet.SetNumber(num);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetNumber()
         {
 
         }
         // sheet.SetOwner(pOwner);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetOwner()
         {
 
         }
         // sheet.SetTitle(title);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetTitle()
         {
 
         }
         // sheet2.GetCategory();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetCategory()
         {
 
         }
         // sheet2.GetIssuePurpose();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetIssuePurpose()
         {
 
         }
         // sheet2.GetRevisionDate();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetRevisionDate()
         {
 
         }
         // sheet2.GetRevisionNumber();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void GetRevisionNumber()
         {
 
         }
         // sheet2.SetCategory(newVal);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetCategory()
         {
 
         }
         // sheet2.SetIssuePurpose(newVal);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetIssuePurpose()
         {
 
         }
         // sheet2.SetRevisionDate(newVal);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetRevisionDate()
         {
 
         }
         // sheet2.SetRevisionNumber(newVal);
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static void SetRevisionNumber()
         {
 

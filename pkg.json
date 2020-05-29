@@ -1,9 +1,9 @@
 ﻿{
     "license": "",
     "file_hash": null,
-    "name": "AMR_CivilDynNodes",
-    "version": "1.0.0",
-    "description": "Civil tools to extend Dynamo.",
+    "name": "AMR_dynSSetMgr",
+    "version": "0.1.0",
+    "description": "Nodes to access the AutoCAD Sheet Set Manager",
     "group": "",
     "keywords": null,
     "dependencies": [],
@@ -15,6 +15,6 @@
     "repository_url": "",
     "contains_binaries": true,
     "node_libraries": [
-        "AMR_CivilDynNodes.CivilDynamoTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        "AMR_dynSSetMgr.AMR_dynSSetMgr, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
     ]
 }

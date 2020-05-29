@@ -25,5 +25,32 @@ namespace AMR.dynSSetMgr
         {
             return _curSheetSet;
         }
+        public string Name
+        {
+            get => _curSheetSet.GetName();
+            set => _curSheetSet.SetName(value);
+        }
+        public string Description
+        {
+            get => _curSheetSet.GetDesc();
+            set => _curSheetSet.SetDesc(value);
+        }
+
+        public AcSmSheet AddNewSheet(string name, string desc = "")
+        {
+            return _curSheetSet.AddNewSheet(name, desc);
+        }
+        public void Clear()
+        {
+            _curSheetSet.Clear();
+        }
+        public AMRDatabase GetDatabase()
+        {
+            return new AMRDatabase(_curSheetSet.GetDatabase());
+        }
+
+        public bool IsDirty
+        { get => _curSheetSet.GetIsDirty(); }
+
     }
 }

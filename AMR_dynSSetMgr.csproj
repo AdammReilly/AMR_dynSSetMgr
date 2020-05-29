@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AMRSheet.cs" />
     <Compile Include="AMRSheetSet.cs" />
     <Compile Include="Database.cs" />
     <None Include="packages.config" />
@@ -94,6 +95,7 @@
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>False</Private>
     </COMReference>
     <COMReference Include="AXDBLib">
       <Guid>{39FFAA00-8623-488F-8C53-DD3B0B7A464F}</Guid>
@@ -103,6 +105,7 @@
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>False</Private>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
