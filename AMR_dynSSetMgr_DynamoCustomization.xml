@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<doc>
+	<assembly>
+		<name>AMR.dynSSetMgr</name>
+	</assembly>
+	<namespaces>
+		<!--Remap Namespaces-->
+		<namespace name="AMR.dynSSetMgr">
+			<category>Sheet Set Manager</category>
+		</namespace>
+	</namespaces>
+	<classes>
+		<!--Remap Class Names-->
+	</classes>
+</doc>
