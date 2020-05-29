@@ -35,17 +35,14 @@
     <ApplicationIcon>Resources\AMR.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DynamoServices, Version=2.6.0.8481, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DynamoVisualProgramming.DynamoServices.2.6.0.8481\lib\net47\DynamoServices.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DynamoServices, Version=2.6.1.8786, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DynamoVisualProgramming.DynamoServices.2.6.1.8786\lib\net47\DynamoServices.dll</HintPath>
     </Reference>
-    <Reference Include="DynamoUnits, Version=2.6.0.8481, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DynamoVisualProgramming.ZeroTouchLibrary.2.6.0.8481\lib\net47\DynamoUnits.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DynamoUnits, Version=2.6.1.8786, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DynamoVisualProgramming.ZeroTouchLibrary.2.6.1.8786\lib\net47\DynamoUnits.dll</HintPath>
     </Reference>
     <Reference Include="ProtoGeometry, Version=2.6.0.8195, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DynamoVisualProgramming.ZeroTouchLibrary.2.6.0.8481\lib\net47\ProtoGeometry.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>packages\DynamoVisualProgramming.ZeroTouchLibrary.2.6.1.8786\lib\net47\ProtoGeometry.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
