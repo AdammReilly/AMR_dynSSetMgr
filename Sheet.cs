@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ACSMCOMPONENTS24Lib;
-using Autodesk.DesignScript.Runtime;
 using AXDBLib;
+using Autodesk.DesignScript.Runtime;
 
 namespace AMR.dynSSetMgr
 {
@@ -65,7 +65,7 @@ namespace AMR.dynSSetMgr
 
         }
         // sheet.GetName();
-        [IsVisibleInDynamoLibrary(false)]
+        [IsVisibleInDynamoLibrary(true)]
         public static string GetName(AMRSheet sheet)
         {
             if (sheet != null)
@@ -127,7 +127,7 @@ namespace AMR.dynSSetMgr
 
         }
         // sheet.SetDesc(desc);
-        [IsVisibleInDynamoLibrary(false)]
+        [IsVisibleInDynamoLibrary(true)]
         public static AMRSheet SetDesc(AMRSheet sheet, string description)
         {
             if (sheet != null)
@@ -147,7 +147,7 @@ namespace AMR.dynSSetMgr
 
         }
         // sheet.SetName(name);
-        [IsVisibleInDynamoLibrary(false)]
+        [IsVisibleInDynamoLibrary(true)]
         public static AMRSheet SetName(AMRSheet sheet, string name)
         {
             if (sheet != null)

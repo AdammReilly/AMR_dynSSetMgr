@@ -70,7 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Sheet.cs" />
+    <Compile Include="Sheet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AMR_dynSSetMgr_DynamoCustomization.xml" />

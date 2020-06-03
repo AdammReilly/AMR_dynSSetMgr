@@ -44,7 +44,9 @@ namespace AMR.dynSSetMgr
             database.LockDatabase(true);
             try
             {
-                retSheet = new AMRSheet(_curSheetSet.AddNewSheet(name, desc));
+                AcSmSheet newSheet = _curSheetSet.AddNewSheet(name, desc);
+                _curSheetSet.InsertComponent(newSheet, null);
+                retSheet = new AMRSheet(newSheet);
             }
             catch (Exception ex)
             {
