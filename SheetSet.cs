@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using ACSMCOMPONENTS24Lib;
@@ -9,320 +11,63 @@ using AXDBLib;
 
 namespace AMR.dynSSetMgr
 {
-    [IsVisibleInDynamoLibrary(true)]
-    public static class SheetSet
+    public partial class SheetSet
     {
-        [IsVisibleInDynamoLibrary(false)]
-        public static Guid GetClassID()
-        {
-            throw new NotImplementedException();
-        }
-        [IsVisibleInDynamoLibrary(true)]
-        public static bool GetIsDirty(AMRSheetSet sheetSet)
-        {
-            return sheetSet.IsDirty;
-        }
+        internal AcSmSheetSet _curSheetSet;
 
         [IsVisibleInDynamoLibrary(false)]
-        public static void Load(AcSmDSTFiler pFiler)
+        internal SheetSet(AcSmSheetSet sheetSetFromSSMgr)
         {
-            throw new NotImplementedException();
+            _curSheetSet = sheetSetFromSSMgr;
         }
-
         [IsVisibleInDynamoLibrary(false)]
-        public static void Save(AcSmDSTFiler pFiler)
+        internal AcSmSheetSet BaseObject()
         {
-            throw new NotImplementedException();
+            return _curSheetSet;
+        }
+        internal string Name
+        {
+            get => _curSheetSet.GetName();
+            set => _curSheetSet.SetName(value);
+        }
+        internal string Description
+        {
+            get => _curSheetSet.GetDesc();
+            set => _curSheetSet.SetDesc(value);
         }
 
-        [IsVisibleInDynamoLibrary(false)]
-        public static string GetTypeName()
+        internal Sheet AddNewSheet(string name, string desc = "")
         {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void InitNew(IAcSmPersist pOwner)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmPersist GetOwner()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetOwner(IAcSmPersist pOwner)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase GetDatabase(AMRSheetSet sheetSet)
-        {
-            return sheetSet.GetDatabase();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmObjectId GetObjectId()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static AMRSheetSet Clear(AMRSheetSet sheetSet)
-        {
-            sheetSet.Clear();
-            return sheetSet;
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetDirectlyOwnedObjects(out Array objects)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static string GetName(AMRSheetSet sheetSet)
-        {
-            if (sheetSet != null)
-            { return sheetSet.Name; }
-            else { return ""; }
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static AMRSheetSet SetName(AMRSheetSet sheetSet, string name)
-        {
-            if (sheetSet != null)
-            { sheetSet.Name = name; }
-            return sheetSet;
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static string GetDesc(AMRSheetSet sheetSet)
-        {
-            if (sheetSet != null)
-            { return sheetSet.Description; }
-            else { return ""; }
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static AMRSheetSet SetDesc(AMRSheetSet sheetSet, string desc)
-        {
-            if (sheetSet != null)
-            { sheetSet.Description = desc; }
-            return sheetSet;
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmCustomPropertyBag GetCustomPropertyBag()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmFileReference GetNewSheetLocation()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetNewSheetLocation(IAcSmFileReference pFileRef)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmAcDbLayoutReference GetDefDwtLayout()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetDefDwtLayout(AcSmAcDbLayoutReference pLayoutRef)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static bool GetPromptForDwt()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetPromptForDwt(bool askForDwt)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmEnumComponent GetSheetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static AMRSheet AddNewSheet(AMRSheetSet sheetSet, string name, string desc = "")
-        {
-            AMRSheet newSheet;
-            if (sheetSet != null)
+            Database database = new Database(_curSheetSet.GetDatabase());
+            Sheet retSheet = null;
+            database.LockDatabase(true);
+            try
             {
-                newSheet = sheetSet.AddNewSheet(name, desc);
-                return newSheet;
+                AcSmSheet newSheet = _curSheetSet.AddNewSheet(name, desc);
+                _curSheetSet.InsertComponent(newSheet, null);
+                retSheet = new Sheet(newSheet);
             }
-            else { return null; }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                database.LockDatabase(false);
+            }
+            return retSheet;
+        }
+        internal void Clear()
+        {
+            _curSheetSet.Clear();
+        }
+        internal Database GetDatabase()
+        {
+            return new Database(_curSheetSet.GetDatabase());
         }
 
-        [IsVisibleInDynamoLibrary(false)]
-        public static void InsertComponent(IAcSmComponent newSheet, IAcSmComponent beforeComp)
-        {
-            throw new NotImplementedException();
-        }
+        internal bool IsDirty
+        { get => _curSheetSet.GetIsDirty(); }
 
-        [IsVisibleInDynamoLibrary(false)]
-        public static void InsertComponentAfter(IAcSmComponent newSheet, IAcSmComponent afterComp)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmSheet ImportSheet(AcSmAcDbLayoutReference pLayoutRef)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void RemoveSheet(AcSmSheet sheet)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmSubset CreateSubset(string name, string desc)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void RemoveSubset(IAcSmSubset subset)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void NotifyRegisteredEventHandlers(AcSmEvent eventcode, IAcSmPersist comp)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void UpdateInMemoryDwgHints()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static IAcSmFileReference GetAltPageSetups()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetAltPageSetups(IAcSmFileReference pDwtRef)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmNamedAcDbObjectReference GetDefAltPageSetup()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetDefAltPageSetup(IAcSmNamedAcDbObjectReference pAltPageSetup)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static bool GetPromptForDwgName()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetPromptForDwgName(bool askForName)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmSheetSelSets GetSheetSelSets()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmResources GetResources()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static IAcSmCalloutBlocks GetCalloutBlocks()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmViewCategories GetViewCategories()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmAcDbBlockRecordReference GetDefLabelBlk()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetDefLabelBlk(AcSmAcDbBlockRecordReference pLabelBlkRef)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static AcSmPublishOptions GetPublishOptions()
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void Sync(AcadDatabase pXDb)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static int Register(IAcSmEvents eventHandler)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void Unregister(int cookie)
-        {
-            throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(false)]
-        public static void UpdateSheetCustomProps()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

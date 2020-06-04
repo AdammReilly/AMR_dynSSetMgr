@@ -17,7 +17,7 @@ namespace AMR.dynSSetMgr
         /// </summary>
         /// <param name="database">The AMRDatabase to close.</param>
         [IsVisibleInDynamoLibrary(true)]
-        public static void Close(AMRDatabase database)
+        public static void Close(Database database)
         {
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
             AcSmDatabase dbToClose = database.BaseObject;
@@ -47,10 +47,10 @@ namespace AMR.dynSSetMgr
         /// <param name="alwaysCreate">Allow overwriting of an existing file.</param>
         /// <returns>AMRDatabase object of the .dst file.</returns>
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase CreateDatabase(string filename, string templatefilename = "0", bool alwaysCreate = true)
+        public static Database CreateDatabase(string filename, string templatefilename = "0", bool alwaysCreate = true)
         {
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
-            return new AMRDatabase(ssMgr.CreateDatabase(filename, templatefilename, alwaysCreate));
+            return new Database(ssMgr.CreateDatabase(filename, templatefilename, alwaysCreate));
         }
 
         /// <summary>
@@ -59,12 +59,12 @@ namespace AMR.dynSSetMgr
         /// <param name="filename">The .dst file name</param>
         /// <returns>AMRDatabase object if found, null if not found.</returns>
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase FindOpenDatabase(string filename)
+        public static Database FindOpenDatabase(string filename)
         {
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
             if (ssMgr.FindOpenDatabase(filename) != null)
             {
-                return new AMRDatabase(ssMgr.FindOpenDatabase(filename));
+                return new Database(ssMgr.FindOpenDatabase(filename));
             }
             else
             { return null; }
@@ -75,12 +75,12 @@ namespace AMR.dynSSetMgr
         /// </summary>
         /// <returns>A list of AMRDatabases.</returns>
         [IsVisibleInDynamoLibrary(true)]
-        public static IList<AMRDatabase> GetDatabases()
+        public static IList<Database> GetDatabases()
         {
             // get the sheet set manager object
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
             // create a list to put the databases into 
-            IList<AMRDatabase> amrDatabases = new List<AMRDatabase>();
+            IList<Database> amrDatabases = new List<Database>();
 
             // get the database enumerator
             IAcSmEnumDatabase enumDatabase = ssMgr.GetDatabaseEnumerator();
@@ -90,7 +90,7 @@ namespace AMR.dynSSetMgr
             {
                 while (item != null)
                 {
-                    amrDatabases.Add(new AMRDatabase((AcSmDatabase)item));
+                    amrDatabases.Add(new Database((AcSmDatabase)item));
                     item = enumDatabase.Next();
                 }
             }
@@ -98,12 +98,12 @@ namespace AMR.dynSSetMgr
         }
 
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRSheetSet GetParentSheetSet(string filename, string layoutname)
+        public static SheetSet GetParentSheetSet(string filename, string layoutname)
         {
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
             AcSmSheetSet sheetSet;
             ssMgr.GetParentSheetSet(filename, layoutname, out sheetSet);
-            AMRSheetSet output = new AMRSheetSet(sheetSet);
+            SheetSet output = new SheetSet(sheetSet);
             return output;
         }
 
@@ -123,10 +123,10 @@ namespace AMR.dynSSetMgr
         /// <param name="bFailIfAlreadyOpen">Throw an error if the .dst is already open.</param>
         /// <returns>An AMRDatabase of the Sheet Set .dst file.</returns>
         [IsVisibleInDynamoLibrary(true)]
-        public static AMRDatabase OpenDatabase(string filename, bool bFailIfAlreadyOpen = false)
+        public static Database OpenDatabase(string filename, bool bFailIfAlreadyOpen = false)
         {
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
-            return new AMRDatabase(ssMgr.OpenDatabase(filename, bFailIfAlreadyOpen));
+            return new Database(ssMgr.OpenDatabase(filename, bFailIfAlreadyOpen));
         }
 
         [IsVisibleInDynamoLibrary(true)]
