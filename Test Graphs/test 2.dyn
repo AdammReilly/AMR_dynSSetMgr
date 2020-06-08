@@ -1,0 +1,4027 @@
+{
+  "Uuid": "0c0df451-a4c2-4549-90bd-5533397029a5",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "test 2",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"C:\\\\Users\\\\areilly\\\\Documents\\\\AutoCAD Sheet Sets\\\\Testing 2.dst\";",
+      "Id": "a29f4e2f998243f2956d22c40ca02712",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "97542401ba264f69a6a9829d6c6dee15",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\TestCreate1.dst\";\n\"C:\\\\_MS-CAD\\\\C3D\\\\2021\\\\Templates\\\\GT Sheet Set Template.dst\";\ntrue;",
+      "Id": "1039e74672f7481cbd87a9c36dabe0c2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "248f6e98cd4746e291e88241252e82de",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59523aa92cef4f10a90c0414eff4d989",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f066fd5054a849f78405f1336a9ba8c9",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"testing creating\";",
+      "Id": "1a5b579eeafb4af88b6cdf57759c3c63",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "69d08c5af49b4c2281dc3499b30e8f7c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"subset1\";\n\"A test subset\";",
+      "Id": "19145b864f7748bd8088e393563a0987",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7fb3a5f76c4a4750b0f86b85470cb76a",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "097535d6ee6d49a5b934696fc9e580b0",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\SHEETS\\\\sheet before.dwg\";\n\"sheet before\";",
+      "Id": "15bf2e027143444984656b97a1f6ff88",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a68962cbd4454ab7ab573092d72e824f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d54d01efc5ea4803a6051c02a03e6683",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\SHEETS\\\\sheet after.dwg\";\n\"sheet after\";",
+      "Id": "122719ac5ba34ce6ad1ac2ace5d208ef",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5947730b408942a9b8fdb5e7a47cde63",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45987aa348bc4143ba251e7b9a4369ac",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\SHEETS\\\\first sheet.dwg\";\n\"first sheet\";",
+      "Id": "b4d0bd7b5a5b41679cf2c8876e155f69",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5814daea9827462f80f4333956d16964",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "934c13507c454cb68276f6719c6a5a46",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Subset Name\";",
+      "Id": "55164cda1764493baa18cac4af07c290",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a477ef78ea5942fa8b2511a70a1d9b81",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.OpenDatabase@string,bool",
+      "Id": "705ba65c40fb463d81b3957cd1bd8585",
+      "Inputs": [
+        {
+          "Id": "70d6738fe9e94927933092bced646b09",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f33bb552a168434fa1ca3075e52edd50",
+          "Name": "filename",
+          "Description": "Path and name of the .dst file to open.\n\nstring",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "de626b97efbf41a0a20c07b759fe9d12",
+          "Name": "bFailIfAlreadyOpen",
+          "Description": "Throw an error if the .dst is already open.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "449ab97a22d64c99ae49ad36efb68e87",
+          "Name": "Database",
+          "Description": "A Database of the Sheet Set .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Opens a Sheet Set .dst file.\n\nSheetSetMgr.OpenDatabase (filename: string, bFailIfAlreadyOpen: bool = false): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.CreateDatabase@string,string,bool",
+      "Id": "59adcf27210d4bd185e750289539cfbd",
+      "Inputs": [
+        {
+          "Id": "9970fff80d614e07a487f173bb2c62a0",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7f8b0f81e8974ead9fc4252afa631679",
+          "Name": "filename",
+          "Description": "The new Sheet Set .dst file name and path.\n\nstring",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f9309f4e05f74f2cac27b05ea110303e",
+          "Name": "templatefilename",
+          "Description": "A template .dst file name and path.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8eba396c266948f196306445833dfcfc",
+          "Name": "alwaysCreate",
+          "Description": "Allow overwriting of an existing file.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "89d97b1b93524ff5868ef74559d0f3d1",
+          "Name": "Database",
+          "Description": "Database object of the new .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a new Sheet Set file.\n\nSheetSetMgr.CreateDatabase (filename: string, templatefilename: string = \"\", alwaysCreate: bool = true): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Id": "a79402ce29da44318178f78cffc6997f",
+      "Inputs": [
+        {
+          "Id": "2ee17c1ae9324539b7d702d1b4ff5959",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d108d10f93e3498090c6c67990886f4f",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Name",
+      "Id": "380be8741a9a40d092771ebc7da887b3",
+      "Inputs": [
+        {
+          "Id": "89a17d5620f34669801206b1870cc7d0",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "58bb381a5e874525b8de7fcebbde4013",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set name.\n\nSheetSet.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Description",
+      "Id": "594a5051cb13423e8d0f7efd957020f0",
+      "Inputs": [
+        {
+          "Id": "b835fb950f3a4e03bccc834d94080932",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "96306a85cde6498795005e036171e1c9",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the Sheet Set description.\n\nSheetSet.Description: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Sheets",
+      "Id": "25f8d7d6382e4f31893ad17f9e2185e8",
+      "Inputs": [
+        {
+          "Id": "295362a69f92467eba84b08c482fdf77",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b7c397d691d547de901f6aa130362423",
+          "Name": "Sheet[]",
+          "Description": "Sheet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all the sheets in the sheet set.\n\nSheetSet.Sheets: Sheet[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetName@string",
+      "Id": "b551ec8718d14f928f925199504459ab",
+      "Inputs": [
+        {
+          "Id": "f6c9ed84f6944ef7921486f7b442f010",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "305310bab8794855977358ba101e27b5",
+          "Name": "value",
+          "Description": "The new sheet set name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d519eea589034a908def7bf6293995d9",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set Name.\n\nSheetSet.SetName (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Id": "82292bb4b9a246f4b0ccb06856a18ba7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2bdf3dca40414ac2a8d488376cb797b6",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.Databases",
+      "Id": "7fb0c9f5561442029941e130c914fa91",
+      "Inputs": [
+        {
+          "Id": "561085c2acf5444c888167115ee62b1f",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a4231d7cd04e47d7a8ee198df27a395b",
+          "Name": "Database[]",
+          "Description": "A list of open Databases.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Lists each of the open sheet set databases.\n\nSheetSetMgr.Databases: Database[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.CreateNewSubset@AMR.dynSSetMgr.SheetSet,string,string,string,string,string,bool",
+      "Id": "b1c931992e5d4b2fafefafc6499375e4",
+      "Inputs": [
+        {
+          "Id": "e053a8f3eb3f43d38e72c4cd467a69b7",
+          "Name": "sheetSet",
+          "Description": "The sheet set to contain the new subset.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "821b362f93b44b56b8e5a531641902d5",
+          "Name": "name",
+          "Description": "The name of the new subset.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "30cbd2f55eb84c74b702ad2407373dec",
+          "Name": "description",
+          "Description": "The optional description of the new subset.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ee91196548648fb9fff29710218ad17",
+          "Name": "newSheetLocation",
+          "Description": "An optional new location to create new sheets for this subset.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7e8ec20246614c9da92086c922d666d8",
+          "Name": "newSheetDWTLocation",
+          "Description": "The optional location of an alternate DWT to create new sheets from.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "40aa4c6409754a2abac387aa3fd0f4eb",
+          "Name": "newSheetDWTLayout",
+          "Description": "The optional layout tab of an alterante DWT to create new sheets from.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1f6d187a33344f009991d4ca98bcb306",
+          "Name": "promptForDWT",
+          "Description": "Optional setting to force the user to select a template with each new sheet.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5ef5b6698bbe48fe8ed4a830365cbee6",
+          "Name": "SubSet",
+          "Description": "The new subset.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create and add a new Subset to the Sheet Set.\n\nSubSet.CreateNewSubset (sheetSet: SheetSet, name: string, description: string = \"\", newSheetLocation: string = \"\", newSheetDWTLocation: string = \"\", newSheetDWTLayout: string = \"\", promptForDWT: bool = false): SubSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.Sheets",
+      "Id": "79a5af5b88d4467992b80b8a8ae056e6",
+      "Inputs": [
+        {
+          "Id": "20375090b6f5414fb83d4bc97ecb498d",
+          "Name": "subSet",
+          "Description": "AMR.dynSSetMgr.SubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7373ed084df14a60b61a32f7fba19ddc",
+          "Name": "Sheet[]",
+          "Description": "Sheet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all the sheets in the subset.\n\nSubSet.Sheets: Sheet[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Subsets",
+      "Id": "488ed95637e44ea6891e709639abe931",
+      "Inputs": [
+        {
+          "Id": "a4b69accec42466ba69d8238066f2f96",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e62b8ccc2d2a4644952349ac9ffbe9ef",
+          "Name": "SubSet[]",
+          "Description": "SubSet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the subsets.\n\nSheetSet.Subsets: SubSet[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Database.Name",
+      "Id": "26257059ba4b47f49cf08132629d1870",
+      "Inputs": [
+        {
+          "Id": "0711d9efe3d74eb0b58c42f06a98befe",
+          "Name": "database",
+          "Description": "AMR.dynSSetMgr.Database",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8c01a48398f947b39d138c6f7a198aa0",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the database name.\n\nDatabase.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Database.Filename",
+      "Id": "1841b5853de940f78934394f127f9dab",
+      "Inputs": [
+        {
+          "Id": "c6a1b2121fc84eefa42b3146cde05609",
+          "Name": "database",
+          "Description": "AMR.dynSSetMgr.Database",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c6f85b938fd44ffd92abfb20bd9c64e6",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the filename of the database.\n\nDatabase.Filename: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.Databases",
+      "Id": "c2322f61953c498b815a9a2621bce091",
+      "Inputs": [
+        {
+          "Id": "5f8f3422127e4d16ac62a24dca617bea",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4a6794d16f1d4f10ae76d4c33716fdc8",
+          "Name": "Database[]",
+          "Description": "A list of open Databases.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Lists each of the open sheet set databases.\n\nSheetSetMgr.Databases: Database[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Id": "849e0ce6005045ca86b7c60311324b97",
+      "Inputs": [
+        {
+          "Id": "9a83cb89ab594754a9fe6c9691e7ab99",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cca9670351bd4af1b45f9a53e47345e0",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.SetNumber@string",
+      "Id": "ad4337f7ed594de28ae9a14551f30eb4",
+      "Inputs": [
+        {
+          "Id": "0fdf6af83cf34b0abadfb3dd3f97979d",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd964405edba40379cb2f95060c72aa5",
+          "Name": "number",
+          "Description": "The number to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e8951e8db32e4399be260b6d94d412ca",
+          "Name": "Sheet",
+          "Description": "The updated sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the sheet number.\n\nSheet.SetNumber (number: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.SetTitle@string",
+      "Id": "5183a2e53928470bb985805d8a1413fe",
+      "Inputs": [
+        {
+          "Id": "39d7f70bb0f84374aee5318c8e667502",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6dc01b039bac466eb63de806e556b0f6",
+          "Name": "title",
+          "Description": "The new sheet title.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1f42f309031f4bbda3115a69f7084561",
+          "Name": "Sheet",
+          "Description": "The updated sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the sheet title.\n\nSheet.SetTitle (title: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.SetTitle@string",
+      "Id": "3c0f17dd488b43d785418e4e824fe3af",
+      "Inputs": [
+        {
+          "Id": "7de563cfdd104d7ab5fa8ec6ee033d14",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5814c6d4bc441f283634d69aae8cde0",
+          "Name": "title",
+          "Description": "The new sheet title.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bdcd9327f6614571b20433cdad180caf",
+          "Name": "Sheet",
+          "Description": "The updated sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the sheet title.\n\nSheet.SetTitle (title: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.SetNumber@string",
+      "Id": "b069008b22574a92be4c5f67955ebef2",
+      "Inputs": [
+        {
+          "Id": "b3c0c64080624eb5920669025c87ef65",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7163b15924f41f2820d856d92b32e50",
+          "Name": "number",
+          "Description": "The number to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "78c74d80b6384a6eb60a9c82f2c1dca6",
+          "Name": "Sheet",
+          "Description": "The updated sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the sheet number.\n\nSheet.SetNumber (number: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.SetTitle@string",
+      "Id": "cea21dac956340139ddfb548151d5c76",
+      "Inputs": [
+        {
+          "Id": "ee32e20e9ff448e1b1d2e77031d7a72b",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4a0d6f08c51641a3877cff5c8c63fd83",
+          "Name": "title",
+          "Description": "The new sheet title.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4ed1db1b591849a2a224216834e04371",
+          "Name": "Sheet",
+          "Description": "The updated sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the sheet title.\n\nSheet.SetTitle (title: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.SetNumber@string",
+      "Id": "5171bc6c40af46c4b1fd839cc3f3844a",
+      "Inputs": [
+        {
+          "Id": "4e7a75460c914fcda7a8df85d2698790",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "88a73aa8a73e4b02809e4ff9e84fe6fb",
+          "Name": "number",
+          "Description": "The number to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dfc85d9f82ef49e688e4afcef6594649",
+          "Name": "Sheet",
+          "Description": "The updated sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the sheet number.\n\nSheet.SetNumber (number: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.AddToSheetSet@AMR.dynSSetMgr.SheetSet,string,string",
+      "Id": "56e01110020e4cc1bef78db9b8002da1",
+      "Inputs": [
+        {
+          "Id": "1b31a9e5f24047eaadaf0bb619cb9571",
+          "Name": "sheetSet",
+          "Description": "The sheet set to add the sheet to.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fbe35a653e054943b12e5b6cb3329f34",
+          "Name": "filename",
+          "Description": "The name of the new sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7e911231d0d6459faac296e2871a849c",
+          "Name": "desc",
+          "Description": "The optional description of the new sheet.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c1066112e5e455696191e1192113b9f",
+          "Name": "Sheet",
+          "Description": "The newly added Sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create and add a new sheet to the beginning of a sheet set. Sheet Set must have a default template and sheet location set.\n\nSheet.AddToSheetSet (sheetSet: SheetSet, filename: string, desc: string = \"\"): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.AddToSheetSetAfter@AMR.dynSSetMgr.SheetSet,string,AMR.dynSSetMgr.Sheet,string",
+      "Id": "4d8404b46fe04c5c890e28039b2d744b",
+      "Inputs": [
+        {
+          "Id": "caf25835b4e1409b995271c400f215d1",
+          "Name": "sheetSet",
+          "Description": "The sheet set to receive the new sheet.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2099781d52714b65bd8ae5b6b5df90f4",
+          "Name": "filename",
+          "Description": "The name of the new sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c16562f0ecb405bade9763fc57b42df",
+          "Name": "indexSheet",
+          "Description": "An existing sheet in the set to put the new sheet after.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a796c542e004cdaaadcda7daed87b7e",
+          "Name": "desc",
+          "Description": "The optional description of the new sheet.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9485f61b32b34b709ad3b9dc9ab5acd4",
+          "Name": "Sheet",
+          "Description": "The newly added Sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create and add a new sheet after a provided sheet in the sheet set. Sheet Set must have a default template and sheet location set.\n\nSheet.AddToSheetSetAfter (sheetSet: SheetSet, filename: string, indexSheet: Sheet, desc: string = \"\"): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.AddToSheetSetBefore@AMR.dynSSetMgr.SheetSet,string,AMR.dynSSetMgr.Sheet,string",
+      "Id": "4a8e88f248494036a080ded11174bbcf",
+      "Inputs": [
+        {
+          "Id": "5adc9299785a4f7c9e6977386a7744fd",
+          "Name": "sheetSet",
+          "Description": "The sheet set to receive the new sheet.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8af4c024e838488b869e438780db3448",
+          "Name": "filename",
+          "Description": "The name of the new sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8a458335ac104f779d4f174967eb5e35",
+          "Name": "indexSheet",
+          "Description": "An existing sheet in the set to put the new sheet before.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ebc5e08d3a164f469b91a8bd059eb694",
+          "Name": "desc",
+          "Description": "The optional description of the new sheet.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "52552ddc705d44ce920acd56cde8224f",
+          "Name": "Sheet",
+          "Description": "The newly added Sheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create and add a new sheet before a provided sheet in the sheet set. Sheet Set must have a default template and sheet location set.\n\nSheet.AddToSheetSetBefore (sheetSet: SheetSet, filename: string, indexSheet: Sheet, desc: string = \"\"): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Id": "7a6349db8da44166aaf0f89eb4f64958",
+      "Inputs": [
+        {
+          "Id": "2ecaebe91c8b43dd83d3129aed17c9b9",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3c19404a660b432e91843efd1c028e50",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.ImportLayoutToSheetSet@AMR.dynSSetMgr.SheetSet,string,string",
+      "Id": "e289b0f3a39346f7928dda6ddefb6ce4",
+      "Inputs": [
+        {
+          "Id": "3cf9ee99b11144109de0950a3d375655",
+          "Name": "sheetSet",
+          "Description": "The sheet set to receive the new sheet.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2b43820fbb044ee0866d4175d63d17d1",
+          "Name": "filename",
+          "Description": "The file and path of the existing sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f09771a539324aafa37caf027e44fb2b",
+          "Name": "layoutName",
+          "Description": "The paperspace layout name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "747504b0bab9422ba06019b175b7cb76",
+          "Name": "Sheet",
+          "Description": "[IsVisibleInDynamoLibrary(true)]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Import an existing sheet file to the beginning of the sheet set.\n\nSheet.ImportLayoutToSheetSet (sheetSet: SheetSet, filename: string, layoutName: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.ImportLayoutToSheetSetAfter@AMR.dynSSetMgr.SheetSet,string,string,AMR.dynSSetMgr.Sheet",
+      "Id": "bcbba8ba7f5843658c184f1426dcd3c8",
+      "Inputs": [
+        {
+          "Id": "996131364b6f4d4b9637ed6bcd79f847",
+          "Name": "sheetSet",
+          "Description": "The sheet set to receive the new sheet.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c1687729ab614389ac64969997084ae1",
+          "Name": "filename",
+          "Description": "The file and path of the existing sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "055bbc3e3daf439992881fd24715482e",
+          "Name": "layoutName",
+          "Description": "The paperspace layout name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "726dc431031e4c638fd1c9ea79c5a4a2",
+          "Name": "indexSheet",
+          "Description": "The sheet to insert after.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2da4fb16686d420298a6b7c1e381cb3a",
+          "Name": "Sheet",
+          "Description": "[IsVisibleInDynamoLibrary(true)]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Import an existing sheet file to a sheet set after a sheet.\n\nSheet.ImportLayoutToSheetSetAfter (sheetSet: SheetSet, filename: string, layoutName: string, indexSheet: Sheet): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.ImportLayoutToSheetSetBefore@AMR.dynSSetMgr.SheetSet,string,string,AMR.dynSSetMgr.Sheet",
+      "Id": "f79ad7ed53fb4d1f80d51dacb73dbcc4",
+      "Inputs": [
+        {
+          "Id": "611fbf99468b4350b51985aca84cbc77",
+          "Name": "sheetSet",
+          "Description": "The sheet set to receive the new sheet.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea7197fe61c741c4bd62adb64318df80",
+          "Name": "filename",
+          "Description": "The file and path of the existing sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "71eabde689884f60b014d2a733d27df6",
+          "Name": "layoutName",
+          "Description": "The paperspace layout name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5783970908a5400f8b3f0e911d02487a",
+          "Name": "indexSheet",
+          "Description": "The sheet to insert before.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "678e249622d849959eac336d70d1b87f",
+          "Name": "Sheet",
+          "Description": "[IsVisibleInDynamoLibrary(true)]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Import an existing sheet file to a sheet set before a sheet.\n\nSheet.ImportLayoutToSheetSetBefore (sheetSet: SheetSet, filename: string, layoutName: string, indexSheet: Sheet): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.Name",
+      "Id": "17ba506a6e2d43a1ae992918f5212029",
+      "Inputs": [
+        {
+          "Id": "25d0e80c6ddb4ae79e1a2eac9266af2e",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ee82af06aa9e495aad2a225f19e64619",
+          "Name": "string",
+          "Description": "Returns the sheet name. A combination of number and title.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the name of the sheet.\n\nSheet.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.Name",
+      "Id": "86f40cf56c5d408c830813f1033c1935",
+      "Inputs": [
+        {
+          "Id": "4ba1a8dcf24248728555ef9c4e0a5fd7",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a400b446bfc94986bc7feecb265b0424",
+          "Name": "string",
+          "Description": "Returns the sheet name. A combination of number and title.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the name of the sheet.\n\nSheet.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.Name",
+      "Id": "329a41d6f3944f98b04193bbfaab712f",
+      "Inputs": [
+        {
+          "Id": "63a30c8f026f4288bad50c49cbebed10",
+          "Name": "sheet",
+          "Description": "AMR.dynSSetMgr.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0536e640ff5744c4995b4961f90c6884",
+          "Name": "string",
+          "Description": "Returns the sheet name. A combination of number and title.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the name of the sheet.\n\nSheet.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.CreateNewSubset@AMR.dynSSetMgr.SheetSet,string,string,string,string,string,bool",
+      "Id": "763300136b414b09b24af6c213e2250a",
+      "Inputs": [
+        {
+          "Id": "f9775d2eed1346249b51742e6fa1532a",
+          "Name": "sheetSet",
+          "Description": "The sheet set to contain the new subset.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ccb05aba0f9f44b5992a74132e42734d",
+          "Name": "name",
+          "Description": "The name of the new subset.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e06feaf3f0db42878572ee623bdeb709",
+          "Name": "description",
+          "Description": "The optional description of the new subset.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "760f853335644a5394092cd2e3d64265",
+          "Name": "newSheetLocation",
+          "Description": "An optional new location to create new sheets for this subset.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8714fdb133bf4758ab6cfe3b6ac24817",
+          "Name": "newSheetDWTLocation",
+          "Description": "The optional location of an alternate DWT to create new sheets from.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "243fb4a40e4f49e68f49f4f146b25051",
+          "Name": "newSheetDWTLayout",
+          "Description": "The optional layout tab of an alterante DWT to create new sheets from.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ced5e60b181341eca4475ca1d53eb186",
+          "Name": "promptForDWT",
+          "Description": "Optional setting to force the user to select a template with each new sheet.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c7fc5525ec2847f2a210f3fe5980a921",
+          "Name": "SubSet",
+          "Description": "The new subset.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create and add a new Subset to the Sheet Set.\n\nSubSet.CreateNewSubset (sheetSet: SheetSet, name: string, description: string = \"\", newSheetLocation: string = \"\", newSheetDWTLocation: string = \"\", newSheetDWTLayout: string = \"\", promptForDWT: bool = false): SubSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Id": "0e148e8dc8fb4cf187e3fd1b3f2f0aa3",
+      "Inputs": [
+        {
+          "Id": "a7684d68405743169b1b880f6732780c",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "60086e59d0a54206a8e90aa35545c29d",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"02\";\n\"sheet before\";",
+      "Id": "80de0d6407154beb8ab622c2a40556f4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3d1fd8898114429983c39ac03f6391a6",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd7d1a67f06046709baf07ba24a4431f",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"03\";\n\"sheet after\";",
+      "Id": "07cc1c1d38ad4becba8d71c7fdd2ac6c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "adcc1113a3e74d2fa6c3f82b16db275a",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "34827c08dc5443e392e9a5c0e80518f2",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"01\";\n\"first sheet\";",
+      "Id": "2bfbc2fb89364350bcf0646f5ebe6996",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e8c3a59a03f9457da14162125abc37f2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5267a7bdb29c458f8ed1b2602ed53ea2",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\SHEETS\\\\sheet before.dwg\";\n\"sheet before\";",
+      "Id": "2951552e6cd84eeb8a549cc1f5b7cb54",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2d2e8fdf3d5b41b8951204be5a626855",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "774005e2ef774b409b627d0dab8f491d",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\SHEETS\\\\sheet after.dwg\";\n\"sheet after\";",
+      "Id": "01cfcfb038cb4e68aba5045cbc9b256d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "64b2d575e4f146e8b2b350d1f3a626bb",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da229054b29d43369d115215cf124ac3",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"E:\\\\Programming\\\\SHEETS\\\\first sheet.dwg\";\n\"first sheet\";",
+      "Id": "51f6398d04e14abdbda476159b002d58",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "08ddf5d0c89d40678e32c246c6808e18",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af31fbee66784b429cfe885ac41b0532",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.ImportLayoutToSubSet@AMR.dynSSetMgr.SubSet,string,string",
+      "Id": "625dad17f13749b088126c1eb20b7c07",
+      "Inputs": [
+        {
+          "Id": "d6cd3953c1964ca2b4597c5286d7e22c",
+          "Name": "subset",
+          "Description": "The subset to receive the new sheet.\n\nSubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "218d7982044749449b716369a478dcac",
+          "Name": "filename",
+          "Description": "The file and path of the existing sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "70f790481fea4558a75edf0bc579f03b",
+          "Name": "layoutName",
+          "Description": "The paperspace layout name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a4fc3388ffec411fbe37d37e48a09100",
+          "Name": "Sheet",
+          "Description": "[IsVisibleInDynamoLibrary(true)]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Import an existing sheet file to the beginning of a subset.\n\nSheet.ImportLayoutToSubSet (subset: SubSet, filename: string, layoutName: string): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.ImportLayoutToSubSetAfter@AMR.dynSSetMgr.SubSet,string,string,AMR.dynSSetMgr.Sheet",
+      "Id": "e55065c001144b72b86dc9e959e0a055",
+      "Inputs": [
+        {
+          "Id": "c9e76e34dd12474b8876133979370c72",
+          "Name": "subset",
+          "Description": "The subset to receive the new sheet.\n\nSubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e59e34231034532a66254bbd36610bb",
+          "Name": "filename",
+          "Description": "The file and path of the existing sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "904a16aaf70f427aae6060a88d98f287",
+          "Name": "layoutName",
+          "Description": "The paperspace layout name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "435065e934664f658d729115027e2c30",
+          "Name": "indexSheet",
+          "Description": "The sheet to insert after.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c6801b41b70e4dd4acd6a43ca7da1904",
+          "Name": "Sheet",
+          "Description": "[IsVisibleInDynamoLibrary(true)]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Import an existing sheet file to a subset after a sheet.\n\nSheet.ImportLayoutToSubSetAfter (subset: SubSet, filename: string, layoutName: string, indexSheet: Sheet): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.Sheet.ImportLayoutToSubSetBefore@AMR.dynSSetMgr.SubSet,string,string,AMR.dynSSetMgr.Sheet",
+      "Id": "eabf40e87f3147ca964cd4449676a270",
+      "Inputs": [
+        {
+          "Id": "dfd1166f9b1845efb2f614bf88e573b8",
+          "Name": "subset",
+          "Description": "The subset to receive the new sheet.\n\nSubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "72c334bc9e7843cca4ad92952f8fa4e3",
+          "Name": "filename",
+          "Description": "The file and path of the existing sheet.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "709c64c64ca9401abda6357be15faee2",
+          "Name": "layoutName",
+          "Description": "The paperspace layout name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "930e13f80173477aae785981e3ee0103",
+          "Name": "indexSheet",
+          "Description": "The sheet to insert before.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c1742cc70550492ea118ca7a64d2f85f",
+          "Name": "Sheet",
+          "Description": "[IsVisibleInDynamoLibrary(true)]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Import an existing sheet file to a subset before a sheet.\n\nSheet.ImportLayoutToSubSetBefore (subset: SubSet, filename: string, layoutName: string, indexSheet: Sheet): Sheet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Id": "90835e4b739d4cf0974674fed93e380f",
+      "Inputs": [
+        {
+          "Id": "da80ab9fa67345ba87eb7751b53ec574",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5ff3bef0613b4408b1692da8bbd8c2e0",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Id": "194f90cafd17469a846666c424846fb9",
+      "Inputs": [
+        {
+          "Id": "d2032f8ebba64255bb0262a4b3d59b37",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "acb927900f084b6cb213e2b2c5900632",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f256b7bfccac4e59b6db92caca0960be",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"TestProp\";\n\"[TestProp]\";",
+      "Id": "42115dfc8c8940be97ac70ff4f1564df",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "25daa32d5e5d433db2c8d9e90c443028",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45107c7edd794a168c1e29ba3b650f04",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Type",
+      "Id": "6c0d169e4e1e4583869200a1d0b2ca65",
+      "Inputs": [
+        {
+          "Id": "4d9c8532037c4cfd9d5b2063c80007a0",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bc23104e02e54cb69cf3dea985fa4d65",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the type of property flag.\n\nCustomProperty.Type: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.AddAsSheetSetProperty@AMR.dynSSetMgr.SheetSet",
+      "Id": "11bffe1098ec4eec90a212a5a9d6850b",
+      "Inputs": [
+        {
+          "Id": "80819d09bdb649399b06088ac3ba336a",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2eded03eb5b4c02861222cc2cf79f4f",
+          "Name": "sheetSet",
+          "Description": "The sheet set to update.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "35cd93245419406cb55e6bf1a82c8037",
+          "Name": "CustomProperty",
+          "Description": "The updated custom property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Add the Custom Property to the sheet set as a Sheet Set property.\n\nCustomProperty.AddAsSheetSetProperty (sheetSet: SheetSet): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Id": "6c5b8e75178d4f71a0befdc9226390af",
+      "Inputs": [
+        {
+          "Id": "36e7fd6337cb428d91492bea9031d3c2",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "99820358ede54731b22fef9a5328ddfd",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "015740a282704135ba023641fbfdb117",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"TestProp\";\n\"[TestProp]\";",
+      "Id": "823c280625054800815189956912daa0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2b1ce6d216d1422caf999e9a62657145",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7880338a7784d64b83a834aa151b9ec",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Type",
+      "Id": "e2142969fb86479b91a0f5d723f7fec3",
+      "Inputs": [
+        {
+          "Id": "096c411bfa524a1e8a75623ff46e38ff",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e22734ebca74841a2dd2544a55a27fd",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the type of property flag.\n\nCustomProperty.Type: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.AddAsSheetProperty@AMR.dynSSetMgr.SheetSet",
+      "Id": "0ab615c96e47494ea03a7f1aec41bba0",
+      "Inputs": [
+        {
+          "Id": "2d28d21524174c71a1439ce0c3d30bd4",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77061a6ff9dc4cb284f3944fcb70aa36",
+          "Name": "sheetSet",
+          "Description": "The sheet set to update.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "35de5a2d8f854d89bc5cd33dfc0990fa",
+          "Name": "CustomProperty",
+          "Description": "The updated custom property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Add the Custom Property to the sheet set as a Sheet property.\n\nCustomProperty.AddAsSheetProperty (sheetSet: SheetSet): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.Name",
+      "Id": "fff93d8e5b6b4b469d29c3952eb08377",
+      "Inputs": [
+        {
+          "Id": "7fc9e374884f43d089c4ed60138508b0",
+          "Name": "subSet",
+          "Description": "AMR.dynSSetMgr.SubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0f7d82236658494e803332d7eb67c3b6",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Subset Name.\n\nSubSet.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.NewSheetLocation",
+      "Id": "f86e1a4550924a648ee1c9f86d0ca48f",
+      "Inputs": [
+        {
+          "Id": "5f9c5227b0aa47759d846c2e1191790d",
+          "Name": "subSet",
+          "Description": "AMR.dynSSetMgr.SubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bf38809bdc4242e8b3a0244344e83713",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the location at which new sheets will be created.\n\nSubSet.NewSheetLocation: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.Description",
+      "Id": "1aa5aa2beb2146198acf21df06ce6455",
+      "Inputs": [
+        {
+          "Id": "8f2e32f415ab4dafbe8b70d340bd902b",
+          "Name": "subSet",
+          "Description": "AMR.dynSSetMgr.SubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9a5d7a1efea84887abba6d38b0da9d8e",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Subset Description.\n\nSubSet.Description: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.NewSheetTemplate",
+      "Id": "e46505db9f714f19bab1860a6f0d2275",
+      "Inputs": [
+        {
+          "Id": "07e8ede174cc43b39d0135a1c9fbb059",
+          "Name": "subSet",
+          "Description": "AMR.dynSSetMgr.SubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4fb221eb5e224e95aa8ab810a57234b6",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the filename and path of the template used for the subset.\n\nSubSet.NewSheetTemplate: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.SubSet.PromptForTemplate",
+      "Id": "d8e13af4b03f44e0a4c7671f15bcb9a1",
+      "Inputs": [
+        {
+          "Id": "ba18e01c780241f9bbdb486ecfec4d86",
+          "Name": "subSet",
+          "Description": "AMR.dynSSetMgr.SubSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "de4b4044c30344279df5063a3c7f96a9",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Prompt For Template setting.\n\nSubSet.PromptForTemplate: bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.EditValue@AMR.dynSSetMgr.SheetSet,string",
+      "Id": "162710b076db40f29e2572fee7fb50e4",
+      "Inputs": [
+        {
+          "Id": "9f1e836505394612b19c5418c4e53b4a",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35f4360ae17e4418b2d179ee20b7794c",
+          "Name": "sheetSet",
+          "Description": "The sheet set containing the custom property.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e90d80ebc754c0ba38a06d2219426d8",
+          "Name": "value",
+          "Description": "The new value to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6bc363f2bf9a48f2ae775ef2bba55625",
+          "Name": "CustomProperty",
+          "Description": "The updated Custom Property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the value of a custom property\n\nCustomProperty.EditValue (sheetSet: SheetSet, value: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Id": "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+      "Inputs": [
+        {
+          "Id": "c7aed73a7fde4eb4a2251d98f3a60569",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5147b47c26c14f8cbd6254f46ea9c83d",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8710150ec9b740d9aed80cba2b82f19f",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"CITY_APP_DATE\";\n\"[CITY_APP_DATE]\";",
+      "Id": "15e8ab55125a41c6a3d54191894da479",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d22b52afc1564b0f83505d86d86f43fa",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6685e987201b40d28ba99d9236364c77",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"New Value\";",
+      "Id": "5378f0826a4a45299bc20a83a294d446",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "01b26611fbf14e71bec51fe354474320",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Id": "2dec5d73411d4388a2caf1ddb759340b",
+      "Inputs": [
+        {
+          "Id": "5473db2080e442c98da75449274bfe0e",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7bc1ba777814c0b9a5c8e5fa7ffac92",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2e2a8361f13442a7ab403285a549b02d",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"New Value\";",
+      "Id": "318e446838ba427d815b7fb2ae86e2e8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e27a5c3501ec457fa2a351b4f5696e15",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"SHEET_CUSTOM\";\n\"[SHEET_CUSTOM]\";",
+      "Id": "ffdb47f54cea4a5da00b64f86df3973b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "039090ecaf284293bb06f7a102e13192",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "038d570d9de94856aba7f29c7d8113a3",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.EditSheetValue@AMR.dynSSetMgr.SheetSet,AMR.dynSSetMgr.Sheet,string",
+      "Id": "224b35b13ce04b579a54b0fb1171cb63",
+      "Inputs": [
+        {
+          "Id": "fcde8ee56f314606bca45fe79ca621ca",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "704c3aa375994918b151f5ef088b8628",
+          "Name": "sheetSet",
+          "Description": "The sheet set containing the custom property.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4431f3bfd5fc4d55baa1905bdb4f0f1f",
+          "Name": "sheet",
+          "Description": "The sheet containing the property to edit.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c2d85d8a993242b9b7181c2d38fd5d63",
+          "Name": "value",
+          "Description": "The new value to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e3231157975b49d8af954448dcb317a6",
+          "Name": "CustomProperty",
+          "Description": "The updated Custom Property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the value of a custom property associated with a specific sheet.\n\nCustomProperty.EditSheetValue (sheetSet: SheetSet, sheet: Sheet, value: string): CustomProperty"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "97542401ba264f69a6a9829d6c6dee15",
+      "End": "70d6738fe9e94927933092bced646b09",
+      "Id": "a276f04593f642988e593fd11523489e"
+    },
+    {
+      "Start": "7fb3a5f76c4a4750b0f86b85470cb76a",
+      "End": "821b362f93b44b56b8e5a531641902d5",
+      "Id": "c091f11832d541a899769cc2d48be965"
+    },
+    {
+      "Start": "097535d6ee6d49a5b934696fc9e580b0",
+      "End": "30cbd2f55eb84c74b702ad2407373dec",
+      "Id": "e4825aef9b7d43bc9f16c3db8276c69b"
+    },
+    {
+      "Start": "a68962cbd4454ab7ab573092d72e824f",
+      "End": "ea7197fe61c741c4bd62adb64318df80",
+      "Id": "1edae4dc5b154e54975efc062535c711"
+    },
+    {
+      "Start": "d54d01efc5ea4803a6051c02a03e6683",
+      "End": "71eabde689884f60b014d2a733d27df6",
+      "Id": "5baaa38def7745229d26477ba4d0a104"
+    },
+    {
+      "Start": "5947730b408942a9b8fdb5e7a47cde63",
+      "End": "c1687729ab614389ac64969997084ae1",
+      "Id": "7c8cbe38e9464f3ab1a49ed74983c297"
+    },
+    {
+      "Start": "45987aa348bc4143ba251e7b9a4369ac",
+      "End": "055bbc3e3daf439992881fd24715482e",
+      "Id": "95ebdddc966a4e6480ad677a96546879"
+    },
+    {
+      "Start": "5814daea9827462f80f4333956d16964",
+      "End": "2b43820fbb044ee0866d4175d63d17d1",
+      "Id": "2babe341a6874a8686fcdb588bd6b457"
+    },
+    {
+      "Start": "934c13507c454cb68276f6719c6a5a46",
+      "End": "f09771a539324aafa37caf027e44fb2b",
+      "Id": "988a02c13cb24034bc3cb24c11a321f5"
+    },
+    {
+      "Start": "a477ef78ea5942fa8b2511a70a1d9b81",
+      "End": "ccb05aba0f9f44b5992a74132e42734d",
+      "Id": "69be83c7d5b64b0f89c3745f87a87237"
+    },
+    {
+      "Start": "d108d10f93e3498090c6c67990886f4f",
+      "End": "89a17d5620f34669801206b1870cc7d0",
+      "Id": "c12e10747b7e40ce9c18325617470de1"
+    },
+    {
+      "Start": "d108d10f93e3498090c6c67990886f4f",
+      "End": "b835fb950f3a4e03bccc834d94080932",
+      "Id": "c3dffee52b7349b5befb4086f452a334"
+    },
+    {
+      "Start": "d108d10f93e3498090c6c67990886f4f",
+      "End": "295362a69f92467eba84b08c482fdf77",
+      "Id": "bd0e726b56414a7abe94036d8ec1e5ac"
+    },
+    {
+      "Start": "d108d10f93e3498090c6c67990886f4f",
+      "End": "a4b69accec42466ba69d8238066f2f96",
+      "Id": "42eab47991de4c848a22d2615c5853e7"
+    },
+    {
+      "Start": "2bdf3dca40414ac2a8d488376cb797b6",
+      "End": "5f8f3422127e4d16ac62a24dca617bea",
+      "Id": "800c0520a2be4a75aef56e2fb89a6ee7"
+    },
+    {
+      "Start": "a4231d7cd04e47d7a8ee198df27a395b",
+      "End": "2ee17c1ae9324539b7d702d1b4ff5959",
+      "Id": "26858d92445b4a0dba712f1a6577dc3b"
+    },
+    {
+      "Start": "a4231d7cd04e47d7a8ee198df27a395b",
+      "End": "0711d9efe3d74eb0b58c42f06a98befe",
+      "Id": "903f3d38eb064d32ab734bfa609732bc"
+    },
+    {
+      "Start": "a4231d7cd04e47d7a8ee198df27a395b",
+      "End": "c6a1b2121fc84eefa42b3146cde05609",
+      "Id": "5e3e9e689fa74d468a49f44c8a9c4090"
+    },
+    {
+      "Start": "5ef5b6698bbe48fe8ed4a830365cbee6",
+      "End": "7fc9e374884f43d089c4ed60138508b0",
+      "Id": "4046f0b7afaf412fbe73f0bf99edecc6"
+    },
+    {
+      "Start": "5ef5b6698bbe48fe8ed4a830365cbee6",
+      "End": "5f9c5227b0aa47759d846c2e1191790d",
+      "Id": "d6a5f0b537744f8fb958f63c3c4efa23"
+    },
+    {
+      "Start": "5ef5b6698bbe48fe8ed4a830365cbee6",
+      "End": "8f2e32f415ab4dafbe8b70d340bd902b",
+      "Id": "ac964be6ab624343a4e1814177eeae3a"
+    },
+    {
+      "Start": "5ef5b6698bbe48fe8ed4a830365cbee6",
+      "End": "ba18e01c780241f9bbdb486ecfec4d86",
+      "Id": "e2981b69b7be4fcd87d2068294696a32"
+    },
+    {
+      "Start": "5ef5b6698bbe48fe8ed4a830365cbee6",
+      "End": "07e8ede174cc43b39d0135a1c9fbb059",
+      "Id": "14c3961be2c24622a4b184622f3839dc"
+    },
+    {
+      "Start": "e62b8ccc2d2a4644952349ac9ffbe9ef",
+      "End": "20375090b6f5414fb83d4bc97ecb498d",
+      "Id": "e26561a5829d47b09e36f5b77f2ccfb9"
+    },
+    {
+      "Start": "4a6794d16f1d4f10ae76d4c33716fdc8",
+      "End": "da80ab9fa67345ba87eb7751b53ec574",
+      "Id": "3c32da090fc94ed09dce1f24ad24da1a"
+    },
+    {
+      "Start": "cca9670351bd4af1b45f9a53e47345e0",
+      "End": "1b31a9e5f24047eaadaf0bb619cb9571",
+      "Id": "98c265dac8c2497f96669a613f962a89"
+    },
+    {
+      "Start": "cca9670351bd4af1b45f9a53e47345e0",
+      "End": "caf25835b4e1409b995271c400f215d1",
+      "Id": "99c4c7a7e368449b86c64ac54bef9f94"
+    },
+    {
+      "Start": "cca9670351bd4af1b45f9a53e47345e0",
+      "End": "5adc9299785a4f7c9e6977386a7744fd",
+      "Id": "f1c31700a66447a9926c69d53869e9c1"
+    },
+    {
+      "Start": "0c1066112e5e455696191e1192113b9f",
+      "End": "0fdf6af83cf34b0abadfb3dd3f97979d",
+      "Id": "8abd73ba941a4639b1182ae74dbf2b41"
+    },
+    {
+      "Start": "0c1066112e5e455696191e1192113b9f",
+      "End": "39d7f70bb0f84374aee5318c8e667502",
+      "Id": "ec29ea86bf2042b688dcbc41986877dc"
+    },
+    {
+      "Start": "0c1066112e5e455696191e1192113b9f",
+      "End": "2c16562f0ecb405bade9763fc57b42df",
+      "Id": "282b79a11acf4467b1f31b1c9af905ed"
+    },
+    {
+      "Start": "9485f61b32b34b709ad3b9dc9ab5acd4",
+      "End": "7de563cfdd104d7ab5fa8ec6ee033d14",
+      "Id": "f3fbf21d7917420f89dfa6af7fd36d87"
+    },
+    {
+      "Start": "9485f61b32b34b709ad3b9dc9ab5acd4",
+      "End": "b3c0c64080624eb5920669025c87ef65",
+      "Id": "b2b7302013084948823af05cd92a8287"
+    },
+    {
+      "Start": "9485f61b32b34b709ad3b9dc9ab5acd4",
+      "End": "8a458335ac104f779d4f174967eb5e35",
+      "Id": "7a809407737847ce91e06bfe4cde0f51"
+    },
+    {
+      "Start": "52552ddc705d44ce920acd56cde8224f",
+      "End": "ee32e20e9ff448e1b1d2e77031d7a72b",
+      "Id": "a60ffde3084640ad890ca51d6162db67"
+    },
+    {
+      "Start": "52552ddc705d44ce920acd56cde8224f",
+      "End": "4e7a75460c914fcda7a8df85d2698790",
+      "Id": "d154272f8b7b436e8580a4aa0d6bc9d0"
+    },
+    {
+      "Start": "3c19404a660b432e91843efd1c028e50",
+      "End": "3cf9ee99b11144109de0950a3d375655",
+      "Id": "43525c803e7044febeff849e4c353a6b"
+    },
+    {
+      "Start": "3c19404a660b432e91843efd1c028e50",
+      "End": "996131364b6f4d4b9637ed6bcd79f847",
+      "Id": "e6b6d4e11dc241b1b078a937f098ce60"
+    },
+    {
+      "Start": "3c19404a660b432e91843efd1c028e50",
+      "End": "611fbf99468b4350b51985aca84cbc77",
+      "Id": "ca907643ec95416d9bd1333a8024c0b2"
+    },
+    {
+      "Start": "747504b0bab9422ba06019b175b7cb76",
+      "End": "726dc431031e4c638fd1c9ea79c5a4a2",
+      "Id": "ad27e1be0803424592254c4c88ba0638"
+    },
+    {
+      "Start": "747504b0bab9422ba06019b175b7cb76",
+      "End": "25d0e80c6ddb4ae79e1a2eac9266af2e",
+      "Id": "cc5cac9895d74cd1bcdbed2d269ec89b"
+    },
+    {
+      "Start": "2da4fb16686d420298a6b7c1e381cb3a",
+      "End": "5783970908a5400f8b3f0e911d02487a",
+      "Id": "616ed46c2b3e44efa8774e5fa344e27d"
+    },
+    {
+      "Start": "2da4fb16686d420298a6b7c1e381cb3a",
+      "End": "63a30c8f026f4288bad50c49cbebed10",
+      "Id": "67b2aef9a7fa40eea04ff0a2e59f82fc"
+    },
+    {
+      "Start": "678e249622d849959eac336d70d1b87f",
+      "End": "4ba1a8dcf24248728555ef9c4e0a5fd7",
+      "Id": "95d7e260d501434a890a13cb169efb97"
+    },
+    {
+      "Start": "c7fc5525ec2847f2a210f3fe5980a921",
+      "End": "d6cd3953c1964ca2b4597c5286d7e22c",
+      "Id": "1ad9fbcceb9c4387ae18208ea6d99211"
+    },
+    {
+      "Start": "c7fc5525ec2847f2a210f3fe5980a921",
+      "End": "c9e76e34dd12474b8876133979370c72",
+      "Id": "c18b2600e78a4b7fb0525265adc18671"
+    },
+    {
+      "Start": "c7fc5525ec2847f2a210f3fe5980a921",
+      "End": "dfd1166f9b1845efb2f614bf88e573b8",
+      "Id": "b9736ba1adf3401baa4a2d8f2a9efb14"
+    },
+    {
+      "Start": "60086e59d0a54206a8e90aa35545c29d",
+      "End": "f9775d2eed1346249b51742e6fa1532a",
+      "Id": "07d117e9b819430c8f216ea92450c9f1"
+    },
+    {
+      "Start": "3d1fd8898114429983c39ac03f6391a6",
+      "End": "88a73aa8a73e4b02809e4ff9e84fe6fb",
+      "Id": "bebc91857358496b8d7435043ff833e9"
+    },
+    {
+      "Start": "bd7d1a67f06046709baf07ba24a4431f",
+      "End": "ebc5e08d3a164f469b91a8bd059eb694",
+      "Id": "4671b41677df48ca89dd8ee67fdf20ad"
+    },
+    {
+      "Start": "bd7d1a67f06046709baf07ba24a4431f",
+      "End": "8af4c024e838488b869e438780db3448",
+      "Id": "28a62f17ac2b4ba39a5babb47fe2b2b3"
+    },
+    {
+      "Start": "bd7d1a67f06046709baf07ba24a4431f",
+      "End": "4a0d6f08c51641a3877cff5c8c63fd83",
+      "Id": "b537c373ea014299bafb657b218ecf45"
+    },
+    {
+      "Start": "adcc1113a3e74d2fa6c3f82b16db275a",
+      "End": "b7163b15924f41f2820d856d92b32e50",
+      "Id": "47a4dc30438b49b281a5bc22f1218220"
+    },
+    {
+      "Start": "34827c08dc5443e392e9a5c0e80518f2",
+      "End": "3a796c542e004cdaaadcda7daed87b7e",
+      "Id": "2e4150006bab4ce7807616c29d656884"
+    },
+    {
+      "Start": "34827c08dc5443e392e9a5c0e80518f2",
+      "End": "2099781d52714b65bd8ae5b6b5df90f4",
+      "Id": "cdf1bc8b51f6416dbf6f9372bcb9a283"
+    },
+    {
+      "Start": "34827c08dc5443e392e9a5c0e80518f2",
+      "End": "c5814c6d4bc441f283634d69aae8cde0",
+      "Id": "76494162a0014b13841d997a32d559f1"
+    },
+    {
+      "Start": "e8c3a59a03f9457da14162125abc37f2",
+      "End": "bd964405edba40379cb2f95060c72aa5",
+      "Id": "388cd296568e4cc59a49ce99261482e2"
+    },
+    {
+      "Start": "5267a7bdb29c458f8ed1b2602ed53ea2",
+      "End": "7e911231d0d6459faac296e2871a849c",
+      "Id": "96c6df5021434331854388ee1b0813fa"
+    },
+    {
+      "Start": "5267a7bdb29c458f8ed1b2602ed53ea2",
+      "End": "fbe35a653e054943b12e5b6cb3329f34",
+      "Id": "6d6190d37cac4417b30631fdfdc30562"
+    },
+    {
+      "Start": "5267a7bdb29c458f8ed1b2602ed53ea2",
+      "End": "6dc01b039bac466eb63de806e556b0f6",
+      "Id": "ee46f78e5cca4224a875c1486cbcc29d"
+    },
+    {
+      "Start": "2d2e8fdf3d5b41b8951204be5a626855",
+      "End": "72c334bc9e7843cca4ad92952f8fa4e3",
+      "Id": "9fab5e4f8a4e4d85b0f29a44e4f659b1"
+    },
+    {
+      "Start": "774005e2ef774b409b627d0dab8f491d",
+      "End": "709c64c64ca9401abda6357be15faee2",
+      "Id": "38c2876ebc0b4d958ba4b00296a105c3"
+    },
+    {
+      "Start": "64b2d575e4f146e8b2b350d1f3a626bb",
+      "End": "8e59e34231034532a66254bbd36610bb",
+      "Id": "9f1e3ff177d14ccfa3c0c08cbd0d647b"
+    },
+    {
+      "Start": "da229054b29d43369d115215cf124ac3",
+      "End": "904a16aaf70f427aae6060a88d98f287",
+      "Id": "9e00bef8b4664a64897f5f0d0aa5e1b2"
+    },
+    {
+      "Start": "08ddf5d0c89d40678e32c246c6808e18",
+      "End": "218d7982044749449b716369a478dcac",
+      "Id": "be640d1b0ce842ad9e2b8e33c9aca439"
+    },
+    {
+      "Start": "af31fbee66784b429cfe885ac41b0532",
+      "End": "70f790481fea4558a75edf0bc579f03b",
+      "Id": "6e0b098ef4ff419dad94ab3f6cc67e3e"
+    },
+    {
+      "Start": "a4fc3388ffec411fbe37d37e48a09100",
+      "End": "435065e934664f658d729115027e2c30",
+      "Id": "0d4a07a5258a46acb8c742fc7d51afeb"
+    },
+    {
+      "Start": "c6801b41b70e4dd4acd6a43ca7da1904",
+      "End": "930e13f80173477aae785981e3ee0103",
+      "Id": "f07d76bd6a8b4622bcf6687b1103cc8c"
+    },
+    {
+      "Start": "f256b7bfccac4e59b6db92caca0960be",
+      "End": "80819d09bdb649399b06088ac3ba336a",
+      "Id": "93d5573232b6488fb0c4df754c5edb62"
+    },
+    {
+      "Start": "25daa32d5e5d433db2c8d9e90c443028",
+      "End": "d2032f8ebba64255bb0262a4b3d59b37",
+      "Id": "2dffc413217c4cd3b33aa9f6d612b0d8"
+    },
+    {
+      "Start": "45107c7edd794a168c1e29ba3b650f04",
+      "End": "acb927900f084b6cb213e2b2c5900632",
+      "Id": "256e978ebc8b4462bf7e734a97e4160c"
+    },
+    {
+      "Start": "35cd93245419406cb55e6bf1a82c8037",
+      "End": "4d9c8532037c4cfd9d5b2063c80007a0",
+      "Id": "c154b194401c4568ba6d983c8263d936"
+    },
+    {
+      "Start": "015740a282704135ba023641fbfdb117",
+      "End": "2d28d21524174c71a1439ce0c3d30bd4",
+      "Id": "4bd61b7c89d44752a8f8ede9c019464a"
+    },
+    {
+      "Start": "2b1ce6d216d1422caf999e9a62657145",
+      "End": "36e7fd6337cb428d91492bea9031d3c2",
+      "Id": "d77c7066ff894fabbb7734b721ade3c7"
+    },
+    {
+      "Start": "b7880338a7784d64b83a834aa151b9ec",
+      "End": "99820358ede54731b22fef9a5328ddfd",
+      "Id": "7ab112d4f4894095b8a23703f95a9b7d"
+    },
+    {
+      "Start": "35de5a2d8f854d89bc5cd33dfc0990fa",
+      "End": "096c411bfa524a1e8a75623ff46e38ff",
+      "Id": "098ed15c18ee4150969cb1439ac2fd37"
+    },
+    {
+      "Start": "8710150ec9b740d9aed80cba2b82f19f",
+      "End": "9f1e836505394612b19c5418c4e53b4a",
+      "Id": "9bdec042b24f45a18c717bb9792c6542"
+    },
+    {
+      "Start": "d22b52afc1564b0f83505d86d86f43fa",
+      "End": "c7aed73a7fde4eb4a2251d98f3a60569",
+      "Id": "06d58729a37d4b37b8f841928c8fa74d"
+    },
+    {
+      "Start": "6685e987201b40d28ba99d9236364c77",
+      "End": "5147b47c26c14f8cbd6254f46ea9c83d",
+      "Id": "8352c60fd95343328a28d574f1a8c2c2"
+    },
+    {
+      "Start": "01b26611fbf14e71bec51fe354474320",
+      "End": "2e90d80ebc754c0ba38a06d2219426d8",
+      "Id": "033186e8c74645dcbe0654001990609c"
+    },
+    {
+      "Start": "2e2a8361f13442a7ab403285a549b02d",
+      "End": "fcde8ee56f314606bca45fe79ca621ca",
+      "Id": "ecf297f2cbcc4e2cbaf84ca6d8ffee73"
+    },
+    {
+      "Start": "e27a5c3501ec457fa2a351b4f5696e15",
+      "End": "c2d85d8a993242b9b7181c2d38fd5d63",
+      "Id": "d9be67d86fc8458c90e2408e76e2fe25"
+    },
+    {
+      "Start": "039090ecaf284293bb06f7a102e13192",
+      "End": "5473db2080e442c98da75449274bfe0e",
+      "Id": "d8dc300c4f5e4651beddf28062c7dafa"
+    },
+    {
+      "Start": "038d570d9de94856aba7f29c7d8113a3",
+      "End": "b7bc1ba777814c0b9a5c8e5fa7ffac92",
+      "Id": "959165d9e5894be2afebf0dbb5fc0f88"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.5.2.7915",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a29f4e2f998243f2956d22c40ca02712",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -157.11176895626659,
+        "Y": 692.35567414302307
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1039e74672f7481cbd87a9c36dabe0c2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -168.1354593976796,
+        "Y": 942.72877035673127
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1a5b579eeafb4af88b6cdf57759c3c63",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1030.0,
+        "Y": 734.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "19145b864f7748bd8088e393563a0987",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2502.7788911689568,
+        "Y": 2085.397432005981
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "15bf2e027143444984656b97a1f6ff88",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1134.6737166138582,
+        "Y": 3222.4617360321627
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "122719ac5ba34ce6ad1ac2ace5d208ef",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1150.7267752856055,
+        "Y": 3074.2694863134143
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b4d0bd7b5a5b41679cf2c8876e155f69",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1160.2643098302619,
+        "Y": 2957.2764452160418
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "55164cda1764493baa18cac4af07c290",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1426.6100040625849,
+        "Y": 3667.5549907057934
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSetMgr.OpenDatabase",
+        "Id": "705ba65c40fb463d81b3957cd1bd8585",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 495.38823104373341,
+        "Y": 682.35567414302307
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSetMgr.CreateDatabase",
+        "Id": "59adcf27210d4bd185e750289539cfbd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 506.78223579189853,
+        "Y": 940.24104479036623
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.ByDatabase",
+        "Id": "a79402ce29da44318178f78cffc6997f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 933.64627903756389,
+        "Y": 937.766470626623
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.Name",
+        "Id": "380be8741a9a40d092771ebc7da887b3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1357.0058543304756,
+        "Y": 879.50614184022527
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.Description",
+        "Id": "594a5051cb13423e8d0f7efd957020f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1346.900164382643,
+        "Y": 1057.7833175681581
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.Sheets",
+        "Id": "25f8d7d6382e4f31893ad17f9e2185e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1343.1883031370287,
+        "Y": 1159.2408582816204
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.SetName",
+        "Id": "b551ec8718d14f928f925199504459ab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1377.7044384070391,
+        "Y": 719.54708463581528
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSetMgr.SheetSetManager",
+        "Id": "82292bb4b9a246f4b0ccb06856a18ba7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -548.92861137103273,
+        "Y": 1569.4945338662681
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSetMgr.Databases",
+        "Id": "7fb0c9f5561442029941e130c914fa91",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 554.25625364124892,
+        "Y": 1141.5774212571048
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.CreateNewSubset",
+        "Id": "b1c931992e5d4b2fafefafc6499375e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2833.2106208513483,
+        "Y": 2009.464908668861
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.Sheets",
+        "Id": "79a5af5b88d4467992b80b8a8ae056e6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2246.2625799297939,
+        "Y": 633.38726872408256
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.Subsets",
+        "Id": "488ed95637e44ea6891e709639abe931",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1892.9866938796313,
+        "Y": 695.8980053578149
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Database.Name",
+        "Id": "26257059ba4b47f49cf08132629d1870",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 956.80863432877118,
+        "Y": 1169.1594980070117
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Database.Filename",
+        "Id": "1841b5853de940f78934394f127f9dab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 932.70375529802789,
+        "Y": 1379.7541483410066
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSetMgr.Databases",
+        "Id": "c2322f61953c498b815a9a2621bce091",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -244.66215797354016,
+        "Y": 1623.6800636037956
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.ByDatabase",
+        "Id": "849e0ce6005045ca86b7c60311324b97",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1258.1748710005375,
+        "Y": 1795.4847387059781
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.SetNumber",
+        "Id": "ad4337f7ed594de28ae9a14551f30eb4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1999.1069772415226,
+        "Y": 1865.6948155568082
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.SetTitle",
+        "Id": "5183a2e53928470bb985805d8a1413fe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2004.7176072924196,
+        "Y": 1973.6994440365786
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.SetTitle",
+        "Id": "3c0f17dd488b43d785418e4e824fe3af",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2011.5581844872611,
+        "Y": 2266.72198855974
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.SetNumber",
+        "Id": "b069008b22574a92be4c5f67955ebef2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2005.9475544363611,
+        "Y": 2158.71736007997
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.SetTitle",
+        "Id": "cea21dac956340139ddfb548151d5c76",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2013.1422394109154,
+        "Y": 2551.6428610537005
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.SetNumber",
+        "Id": "5171bc6c40af46c4b1fd839cc3f3844a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2007.5316093600154,
+        "Y": 2443.6382325739305
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.AddToSheetSet",
+        "Id": "56e01110020e4cc1bef78db9b8002da1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1670.7452969789404,
+        "Y": 1785.6515146509928
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.AddToSheetSetAfter",
+        "Id": "4d8404b46fe04c5c890e28039b2d744b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1694.1531408563908,
+        "Y": 2141.1581435397779
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.AddToSheetSetBefore",
+        "Id": "4a8e88f248494036a080ded11174bbcf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1682.4492189176656,
+        "Y": 2426.4412407962104
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.ByDatabase",
+        "Id": "7a6349db8da44166aaf0f89eb4f64958",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1264.055751504862,
+        "Y": 2837.7461634589754
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.ImportLayoutToSheetSet",
+        "Id": "e289b0f3a39346f7928dda6ddefb6ce4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1718.0595579802941,
+        "Y": 2836.25681114957
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.ImportLayoutToSheetSetAfter",
+        "Id": "bcbba8ba7f5843658c184f1426dcd3c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1741.6610715695003,
+        "Y": 3010.9080117096969
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.ImportLayoutToSheetSetBefore",
+        "Id": "f79ad7ed53fb4d1f80d51dacb73dbcc4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1817.1859150549608,
+        "Y": 3190.2795149876647
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.Name",
+        "Id": "17ba506a6e2d43a1ae992918f5212029",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2097.2572096468762,
+        "Y": 2845.6974165852521
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.Name",
+        "Id": "86f40cf56c5d408c830813f1033c1935",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2165.4591406081881,
+        "Y": 3195.20931661285
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.Name",
+        "Id": "329a41d6f3944f98b04193bbfaab712f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2118.6060090867495,
+        "Y": 3017.761143231136
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.CreateNewSubset",
+        "Id": "763300136b414b09b24af6c213e2250a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1757.2305953935304,
+        "Y": 3603.4110290807121
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.ByDatabase",
+        "Id": "0e148e8dc8fb4cf187e3fd1b3f2f0aa3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1352.9191872578451,
+        "Y": 3497.1228981832433
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "80de0d6407154beb8ab622c2a40556f4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1355.1474705732,
+        "Y": 2608.84712202116
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "07cc1c1d38ad4becba8d71c7fdd2ac6c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1386.01276854479,
+        "Y": 2323.2066989207
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2bfbc2fb89364350bcf0646f5ebe6996",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1394.60142398992,
+        "Y": 2051.22401708839
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2951552e6cd84eeb8a549cc1f5b7cb54",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1332.5125953898896,
+        "Y": 4255.40241239838
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "01cfcfb038cb4e68aba5045cbc9b256d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1339.0063360373724,
+        "Y": 4110.6048380943375
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "51f6398d04e14abdbda476159b002d58",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1375.0571820452637,
+        "Y": 3967.282511777847
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.ImportLayoutToSubSet",
+        "Id": "625dad17f13749b088126c1eb20b7c07",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1918.2567733784354,
+        "Y": 3978.781083720788
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.ImportLayoutToSubSetAfter",
+        "Id": "e55065c001144b72b86dc9e959e0a055",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1916.605442232112,
+        "Y": 4155.4735163774039
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sheet.ImportLayoutToSubSetBefore",
+        "Id": "eabf40e87f3147ca964cd4449676a270",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1910.0001176468179,
+        "Y": 4338.7712736193153
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SheetSet.ByDatabase",
+        "Id": "90835e4b739d4cf0974674fed93e380f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 105.05622880237684,
+        "Y": 1697.6366299164872
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.ByNameValue",
+        "Id": "194f90cafd17469a846666c424846fb9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1296.6481171132584,
+        "Y": 4666.7505234773162
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "42115dfc8c8940be97ac70ff4f1564df",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1071.8047529249081,
+        "Y": 4668.842529467749
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.Type",
+        "Id": "6c0d169e4e1e4583869200a1d0b2ca65",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2006.9793022365168,
+        "Y": 4684.2296153632824
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.AddAsSheetSetProperty",
+        "Id": "11bffe1098ec4eec90a212a5a9d6850b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1651.0786357790862,
+        "Y": 4681.1655273056685
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.ByNameValue",
+        "Id": "6c5b8e75178d4f71a0befdc9226390af",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1259.5520692230862,
+        "Y": 4979.9639236488829
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "823c280625054800815189956912daa0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1034.7087050347361,
+        "Y": 4982.055929639313
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.Type",
+        "Id": "e2142969fb86479b91a0f5d723f7fec3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1969.8832543463461,
+        "Y": 4997.4430155348427
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.AddAsSheetProperty",
+        "Id": "0ab615c96e47494ea03a7f1aec41bba0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1603.6489714340196,
+        "Y": 4978.3476388440122
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.Name",
+        "Id": "fff93d8e5b6b4b469d29c3952eb08377",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3239.6199297554776,
+        "Y": 1824.4804255629178
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.NewSheetLocation",
+        "Id": "f86e1a4550924a648ee1c9f86d0ca48f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3245.9409134287957,
+        "Y": 2146.8505929021876
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.Description",
+        "Id": "1aa5aa2beb2146198acf21df06ce6455",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3239.6199297554781,
+        "Y": 1986.2976075998847
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.NewSheetTemplate",
+        "Id": "e46505db9f714f19bab1860a6f0d2275",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3245.9409134287957,
+        "Y": 2490.7121047307405
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "SubSet.PromptForTemplate",
+        "Id": "d8e13af4b03f44e0a4c7671f15bcb9a1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3256.0544873061062,
+        "Y": 2316.2529553471368
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.EditValue",
+        "Id": "162710b076db40f29e2572fee7fb50e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3251.9927691872094,
+        "Y": 4645.2306666394907
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.ByNameValue",
+        "Id": "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2763.623024892544,
+        "Y": 4642.4319861564263
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "15e8ab55125a41c6a3d54191894da479",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2496.7961003426262,
+        "Y": 4630.3274011328422
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5378f0826a4a45299bc20a83a294d446",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2706.835779034901,
+        "Y": 4789.7366377513936
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.ByNameValue",
+        "Id": "2dec5d73411d4388a2caf1ddb759340b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2719.4978935843915,
+        "Y": 5041.9267539820958
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "318e446838ba427d815b7fb2ae86e2e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2662.7106477267516,
+        "Y": 5189.2314055770566
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ffdb47f54cea4a5da00b64f86df3973b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2452.6709690344815,
+        "Y": 5029.8221689585062
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CustomProperty.EditSheetValue",
+        "Id": "224b35b13ce04b579a54b0fb1171cb63",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3151.7421442796108,
+        "Y": 5065.1076132497074
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "5003b065a2a3430bbfdcf0703950e4e4",
+        "Title": "Importing Sheets to Sheet Set",
+        "Nodes": [
+          "15bf2e027143444984656b97a1f6ff88",
+          "122719ac5ba34ce6ad1ac2ace5d208ef",
+          "b4d0bd7b5a5b41679cf2c8876e155f69",
+          "86f40cf56c5d408c830813f1033c1935",
+          "f79ad7ed53fb4d1f80d51dacb73dbcc4",
+          "bcbba8ba7f5843658c184f1426dcd3c8",
+          "329a41d6f3944f98b04193bbfaab712f",
+          "e289b0f3a39346f7928dda6ddefb6ce4",
+          "17ba506a6e2d43a1ae992918f5212029",
+          "7a6349db8da44166aaf0f89eb4f64958"
+        ],
+        "Left": 1124.6737166138582,
+        "Top": 2783.25681114957,
+        "Width": 1236.78542399433,
+        "Height": 578.02270383809491,
+        "FontSize": 36.0,
+        "InitialTop": 2836.25681114957,
+        "InitialHeight": 531.20492488259288,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6920056c1f184976b35bbf1234be6f7e",
+        "Title": "Adding new Sheets to Sheet Set",
+        "Nodes": [
+          "849e0ce6005045ca86b7c60311324b97",
+          "ad4337f7ed594de28ae9a14551f30eb4",
+          "5183a2e53928470bb985805d8a1413fe",
+          "3c0f17dd488b43d785418e4e824fe3af",
+          "b069008b22574a92be4c5f67955ebef2",
+          "cea21dac956340139ddfb548151d5c76",
+          "5171bc6c40af46c4b1fd839cc3f3844a",
+          "56e01110020e4cc1bef78db9b8002da1",
+          "4d8404b46fe04c5c890e28039b2d744b",
+          "4a8e88f248494036a080ded11174bbcf",
+          "80de0d6407154beb8ab622c2a40556f4",
+          "07cc1c1d38ad4becba8d71c7fdd2ac6c",
+          "2bfbc2fb89364350bcf0646f5ebe6996"
+        ],
+        "Left": 1248.1748710005375,
+        "Top": 1732.6515146509928,
+        "Width": 971.356738359478,
+        "Height": 979.19560737016718,
+        "FontSize": 36.0,
+        "InitialTop": 1785.6515146509928,
+        "InitialHeight": 968.19560737016718,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e6f71b05d12640e08807334aec9410aa",
+        "Title": "Importing Sheets to SubSet",
+        "Nodes": [
+          "55164cda1764493baa18cac4af07c290",
+          "763300136b414b09b24af6c213e2250a",
+          "0e148e8dc8fb4cf187e3fd1b3f2f0aa3",
+          "2951552e6cd84eeb8a549cc1f5b7cb54",
+          "01cfcfb038cb4e68aba5045cbc9b256d",
+          "51f6398d04e14abdbda476159b002d58",
+          "625dad17f13749b088126c1eb20b7c07",
+          "e55065c001144b72b86dc9e959e0a055",
+          "eabf40e87f3147ca964cd4449676a270"
+        ],
+        "Left": 1322.5125953898896,
+        "Top": 3444.1228981832433,
+        "Width": 832.74417798854574,
+        "Height": 1065.648375436072,
+        "FontSize": 36.0,
+        "InitialTop": 3497.1228981832433,
+        "InitialHeight": 986.648375436072,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "6fe65599ad474137bdb8f8982c164c11",
+        "Title": "Add Custom Property to Sheet Set as Sheet Set Property",
+        "Nodes": [
+          "194f90cafd17469a846666c424846fb9",
+          "42115dfc8c8940be97ac70ff4f1564df",
+          "6c0d169e4e1e4583869200a1d0b2ca65",
+          "11bffe1098ec4eec90a212a5a9d6850b"
+        ],
+        "Left": 1061.8047529249081,
+        "Top": 4613.7505234773162,
+        "Width": 1206.1745493116086,
+        "Height": 186.41500382835238,
+        "FontSize": 36.0,
+        "InitialTop": 4666.7505234773162,
+        "InitialHeight": 162.47909188596623,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "99bf771afbd44872877578c4ce87fa72",
+        "Title": "Add Custom Property to Sheet Set as Sheet Property",
+        "Nodes": [
+          "6c5b8e75178d4f71a0befdc9226390af",
+          "823c280625054800815189956912daa0",
+          "e2142969fb86479b91a0f5d723f7fec3",
+          "0ab615c96e47494ea03a7f1aec41bba0"
+        ],
+        "Left": 1024.7087050347361,
+        "Top": 4925.3476388440122,
+        "Width": 1206.17454931161,
+        "Height": 165.09537669083056,
+        "FontSize": 36.0,
+        "InitialTop": 4978.3476388440122,
+        "InitialHeight": 164.09537669083056,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b17d4312c0014b528e208e771e698f38",
+        "Title": "Adding a Subset to the Sheet Set",
+        "Nodes": [
+          "19145b864f7748bd8088e393563a0987",
+          "b1c931992e5d4b2fafefafc6499375e4",
+          "fff93d8e5b6b4b469d29c3952eb08377",
+          "f86e1a4550924a648ee1c9f86d0ca48f",
+          "1aa5aa2beb2146198acf21df06ce6455",
+          "e46505db9f714f19bab1860a6f0d2275",
+          "d8e13af4b03f44e0a4c7671f15bcb9a1"
+        ],
+        "Left": 2492.7788911689568,
+        "Top": 1771.4804255629178,
+        "Width": 960.27559613714948,
+        "Height": 812.23167916782268,
+        "FontSize": 36.0,
+        "InitialTop": 1824.4804255629178,
+        "InitialHeight": 811.23167916782268,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1b872a85a26f49dda015ec464fd8922f",
+        "Title": "Edit Sheet Set Custom Property ",
+        "Nodes": [
+          "162710b076db40f29e2572fee7fb50e4",
+          "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+          "15e8ab55125a41c6a3d54191894da479",
+          "5378f0826a4a45299bc20a83a294d446"
+        ],
+        "Left": 2486.7961003426262,
+        "Top": 4577.3274011328422,
+        "Width": 1092.1966688445832,
+        "Height": 305.4092366185514,
+        "FontSize": 36.0,
+        "InitialTop": 4630.3274011328422,
+        "InitialHeight": 304.4092366185514,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b87fe5c45f7749b7af5a02627fcfcf4c",
+        "Title": "Edit Custom Property on a Sheet",
+        "Nodes": [
+          "2dec5d73411d4388a2caf1ddb759340b",
+          "318e446838ba427d815b7fb2ae86e2e8",
+          "ffdb47f54cea4a5da00b64f86df3973b",
+          "224b35b13ce04b579a54b0fb1171cb63"
+        ],
+        "Left": 2442.6709690344815,
+        "Top": 4976.8221689585062,
+        "Width": 1036.0711752451293,
+        "Height": 305.40923661855049,
+        "FontSize": 36.0,
+        "InitialTop": 5029.8221689585062,
+        "InitialHeight": 282.40923661854981,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 120.12449777439821,
+    "Y": -55.488487441923326,
+    "Zoom": 0.1971138400520194
+  }
+}
