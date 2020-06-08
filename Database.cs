@@ -11,20 +11,68 @@ using AXDBLib;
 
 namespace AMR.dynSSetMgr
 {
+    /// <summary>
+    /// Represents the file containing a Sheet Set.
+    /// </summary>
     public partial class Database
     {
-       internal AcSmDatabase _curDatabase;
+        internal AcSmDatabase _curDatabase;
 
         [IsVisibleInDynamoLibrary(false)]
         internal AcSmDatabase BaseObject
         { get => _curDatabase; }
 
+        #region constructors
+        // constuctors need to be static methods in order to show up in the Create category
+
+        /// <summary>
+        /// The file that stores the sheet set.
+        /// </summary>
+        /// <param name="dbFromSSMgr">The Sheet Set Manager object.</param>
         [IsVisibleInDynamoLibrary(false)]
         internal Database(AcSmDatabase dbFromSSMgr)
         {
             _curDatabase = dbFromSSMgr;
         }
 
+        /// <summary>
+        /// Open a .dst file.
+        /// </summary>
+        /// <param name="sheetSetManager">The sheet set manager.</param>
+        /// <param name="filename">Full path and name of the .dst file.</param>
+        /// <returns>Database in the .dst file.</returns>
+        public static Database ByFilename(SheetSetMgr sheetSetManager, string filename)
+        {
+            return sheetSetManager.OpenDatabase(filename, false);
+        }
+
+
+        #endregion
+        #region properties
+        // properties can only be read-only and will show up in the Query category
+        // settable properties will be ignored in Dynamo
+
+        /// <summary>
+        /// Get the filename of the database.
+        /// </summary>
+        public string Filename
+        { get => _curDatabase.GetFileName(); }
+
+        /// <summary>
+        /// Get the database name.
+        /// </summary>
+        public string Name
+        { get => _curDatabase.GetName(); }
+
+        #endregion
+
+        #region publicMethods
+        // These will show up in the Actions category
+
+
+        #endregion
+
+        #region AcSmDatabase_for_reference
         // db.Clear();
         [IsVisibleInDynamoLibrary(false)]
         internal void Clear()
@@ -63,10 +111,10 @@ namespace AMR.dynSSetMgr
             get => _curDatabase.GetDesc();
             set
             {
-                if (LockDatabase(true))
+                if (LockDatabase(this, true))
                 {
                     _curDatabase.SetDesc(value);
-                    LockDatabase(false);
+                    LockDatabase(this, false);
                 }
             }
         }
@@ -94,7 +142,7 @@ namespace AMR.dynSSetMgr
             {
                 try
                 {
-                    if (LockDatabase(true))
+                    if (LockDatabase(this, true))
                     {
                         // this line causes an error, as if the database isn't locked.
                         _curDatabase.SetFileName(value);
@@ -106,7 +154,7 @@ namespace AMR.dynSSetMgr
                 }
                 finally
                 {
-                    LockDatabase(false);
+                    LockDatabase(this, false);
                 }
             }
         }
@@ -124,10 +172,10 @@ namespace AMR.dynSSetMgr
             get => _curDatabase.GetIsTemporary();
             set
             {
-                if (LockDatabase(true))
+                if (LockDatabase(this, true))
                 {
                     _curDatabase.SetIsTemporary();
-                    LockDatabase(false);
+                    LockDatabase(this, false);
                 }
             }
         }
@@ -154,21 +202,6 @@ namespace AMR.dynSSetMgr
         {
             get => _curDatabase.GetLockStatus();
         }
-        // db.GetName();
-        // db.SetName(name);
-        [IsVisibleInDynamoLibrary(false)]
-        internal string Name
-        {
-            get => _curDatabase.GetName();
-            set
-            {
-                if (LockDatabase(true))
-                {
-                    _curDatabase.SetName(value);
-                    LockDatabase(false);
-                }
-            }
-        }
         // db.GetNewObjectId(hand, out cookie);
         [IsVisibleInDynamoLibrary(false)]
         internal int GetNewObjectId(string hand)
@@ -191,10 +224,10 @@ namespace AMR.dynSSetMgr
             get => _curDatabase.GetOwner();
             set
             {
-                if (LockDatabase(true))
+                if (LockDatabase(this, true))
                 {
                     _curDatabase.SetOwner(value);
-                    LockDatabase(false);
+                    LockDatabase(this, false);
                 }
             }
         }
@@ -283,29 +316,33 @@ namespace AMR.dynSSetMgr
         {
             _curDatabase.UpdateInMemoryDwgHints();
         }
+        #endregion
+
 
         /// <summary>
-        /// Locks or unlocks the database
+        /// Locks or unlocks a database
         /// </summary>
+        /// <param name="database">The database object to be locked.</param>
         /// <param name="lockFlag">true to lock, false to unlock</param>
         /// <returns>Returns if the lock was successful.</returns>
         /// <search>Sheet Set, Lock, Database</search>
         [IsVisibleInDynamoLibrary(false)]
-        internal bool LockDatabase(bool lockFlag)
+        public static bool LockDatabase(Database database, bool lockFlag)
         {
+            AcSmDatabase acDatabase = database.BaseObject;
             bool dbLock = false;
             // if the lockFlag is true, then attempt to lock the database, otherwise attempt to unlock it
-            if ((lockFlag == true) && (_curDatabase.GetLockStatus() == AcSmLockStatus.AcSmLockStatus_UnLocked))
+            if ((lockFlag == true) && (acDatabase.GetLockStatus() == AcSmLockStatus.AcSmLockStatus_UnLocked))
             {
-                _curDatabase.LockDb(_curDatabase);
-                if (_curDatabase.GetLockStatus() == AcSmLockStatus.AcSmLockStatus_Locked_Local)
+                acDatabase.LockDb(acDatabase);
+                if (acDatabase.GetLockStatus() == AcSmLockStatus.AcSmLockStatus_Locked_Local)
                 {
                     dbLock = true;
                 }
             }
-            else if ((lockFlag == false) && (_curDatabase.GetLockStatus() == AcSmLockStatus.AcSmLockStatus_Locked_Local))
+            else if ((lockFlag == false) && (acDatabase.GetLockStatus() == AcSmLockStatus.AcSmLockStatus_Locked_Local))
             {
-                _curDatabase.UnlockDb(_curDatabase);
+                acDatabase.UnlockDb(acDatabase);
                 dbLock = true;
             }
             else
@@ -315,5 +352,13 @@ namespace AMR.dynSSetMgr
             return dbLock;
         }
 
+        /// <summary>
+        /// Format the name of this object
+        /// </summary>
+        /// <returns>A string representing the name of this object.</returns>
+        public override string ToString()
+        {
+            return "Database: ( " + System.IO.Path.GetFileName(this.FileName) + " )";
+        }
     }
 }

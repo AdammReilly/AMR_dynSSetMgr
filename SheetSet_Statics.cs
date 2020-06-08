@@ -9,7 +9,6 @@ using AXDBLib;
 
 namespace AMR.dynSSetMgr
 {
-    [IsVisibleInDynamoLibrary(true)]
     public partial class SheetSet
     {
         [IsVisibleInDynamoLibrary(false)]
@@ -17,10 +16,10 @@ namespace AMR.dynSSetMgr
         {
             throw new NotImplementedException();
         }
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static bool GetIsDirty(SheetSet sheetSet)
         {
-            return sheetSet.IsDirty;
+            throw new NotImplementedException();
         }
 
         [IsVisibleInDynamoLibrary(false)]
@@ -59,61 +58,16 @@ namespace AMR.dynSSetMgr
             throw new NotImplementedException();
         }
 
-        [IsVisibleInDynamoLibrary(true)]
-        public static Database GetDatabase(SheetSet sheetSet)
-        {
-            return sheetSet.GetDatabase();
-        }
-
         [IsVisibleInDynamoLibrary(false)]
         public static IAcSmObjectId GetObjectId()
         {
             throw new NotImplementedException();
         }
 
-        [IsVisibleInDynamoLibrary(true)]
-        public static SheetSet Clear(SheetSet sheetSet)
-        {
-            sheetSet.Clear();
-            return sheetSet;
-        }
-
         [IsVisibleInDynamoLibrary(false)]
         public static void GetDirectlyOwnedObjects(out Array objects)
         {
             throw new NotImplementedException();
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static string GetName(SheetSet sheetSet)
-        {
-            if (sheetSet != null)
-            { return sheetSet.Name; }
-            else { return ""; }
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static SheetSet SetName(SheetSet sheetSet, string name)
-        {
-            if (sheetSet != null)
-            { sheetSet.Name = name; }
-            return sheetSet;
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static string GetDesc(SheetSet sheetSet)
-        {
-            if (sheetSet != null)
-            { return sheetSet.Description; }
-            else { return ""; }
-        }
-
-        [IsVisibleInDynamoLibrary(true)]
-        public static SheetSet SetDesc(SheetSet sheetSet, string desc)
-        {
-            if (sheetSet != null)
-            { sheetSet.Description = desc; }
-            return sheetSet;
         }
 
         [IsVisibleInDynamoLibrary(false)]
@@ -164,7 +118,7 @@ namespace AMR.dynSSetMgr
             throw new NotImplementedException();
         }
 
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static Sheet AddNewSheet(SheetSet sheetSet, string name, string desc = "")
         {
             Sheet newSheet;
@@ -224,6 +178,7 @@ namespace AMR.dynSSetMgr
             throw new NotImplementedException();
         }
 
+        [IsVisibleInDynamoLibrary(false)]
         public static IAcSmFileReference GetAltPageSetups()
         {
             throw new NotImplementedException();

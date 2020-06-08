@@ -8,6 +8,9 @@
 		<namespace name="AMR.dynSSetMgr">
 			<category>Sheet Set Manager</category>
 		</namespace>
+		<namespace name="ACSMCOMPONENTS24Lib">
+			<category>Sheet Set Manager.Enumerations</category>
+		</namespace>
 	</namespaces>
 	<classes>
 		<!--Remap Class Names-->

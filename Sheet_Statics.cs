@@ -9,6 +9,7 @@ using Autodesk.DesignScript.Runtime;
 
 namespace AMR.dynSSetMgr
 {
+   
     [IsVisibleInDynamoLibrary(true)]
     public partial class Sheet
     {
@@ -24,34 +25,14 @@ namespace AMR.dynSSetMgr
         {
 
         }
-        // sheet.GetDatabase();
-        [IsVisibleInDynamoLibrary(true)]
-        public static Database GetDatabase(Sheet sheet)
-        {
-            if (sheet != null)
-            { return sheet.GetDatabase(); }
-            else { return null; }
-        }
-        // sheet.GetDesc();
-        [IsVisibleInDynamoLibrary(true)]
-        public static string GetDesc(Sheet sheet)
-        {
-            if (sheet != null)
-            { return sheet.Description; }
-            else { return ""; }
-        }
+      
         // sheet.GetDirectlyOwnedObjects(out objects);
         [IsVisibleInDynamoLibrary(false)]
         public static void GetDirectlyOwnedObjects()
         {
 
         }
-        // sheet.GetDoNotPlot();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetDoNotPlot()
-        {
-
-        }
+    
         // sheet.GetIsDirty();
         [IsVisibleInDynamoLibrary(false)]
         public static void GetIsDirty()
@@ -60,24 +41,11 @@ namespace AMR.dynSSetMgr
         }
         // sheet.GetLayout();
         [IsVisibleInDynamoLibrary(false)]
-        public static void GetLayout()
+        public static void GetLayout(Sheet sheet)
         {
-
+            
         }
-        // sheet.GetName();
-        [IsVisibleInDynamoLibrary(true)]
-        public static string GetName(Sheet sheet)
-        {
-            if (sheet != null)
-            { return sheet.Name; }
-            else { return ""; }
-        }
-        // sheet.GetNumber();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetNumber()
-        {
-
-        }
+      
         // sheet.GetObjectId();
         [IsVisibleInDynamoLibrary(false)]
         public static void GetObjectId()
@@ -96,12 +64,7 @@ namespace AMR.dynSSetMgr
         {
 
         }
-        // sheet.GetTitle();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetTitle()
-        {
-
-        }
+      
         // sheet.GetTypeName();
         [IsVisibleInDynamoLibrary(false)]
         public static void GetTypeName()
@@ -126,37 +89,10 @@ namespace AMR.dynSSetMgr
         {
 
         }
-        // sheet.SetDesc(desc);
-        [IsVisibleInDynamoLibrary(true)]
-        public static Sheet SetDesc(Sheet sheet, string description)
-        {
-            if (sheet != null)
-            { sheet.Description = description; }
-            return sheet;
-        }
-        // sheet.SetDoNotPlot(doNotPlot);
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetDoNotPlot()
-        {
-
-        }
+       
         // sheet.SetLayout(pLayoutRef);
         [IsVisibleInDynamoLibrary(false)]
         public static void SetLayout()
-        {
-
-        }
-        // sheet.SetName(name);
-        [IsVisibleInDynamoLibrary(true)]
-        public static Sheet SetName(Sheet sheet, string name)
-        {
-            if (sheet != null)
-            { sheet.Name = name; }
-            return sheet;
-        }
-        // sheet.SetNumber(num);
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetNumber()
         {
 
         }
@@ -178,48 +114,13 @@ namespace AMR.dynSSetMgr
         {
 
         }
-        // sheet2.GetIssuePurpose();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetIssuePurpose()
-        {
-
-        }
-        // sheet2.GetRevisionDate();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetRevisionDate()
-        {
-
-        }
-        // sheet2.GetRevisionNumber();
-        [IsVisibleInDynamoLibrary(false)]
-        public static void GetRevisionNumber()
-        {
-
-        }
+      
         // sheet2.SetCategory(newVal);
         [IsVisibleInDynamoLibrary(false)]
         public static void SetCategory()
         {
 
         }
-        // sheet2.SetIssuePurpose(newVal);
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetIssuePurpose()
-        {
-
-        }
-        // sheet2.SetRevisionDate(newVal);
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetRevisionDate()
-        {
-
-        }
-        // sheet2.SetRevisionNumber(newVal);
-        [IsVisibleInDynamoLibrary(false)]
-        public static void SetRevisionNumber()
-        {
-
-        }
-
+       
     }
 }

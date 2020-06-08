@@ -65,7 +65,7 @@ namespace AMR.dynSSetMgr
             else { return null; }
         }
         // db.GetDesc();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static string GetDescription(Database database)
         {
             if (database != null)
@@ -127,7 +127,7 @@ namespace AMR.dynSSetMgr
         // db.GetLockOwnerInfo(pstrUserName, pstrMachineName);
         // db.GetLockStatus();
         // db.GetName();
-        [IsVisibleInDynamoLibrary(true)]
+        [IsVisibleInDynamoLibrary(false)]
         public static string GetName(Database database)
         {
             if (database != null)
