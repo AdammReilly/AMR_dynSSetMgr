@@ -2,17 +2,11 @@
     "license": "",
     "file_hash": null,
     "name": "AMR Sheet Set Manager",
-    "version": "0.2.74",
-    "description": "Exposes the AutoCAD Sheet Set Manager to Dynamo.
-    Currently allows:
-    creation and limited editing of a new Sheet Set;
-    creation and editing of Sheets;
-    creation and limited editing of Subsets;
-    creation and editing of Custom Properties.
-    For questions or input, you can reach me on Twitter, LinkedIn or Facebook at @AdammReilly.",
+    "version": "0.3.0",
+    "description": "Exposes the AutoCAD Sheet Set Manager to Dynamo.\r\nCurrently allows:\r\ncreation and editing of Sheet Sets;\r\ncreation and editing of Sheets;\r\ncreation and editing of Subsets;\r\ncreation and editing of Custom Properties.\r\nFor questions or input, you can reach me on Twitter, LinkedIn or Facebook at @AdammReilly.",
     "group": "",
     "keywords": null,
-    "dependencies": ["AutoCAD"],
+    "dependencies": [],
     "contents": "",
     "engine_version": "2.5.0.0",
     "engine": "dynamo",
@@ -21,7 +15,6 @@
     "repository_url": "",
     "contains_binaries": true,
     "node_libraries": [
-        "AMR_dynSSetMgr.AMR_dynSSetMgr, Version=0.2.74.6, Culture=neutral, PublicKeyToken=null"
+        "AMR_dynSSetMgr.AMR_dynSSetMgr, Version=0.3.0.7, Culture=neutral, PublicKeyToken=null"
     ]
-}
-
+} 

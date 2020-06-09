@@ -144,8 +144,8 @@ namespace AMR.dynSSetMgr
         /// Get all the sheets in the subset.
         /// </summary>
         public IList<Sheet> Sheets
-        { 
-          get
+        {
+            get
             {
                 IList<Sheet> sheets = new List<Sheet>();
                 try
@@ -200,30 +200,210 @@ namespace AMR.dynSSetMgr
         public bool PromptForTemplate
         { get => _curSubSet.GetPromptForDwt(); }
 
+        /// <summary>
+        /// Get the subset setting to disable publishing of the entire set.
+        /// </summary>
+        public bool PublishSheets
+        {
+            get => _curSubSet2.GetOverrideSheetPublish();
+        }
+
         #endregion
 
 
         #region publicMethods
         // These will show up in the Actions category
+        /// <summary>
+        /// Set the SubSet publish override setting.
+        /// </summary>
+        /// <param name="publish">Set to publish or not.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet SetPublishSheets(bool publish)
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    _curSubSet2.SetOverrideSheetPublish(publish);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
 
-            // Set Subset Name
+        /// <summary>
+        /// Set the name of the SubSet.
+        /// </summary>
+        /// <param name="newName">The new name to assign the subset.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet SetName(string newName)
+        {
+            if (Database.LockDatabase(this.Database, true))
+            { _curSubSet.SetName(newName); }
+            Database.LockDatabase(this.Database, false);
+            return this;
+        }
 
-            // Set Publish Sheets in Subset
+        /// <summary>
+        /// Set the location for new sheets to be created.
+        /// </summary>
+        /// <param name="filePath">The folder path for new sheets.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet SetNewSheetLocation(string filePath)
+        {
+            if (Database.LockDatabase(this.Database, true))
+            {
+                // create a file reference
+                IAcSmFileReference fileReference = _curSubSet.GetNewSheetLocation();
+                // check if a new path was provided, if not, default to the sheet set location
+                if (filePath != "")
+                { fileReference.SetFileName(filePath); }
+                else
+                {
+                    // get thet folder the sheet set is stored in
+                    IAcSmFileReference sheetSetFolder = _curSubSet.GetDatabase().GetSheetSet().GetNewSheetLocation();
+                    fileReference.SetFileName(sheetSetFolder.GetFileName());
+                }
+                // set the location for new sheets added to the subset
+                _curSubSet.SetNewSheetLocation(fileReference);
+            }
+            Database.LockDatabase(this.Database, false);
+            return this;
+        }
 
-            // Set New Sheet Location
+        /// <summary>
+        /// Set the SubSet new sheet template.
+        /// </summary>
+        /// <param name="newSheetDWTLocation">File and path to the .dwt file.</param>
+        /// <param name="newSheetDWTLayout">Layout name in the .dwt file.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet SetNewSheetTemplate(string newSheetDWTLocation, string newSheetDWTLayout)
+        {
+            // check if a default DWT location and name was provided
+            if ((newSheetDWTLocation != "") && (newSheetDWTLayout != ""))
+            {
+                // if the .dwt file exists, continue on
+                if (File.Exists(newSheetDWTLocation))
+                {
+                    if (Database.LockDatabase(this.Database, true))
+                    {
+                        // create a reference to a layout reference object
+                        AcSmAcDbLayoutReference layoutReference = _curSubSet.GetDefDwtLayout();
+                        layoutReference.SetFileName(newSheetDWTLocation);
+                        layoutReference.SetName(newSheetDWTLayout);
+                        // set the layout reference for the subset
+                        _curSubSet.SetDefDwtLayout(layoutReference);
+                    }
+                    Database.LockDatabase(this.Database, false);
+                }
+            }
+            return this;
+        }
 
-            // Set Sheet Creation Template
+        /// <summary>
+        /// Set the Prompt for Template setting.
+        /// </summary>
+        /// <param name="newPrompt">The value to assign to the setting.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet SetPromptForTemplate(bool newPrompt)
+        {
+            if (Database.LockDatabase(this.Database, true))
+            {
+                _curSubSet.SetPromptForDwt(newPrompt);
+            }
+            Database.LockDatabase(this.Database, false);
+            return this;
+        }
 
-            // Set Prompt for Template
+        /// <summary>
+        /// Move an existing sheet into the subset before another sheet, or to the top.
+        /// </summary>
+        /// <param name="sheet">Existing sheet.</param>
+        /// <param name="indexSheet">Sheet to insert before. Can be null for start of SubSet.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet MoveSheet(Sheet sheet, Sheet indexSheet = null)
+        {
+            IAcSmComponent index = null;
+            if (indexSheet != null)
+            { index = (IAcSmComponent)indexSheet.BaseObject; }
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    IAcSmPersist owner = sheet.BaseObject.GetOwner();
+                    if (owner.GetTypeName() == "AcSmSheetSet")
+                    {
+                        AcSmSheetSet sheetSet = (AcSmSheetSet)owner;
+                        sheetSet.RemoveSheet(sheet.BaseObject);
+                    }
+                    else if (owner.GetTypeName() == "AcSmSubset")
+                    {
+                        AcSmSubset subSet = (AcSmSubset)owner;
+                        subSet.RemoveSheet(sheet.BaseObject);
+                    }
+                    _curSubSet.InsertComponent(sheet.BaseObject, index);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
 
-            // Insert Sheet
+        /// <summary>
+        /// Move an existing sheet into the subset, after a sheet.
+        /// </summary>
+        /// <param name="sheet">Existing sheet.</param>
+        /// <param name="indexSheet">Sheet to insert after.</param>
+        /// <returns>The updated SubSet.</returns>
+        public SubSet MoveSheetAfter(Sheet sheet, Sheet indexSheet)
+        {
+            IAcSmComponent index = (IAcSmComponent)indexSheet.BaseObject;
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    IAcSmPersist owner = sheet.BaseObject.GetOwner();
+                    if (owner.GetTypeName() == "AcSmSheetSet")
+                    {
+                        AcSmSheetSet sheetSet = (AcSmSheetSet)owner;
+                        sheetSet.RemoveSheet(sheet.BaseObject);
+                    }
+                    else if (owner.GetTypeName() == "AcSmSubset")
+                    {
+                        AcSmSubset subSet = (AcSmSubset)owner;
+                        subSet.RemoveSheet(sheet.BaseObject);
+                    }
+                    _curSubSet.InsertComponentAfter(sheet.BaseObject, index);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
 
-            // Insert Sheet Before
-
-            // Insert Sheet After
-
-            // Remove Sheet
-
+        /// <summary>
+        /// Remove a sheet from the SubSet.
+        /// </summary>
+        /// <param name="sheet">A Sheet to be removed.</param>
+        /// <returns>The Sheet that was removed.</returns>
+        public Sheet RemoveSheet(Sheet sheet)
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    _curSubSet.RemoveSheet(sheet.BaseObject);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return sheet;
+        }
 
 
         #endregion
