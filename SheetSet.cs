@@ -9,6 +9,9 @@ using ACSMCOMPONENTS24Lib;
 using Autodesk.DesignScript.Runtime;
 using AXDBLib;
 
+using Dynamo.Graph.Nodes;
+using NUnit.Framework.Constraints;
+
 namespace AMR.dynSSetMgr
 {
     /// <summary>
@@ -222,14 +225,88 @@ namespace AMR.dynSSetMgr
         public bool PromptForTemplate
         { get => _curSheetSet.GetPromptForDwt(); }
 
-        // Get Model Views (custom object?)
+        /// <summary>
+        /// Get a list of paths in the Model Views tab.
+        /// </summary>
+        public IList<string> ModelViews
+        {
+            get
+            {
+                IList<string> resources = new List<string>();
+                IAcSmEnumFileReference resEnum = _curSheetSet.GetResources().GetEnumerator();
+                resEnum.Reset();
+                IAcSmFileReference resItem = resEnum.Next();
+                while (resItem != null)
+                {
+                    resources.Add(resItem.GetFileName());
+                    resItem = resEnum.Next();
+                }
+                return resources;
+            }
+        }
 
-        // Get Sheet Views (custom object?)
+        /// <summary>
+        /// Get the label block assigned to the Sheet Set
+        /// </summary>
+        /// <returns>The file name and path to the block, and the name of the block in the file, blank if the file itself. </returns>
+        [NodeCategory("Query")]
+        public Dictionary<string, string> LabelBlock()
+        {
+            AcSmAcDbBlockRecordReference labelBlock = _curSheetSet.GetDefLabelBlk();
+            Dictionary<string, string> retVal = new Dictionary<string, string>
+                {   { "FileName", labelBlock.GetFileName() },
+                    { "BlockName", labelBlock.GetName()  }
+                };
+            return retVal;
+        }
 
-        // Get Label Block Views (custom object?)
 
-        // Get Callout Blocks (custom object?)
+        /// <summary>
+        /// Get the Callout Blocks for the Sheet Set
+        /// </summary>
+        /// <returns>A list of FileName/BlockName pairs.</returns>
+        [NodeCategory("Query")]
+        public IList<Dictionary<string, string>> CalloutBlocks()
+        {
+            IAcSmCalloutBlocks callOutBlocks = _curSheetSet.GetCalloutBlocks();
+            IList<Dictionary<string, string>> retVal = new List<Dictionary<string, string>>();
+            IAcSmEnumAcDbBlockRecordReference coEnum = callOutBlocks.GetEnumerator();
+            coEnum.Reset();
+            AcSmAcDbBlockRecordReference coItem = coEnum.Next();
+            while (coItem != null)
+            {
+                string filename = coItem.GetFileName();
+                string blockName = coItem.GetName();
+                Dictionary<string, string> newItem = new Dictionary<string, string>
+                {   { "FileName", filename },
+                    { "BlockName", blockName  }
+                };
+                retVal.Add(newItem);
+                coItem = coEnum.Next();
+            }
+            return retVal;
+        }
 
+            /// <summary>
+            /// Get the Sheet Selection Sets for the Sheet Set.
+            /// </summary>
+            public IList<SheetSelectionSet> SheetSelectionSets
+        {
+            get
+            {
+                IList<SheetSelectionSet> sheetSels = new List<SheetSelectionSet>();
+                IAcSmSheetSelSets sheetSelSets = _curSheetSet.GetSheetSelSets();
+                IAcSmEnumSheetSelSet sheetSelEnum = sheetSelSets.GetEnumerator();
+                sheetSelEnum.Reset();
+                AcSmSheetSelSet curSelSet = sheetSelEnum.Next();
+                while (curSelSet != null)
+                {
+                    sheetSels.Add(new SheetSelectionSet(curSelSet));
+                    curSelSet = sheetSelEnum.Next();
+                }
+                return sheetSels;
+            }
+        }
         #endregion
 
         #region publicMethods
@@ -524,13 +601,174 @@ namespace AMR.dynSSetMgr
             return sheet;
         }
 
-        // Set Model Views (custom object?)
+        /// <summary>
+        /// Add a new path to the Model View tab
+        /// </summary>
+        /// <param name="filepath">The folder path to add.</param>
+        /// <returns>The updated Sheet Set.</returns>
+        public SheetSet AddModelView(string filepath)
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    // create a reference to a new resource location
+                    IAcSmResources resources = _curSheetSet.GetResources();
+                    AcSmFileReference fileReference = new AcSmFileReference();
+                    fileReference.InitNew(_curSheetSet.GetDatabase());
+                    fileReference.SetFileName(filepath);
+                    // add teh resource to the sheet set
+                    resources.Add(fileReference);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
 
-        // Set Sheet Views (custom object?)
+        /// <summary>
+        /// Remove a location from the Model View tab.
+        /// </summary>
+        /// <param name="filepath">The path to remove.</param>
+        /// <returns>The updated Sheet Set.</returns>
+        public SheetSet RemoveModelView(string filepath)
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    // create a reference to a new resource location
+                    IAcSmResources resources = _curSheetSet.GetResources();
+                    IAcSmEnumFileReference fileEnum = resources.GetEnumerator();
+                    fileEnum.Reset();
+                    IAcSmFileReference fileReference = fileEnum.Next();
+                    while (fileReference != null)
+                    {
+                        if (fileReference.GetFileName() == filepath)
+                        {
+                            resources.Remove(fileReference);
+                        }
+                        fileReference = fileEnum.Next();
+                    }
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
 
-        // Set Label Block Views (custom object?)
+        /// <summary>
+        /// Add a label block to the sheet set.
+        /// </summary>
+        /// <param name="fileName">The file name and path containing the block.</param>
+        /// <param name="blockName">The block name, blank if using the file itself.</param>
+        /// <returns>The updated Sheet Set.</returns>
+        public SheetSet SetLabelBlock(string fileName, string blockName = "")
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    // Create a new layout label block reference
+                    AcSmAcDbBlockRecordReference labelBlockRef = new AcSmAcDbBlockRecordReference();
+                    // create a reference to the layout label block
+                    labelBlockRef.InitNew(this.BaseObject.GetDatabase());
+                    labelBlockRef.SetFileName(fileName);
+                    labelBlockRef.SetName(blockName);
+                    // Set the label block for the sheet set
+                    this.BaseObject.SetDefLabelBlk(labelBlockRef);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
 
-        // Set Callout Blocks (custom object?)
+        /// <summary>
+        /// Add a Callout Block to the Sheet Set
+        /// </summary>
+        /// <param name="fileName">Path and filename where the block is located.</param>
+        /// <param name="blockName">The block name. Leave blank if using the file.</param>
+        /// <returns>The updated Sheet Set.</returns>
+        public SheetSet AddCalloutBlock(string fileName, string blockName = "")
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    // Create a new callout block reference
+                    AcSmAcDbBlockRecordReference coBlockRef = new AcSmAcDbBlockRecordReference();
+                    // Get the callout blocks
+                    IAcSmCalloutBlocks callOutBlocks = _curSheetSet.GetCalloutBlocks();
+                    // create a new reference to a callout block and define the block to use
+                    coBlockRef.InitNew(this.BaseObject.GetDatabase());
+                    coBlockRef.SetFileName(fileName);
+                    coBlockRef.SetName(blockName);
+                    // add thte block to the callout blocks
+                    callOutBlocks.Add(coBlockRef);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
+
+        /// <summary>
+        /// Remove a Callout Block from the Sheet Set
+        /// </summary>
+        /// <param name="fileName">File and path to the block.</param>
+        /// <param name="blockName">The block name. Leave blank if using the file.</param>
+        /// <returns>The updated Sheet Set.</returns>
+        public SheetSet RemoveCalloutBlock(string fileName, string blockName = "")
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    IAcSmCalloutBlocks callOutBlocks = _curSheetSet.GetCalloutBlocks();
+                    IList<Dictionary<string, string>> retVal = new List<Dictionary<string, string>>();
+                    IAcSmEnumAcDbBlockRecordReference coEnum = callOutBlocks.GetEnumerator();
+                    coEnum.Reset();
+                    AcSmAcDbBlockRecordReference coItem = coEnum.Next();
+                    while (coItem != null)
+                    {
+                        if ((coItem.GetName() == blockName) && (coItem.GetFileName() == fileName))
+                        {
+                            callOutBlocks.Remove(coItem);
+                        }
+                        coItem = coEnum.Next();
+                    }
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return this;
+        }
+
+        /// <summary>
+        /// Remove an existing Sheet Selection Set.
+        /// </summary>
+        /// <param name="sheetSelectionSet">The selection set to remove.</param>
+        /// <returns>The removed selection set.</returns>
+        public SheetSelectionSet RemoveSheetSelectionSet(SheetSelectionSet sheetSelectionSet)
+        {
+            try
+            {
+                if (Database.LockDatabase(this.Database, true))
+                {
+                    _curSheetSet.GetSheetSelSets().Remove(sheetSelectionSet.BaseObject);
+                }
+            }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally { Database.LockDatabase(this.Database, false); }
+            return sheetSelectionSet;
+        }
 
         #endregion
 

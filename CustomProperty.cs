@@ -116,7 +116,7 @@ namespace AMR.dynSSetMgr
                     AcSmCustomPropertyValue curPropVal = null;
                     string curPropName = "";
                     propEnum.Next(out curPropName, out curPropVal);
-                    while (propEnum != null)
+                    while (curPropVal != null)
                     {
                         if (curPropName == _customPropName)
                         {
@@ -157,7 +157,7 @@ namespace AMR.dynSSetMgr
                     AcSmCustomPropertyValue curPropVal = null;
                     string curPropName = "";
                     propEnum.Next(out curPropName, out curPropVal);
-                    while (propEnum != null)
+                    while (curPropVal != null)
                     {
                         if (curPropVal.GetFlags() == PropertyFlags.CUSTOM_SHEET_PROP)
                         {

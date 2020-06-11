@@ -125,7 +125,10 @@
   <ItemGroup>
     <Compile Include="CustomProperty.cs" />
     <Compile Include="Sheet.cs" />
+    <Compile Include="SheetSelectionSet.cs" />
     <Compile Include="SheetSet.cs" />
+    <None Include="EmptyClass.cs" />
+    <Compile Include="SheetView.cs" />
     <Compile Include="SubSet.cs" />
     <None Include="Database_Statics.cs" />
     <None Include="packages.config" />
@@ -183,7 +186,7 @@ xcopy /Y "$(ProjectDir)AMR_dynSSetMgr_DynamoCustomization.xml" "$(AppData)\Autod
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_AssemblyInfoFilename="" BuildVersion_BuildVersioningStyle="None.None.Increment.DeltaBaseDateInDays" BuildVersion_StartDate="2020/6/1" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildAction="Build" />
+      <UserProperties BuildVersion_BuildAction="Build" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_StartDate="2020/6/1" BuildVersion_BuildVersioningStyle="None.None.Increment.DeltaBaseDateInDays" BuildVersion_AssemblyInfoFilename="" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

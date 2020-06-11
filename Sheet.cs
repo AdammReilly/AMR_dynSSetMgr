@@ -653,6 +653,27 @@ namespace AMR.dynSSetMgr
             }
         }
 
+        /// <summary>
+        /// Get the Sheet Views in the Sheet.
+        /// </summary>
+        public IList<SheetView> SheetViews
+        {
+            get
+            {
+                IList<SheetView> views = new List<SheetView>();
+                AcSmSheetViews sheetViews = _curSheet.GetSheetViews();
+                IAcSmEnumSheetView sVEnum = sheetViews.GetEnumerator();
+                sVEnum.Reset();
+                AcSmSheetView viewItem = sVEnum.Next();
+                while (viewItem != null)
+                {
+                    views.Add(new SheetView(viewItem));
+                    viewItem = sVEnum.Next();
+                }
+                return views;
+            }
+        }
+
         #endregion
 
         #region publicMethods
