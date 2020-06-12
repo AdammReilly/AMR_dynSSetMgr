@@ -250,6 +250,7 @@ namespace AMR.dynSSetMgr
         /// </summary>
         /// <returns>The file name and path to the block, and the name of the block in the file, blank if the file itself. </returns>
         [NodeCategory("Query")]
+        [MultiReturn(new[] { "FileName", "BlockName" })]
         public Dictionary<string, string> LabelBlock()
         {
             AcSmAcDbBlockRecordReference labelBlock = _curSheetSet.GetDefLabelBlk();

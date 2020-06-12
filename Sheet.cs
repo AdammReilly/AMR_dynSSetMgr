@@ -674,6 +674,13 @@ namespace AMR.dynSSetMgr
             }
         }
 
+        /// <summary>
+        /// Get the filename of the Sheet.
+        /// </summary>
+        public string FileName
+        { get => _curSheet.GetLayout().GetFileName(); }
+
+
         #endregion
 
         #region publicMethods
