@@ -36,6 +36,18 @@
     <ApplicationIcon>Resources\AMR.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2021\accoremgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2021\acdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2021\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DesignScriptBuiltin, Version=2.6.1.8786, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\DynamoVisualProgramming.Core.2.6.1.8786\lib\net47\DesignScriptBuiltin.dll</HintPath>
       <Private>False</Private>

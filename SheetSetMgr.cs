@@ -77,6 +77,7 @@ namespace AMR.dynSSetMgr
             IAcSmSheetSetMgr ssMgr = new AcSmSheetSetMgr();
             AcSmDatabase dbToClose = database.BaseObject;
             ssMgr.Close(dbToClose);
+            dbToClose.Clear();
             dbToClose = null;
         }
 
@@ -137,7 +138,9 @@ namespace AMR.dynSSetMgr
         [IsVisibleInDynamoLibrary(true)]
         public Database OpenDatabase(string filename, bool bFailIfAlreadyOpen = false)
         {
-            return new Database(_sheetSetMgr.OpenDatabase(filename, bFailIfAlreadyOpen));
+            Database retVal = new Database(_sheetSetMgr.OpenDatabase(filename, bFailIfAlreadyOpen));
+            Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument.SendStringToExecute(".-opensheetset " + filename + "\n", true, false, false);
+            return retVal;
         }
 
 

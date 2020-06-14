@@ -184,7 +184,7 @@ namespace AMR.dynSSetMgr
         /// Add the Custom Property to the sheet set as a Sheet Set property.
         /// </summary>
         /// <param name="sheetSet">The sheet set to update.</param>
-        /// <returns>The updated custom property.</returns>
+        /// <returns>The new custom property.</returns>
         public CustomProperty AddAsSheetSetProperty(SheetSet sheetSet)
         {
             CustomProperty retVal = null;
@@ -223,7 +223,7 @@ namespace AMR.dynSSetMgr
         /// Add the Custom Property to the sheet set as a Sheet property.
         /// </summary>
         /// <param name="sheetSet">The sheet set to update.</param>
-        /// <returns>The updated custom property.</returns>
+        /// <returns>The new custom property.</returns>
         public CustomProperty AddAsSheetProperty(SheetSet sheetSet)
         {
             CustomProperty retVal = null;

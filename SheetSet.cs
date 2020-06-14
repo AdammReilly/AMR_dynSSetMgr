@@ -267,6 +267,7 @@ namespace AMR.dynSSetMgr
         /// </summary>
         /// <returns>A list of FileName/BlockName pairs.</returns>
         [NodeCategory("Query")]
+        //[MultiReturn(new[] { "FileName", "BlockName" })]
         public IList<Dictionary<string, string>> CalloutBlocks()
         {
             IAcSmCalloutBlocks callOutBlocks = _curSheetSet.GetCalloutBlocks();

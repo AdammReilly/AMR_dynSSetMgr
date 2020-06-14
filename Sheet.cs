@@ -812,6 +812,25 @@ namespace AMR.dynSSetMgr
             else { return null; }
         }
 
+        /// <summary>
+        /// Set the source location for the Sheet
+        /// </summary>
+        /// <param name="filename">The file name to point the Sheet to.</param>
+        /// <param name="layoutName">The layout in the file to use for the Sheet</param>
+        /// <returns>The updated Sheet.</returns>
+        public Sheet SetSource(string filename, string layoutName)
+        {
+            if (Database.LockDatabase(this.Database, true))
+            {
+                AcSmAcDbLayoutReference layoutRef = _curSheet.GetLayout();
+                layoutRef.SetFileName(filename);
+                layoutRef.SetName(layoutName);
+                Database.LockDatabase(this.Database, false);
+                return this;
+            }
+            else { return null; }
+        }
+
         #endregion
 
 
