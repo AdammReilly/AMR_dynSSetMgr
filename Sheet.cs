@@ -833,6 +833,32 @@ namespace AMR.dynSSetMgr
 
         #endregion
 
+        #region statics
+
+        /// <summary>
+        /// Renumber a series of Sheets, using the provided values
+        /// </summary>
+        /// <param name="sheets">The list of Sheets to renumber</param>
+        /// <param name="start">The initial value to start the renumber from.</param>
+        /// <param name="increment">The renumbering increment.</param>
+        /// <param name="prefix">Optional prefix to add to the number.</param>
+        /// <param name="suffix">Optional suffix to add to the number.</param>
+        /// <returns></returns>
+        public static IList<Sheet> RenumberSheets(IList<Sheet> sheets, int start, int increment, string prefix = "", string suffix = "")
+        {
+            int curNumber = start;
+            IList<Sheet> retVal = new List<Sheet>();
+            foreach (Sheet sheet in sheets)
+            {
+                sheet.SetNumber(prefix + curNumber.ToString() + suffix);
+                retVal.Add(sheet);
+                curNumber += increment;
+            }
+            return retVal;
+        }
+
+        #endregion
+
 
         /// <summary>
         /// Format the name of this object
