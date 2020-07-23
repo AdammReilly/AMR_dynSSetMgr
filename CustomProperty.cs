@@ -41,6 +41,19 @@ namespace AMR.dynSSetMgr
             return new CustomProperty(propName, propValue, 0);
         }
 
+        /// <summary>
+        /// Get a custom property from the sheet set
+        /// </summary>
+        /// <param name="sheetSet">The Sheet Set to search.</param>
+        /// <param name="propertyName">The name to look for.</param>
+        /// <returns>The Custom Property.</returns>
+        public static CustomProperty ByName(SheetSet sheetSet, string propertyName)
+        {
+            CustomProperty retVal = null;
+            AcSmCustomPropertyValue propValue = sheetSet.BaseObject.GetCustomPropertyBag().GetProperty(propertyName);
+            retVal = new CustomProperty(propertyName, propValue.GetValue(), (int)propValue.GetFlags());
+            return retVal;
+        }
 
         #endregion
 
