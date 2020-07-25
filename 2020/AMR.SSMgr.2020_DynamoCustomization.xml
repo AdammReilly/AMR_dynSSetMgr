@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0"?>
 <doc>
 	<assembly>
-		<name>AMR.dynSSetMgr</name>
+		<name>AMR.SSMgr.2020</name>
 	</assembly>
 	<namespaces>
 		<!--Remap Namespaces-->
+		<namespace name="AMR.SSMgr.2020">
+			<category>Sheet Set Manager</category>
+		</namespace>
 		<namespace name="AMR.dynSSetMgr">
 			<category>Sheet Set Manager</category>
 		</namespace>
-		<namespace name="ACSMCOMPONENTS24Lib">
+		<namespace name="ACSMCOMPONENTS23Lib">
 			<category>Sheet Set Manager.Enumerations</category>
 		</namespace>
 	</namespaces>

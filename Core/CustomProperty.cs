@@ -4,7 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if C3D2021
 using ACSMCOMPONENTS24Lib;
+#elif C3D2020
+using ACSMCOMPONENTS23Lib;
+#endif
 using Autodesk.DesignScript.Runtime;
 using AXDBLib;
 using Dynamo.Graph.Nodes;
@@ -27,6 +31,12 @@ namespace AMR.dynSSetMgr
         {
             _customPropName = propName;
             _customPropValue = propValue;
+            _curPropFlag = propFlag;
+        }
+        internal CustomProperty(string propName, object propValue, int propFlag)
+        {
+            _customPropName = propName;
+            _customPropValue = propValue.ToString();
             _curPropFlag = propFlag;
         }
 

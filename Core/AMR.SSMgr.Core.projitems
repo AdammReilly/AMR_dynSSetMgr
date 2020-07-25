@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>539045b3-218f-4f68-a95d-fb5b6cebdd28</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AMR.SSMgr.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Database_Statics.cs" />
+    <None Include="$(MSBuildThisFileDirectory)EmptyClass.cs" />
+    <None Include="$(MSBuildThisFileDirectory)packages.config" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\AMR.ico" />
+    <None Include="$(MSBuildThisFileDirectory)SheetSet_Statics.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Sheet_Statics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sheet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SheetSelectionSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SheetSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SheetSetMgr.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SheetView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SubSet.cs" />
+  </ItemGroup>
+</Project>

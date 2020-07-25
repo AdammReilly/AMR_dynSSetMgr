@@ -5,7 +5,11 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+#if C3D2021
 using ACSMCOMPONENTS24Lib;
+#elif C3D2020
+using ACSMCOMPONENTS23Lib;
+#endif
 using Autodesk.DesignScript.Runtime;
 using AXDBLib;
 

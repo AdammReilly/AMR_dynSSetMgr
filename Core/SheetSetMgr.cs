@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if C3D2021
 using ACSMCOMPONENTS24Lib;
+#elif C3D2020
+using ACSMCOMPONENTS23Lib;
+#endif
+
 using Autodesk.DesignScript.Runtime;
+
 using AXDBLib;
 
 namespace AMR.dynSSetMgr
@@ -17,7 +23,7 @@ namespace AMR.dynSSetMgr
     {
         private IAcSmSheetSetMgr _sheetSetMgr;
 
-        #region constructors
+#region constructors
         internal SheetSetMgr()
         {
             _sheetSetMgr = new AcSmSheetSetMgr();
@@ -32,9 +38,9 @@ namespace AMR.dynSSetMgr
             return new SheetSetMgr();
         }
 
-        #endregion
+#endregion
 
-        #region properties
+#region properties
         /// <summary>
         /// Lists each of the open sheet set databases.
         /// </summary>
@@ -63,9 +69,9 @@ namespace AMR.dynSSetMgr
         }
 
 
-        #endregion
+#endregion
 
-        #region publicMethods
+#region publicMethods
 
         /// <summary>
         /// Close the selected Sheet Set database.
@@ -178,7 +184,7 @@ namespace AMR.dynSSetMgr
         }
 
 
-        #endregion
+#endregion
 
 
         /// <summary>
