@@ -192,11 +192,11 @@
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y "$(TargetDir)*.*" "$(AppData)\Autodesk\C3D 2021\Dynamo\2.5\packages\AMR Sheet Set Manager\bin\"
 xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Autodesk\C3D 2021\Dynamo\2.5\packages\AMR Sheet Set Manager\"
-xcopy /Y "${ProjectDir)AMR.SSMgr.2021_DynamoCustomization.xml" "$(AppData)\Autodesk\C3D 2021\Dynamo\2.5\packages\AMR Sheet Set Manager\bin\"</PostBuildEvent>
+xcopy /Y /C "${ProjectDir)AMR.SSMgr.2021_DynamoCustomization.xml" "$(AppData)\Autodesk\C3D 2021\Dynamo\2.5\packages\AMR Sheet Set Manager\bin\"</PostBuildEvent>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_AssemblyInfoFilename="" BuildVersion_BuildVersioningStyle="None.None.Increment.DeltaBaseDateInDays" BuildVersion_StartDate="2020/6/1" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildAction="Build" />
+      <UserProperties BuildVersion_BuildAction="Build" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_StartDate="2020/6/1" BuildVersion_BuildVersioningStyle="None.None.Increment.DeltaBaseDateInDays" BuildVersion_AssemblyInfoFilename="" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

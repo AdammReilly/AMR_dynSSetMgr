@@ -430,6 +430,7 @@ namespace AMR.dynSSetMgr
                 if (Database.LockDatabase(this.Database, true))
                 {
                     IAcSmFileReference fileRef = new AcSmFileReference();
+                    fileRef.InitNew(this.Database.BaseObject);
                     fileRef.SetFileName(filename);
                     _curSheetSet.SetAltPageSetups(fileRef);
                     Database.LockDatabase(this.Database, false);
@@ -534,20 +535,32 @@ namespace AMR.dynSSetMgr
         /// <returns>The updated Sheet Set.</returns>
         public SheetSet SetNewSheetTemplate(string templatePath, string layoutName)
         {
-            if ((templatePath != "") || (templatePath != null) || (layoutName != "") || (layoutName != null))
+            SheetSet retVal = null;
+            try
             {
-                if (Database.LockDatabase(this.Database, true))
+                if ((templatePath != "") || (templatePath != null) || (layoutName != "") || (layoutName != null))
                 {
-                    AcSmAcDbLayoutReference fileRef = new AcSmAcDbLayoutReference();
-                    fileRef.SetFileName(templatePath);
-                    fileRef.SetName(layoutName);
-                    _curSheetSet.SetDefDwtLayout(fileRef);
-                    Database.LockDatabase(this.Database, false);
-                    return this;
+                    if (Database.LockDatabase(this.Database, true))
+                    {
+                        AcSmAcDbLayoutReference fileRef = this.BaseObject.GetDefDwtLayout();
+                        fileRef.SetFileName(templatePath);
+                        fileRef.SetName(layoutName);
+                        _curSheetSet.SetDefDwtLayout(fileRef);
+                        Database.LockDatabase(this.Database, false);
+                        return this;
+                    }
+                    else { return null; }
                 }
                 else { return null; }
             }
-            else { return null; }
+            catch (Exception ex)
+            { Debug.WriteLine(ex.Message); }
+            finally
+            {
+                Database.LockDatabase(this.Database, false);
+                retVal = null;
+            }
+            return retVal;
         }
 
         /// <summary>

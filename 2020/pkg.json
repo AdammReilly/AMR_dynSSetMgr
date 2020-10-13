@@ -2,7 +2,7 @@
     "license": "",
     "file_hash": null,
     "name": "AMR Sheet Set Manager",
-    "version": "2020.3.50",
+    "version": "2020.3.53",
     "description": "Exposes the AutoCAD Sheet Set Manager to Dynamo.\r\nCurrently allows:\r\ncreation and editing of Sheet Sets;\r\ncreation and editing of Sheets;\r\ncreation and editing of Subsets;\r\ncreation and editing of Custom Properties.\r\nSample graphs have been provided in the extra folder.\r\nFor questions or input, you can reach me on Twitter, LinkedIn or Facebook at @AdammReilly.",
     "group": "AMR",
     "keywords": null,
@@ -16,6 +16,6 @@
     "repository_url": "https://github.com/AdammReilly/AMR_dynSSetMgr",
     "contains_binaries": true,
     "node_libraries": [
-        "AMR.SSMgr.2020, Version=2020.3.50.53, Culture=neutral, PublicKeyToken=null"
+        "AMR.SSMgr.2020, Version=2020.3.53.286, Culture=neutral, PublicKeyToken=null"
     ]
 } 
