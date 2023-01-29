@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44F23FF0-9D20-4E3A-A01C-D7D4DE13B394}</ProjectGuid>
+    <ProjectGuid>{25F2D131-79E9-4201-9605-A11CAF9BEC33}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AMR.SSMgr._2021</RootNamespace>
-    <AssemblyName>AMR.SSMgr.2021</AssemblyName>
+    <RootNamespace>AMR.SSMgr._2023</RootNamespace>
+    <AssemblyName>AMR.SSMgr.2023</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -18,11 +18,11 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;C3D2021</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;C3D2023</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
-    <DocumentationFile>bin\Debug\AMR.SSMgr.2021.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\AMR.SSMgr.2023.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,23 +37,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="accoremgd">
-      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\accoremgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2023\accoremgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="acdbmgd">
-      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\acdbmgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2023\acdbmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="acmgd">
-      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\acmgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2023\acmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AutoCADNodes">
-      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\C3D\Dynamo\AutoCADNodes.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2023\C3D\Dynamo\AutoCADNodes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Civil3DNodes">
-      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\C3D\Dynamo\Civil3DNodes.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2023\C3D\Dynamo\Civil3DNodes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DesignScriptBuiltin, Version=2.6.1.8786, Culture=neutral, processorArchitecture=MSIL">
@@ -144,7 +144,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AMR.SSMgr.2021_DynamoCustomization.xml" />
+    <Content Include="AMR.SSMgr.2022_DynamoCustomization.xml" />
     <None Include="Resources\AMR.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -165,7 +165,6 @@
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <Private>False</Private>
     </COMReference>
     <COMReference Include="AXDBLib">
       <Guid>{39FFAA00-8623-488F-8C53-DD3B0B7A464F}</Guid>
@@ -181,8 +180,8 @@
   <Import Project="..\Core\AMR.SSMgr.Core.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)$(TargetFileName)" "$(AppData)\Autodesk\C3D 2021\Dynamo\2.5\packages\AMR Sheet Set Manager\bin\"
-xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Autodesk\C3D 2021\Dynamo\2.5\packages\AMR Sheet Set Manager\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y "$(TargetDir)$(TargetFileName)" "$(AppData)\Autodesk\C3D 2023\Dynamo\2.13\packages\AMR Sheet Set Manager\bin\"
+xcopy /Y "$(ProjectDir)pkg.json" "$(AppData)\Autodesk\C3D 2023\Dynamo\2.13\packages\AMR Sheet Set Manager\"</PostBuildEvent>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
