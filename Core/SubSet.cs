@@ -177,6 +177,34 @@ namespace AMR.dynSSetMgr
         }
 
         /// <summary>
+        /// Get all the subsets in the subset.
+        /// </summary>
+        public IList<SubSet> SubSets
+        {
+            get
+            {
+                IList<SubSet> subsets = new List<SubSet>();
+                try
+                {
+                    IAcSmEnumComponent sheetEnum = _curSubSet.GetSheetEnumerator();
+                    sheetEnum.Reset();
+                    IAcSmPersist item = sheetEnum.Next();
+                    while (item != null)
+                    {
+                        if (item.GetTypeName() == "AcSmSubset")
+                        {
+                            subsets.Add(new SubSet((AcSmSubset)item));
+                        }
+                        item = sheetEnum.Next();
+                    }
+                }
+                catch (Exception ex)
+                { Console.WriteLine(ex.Message); }
+                return subsets;
+            }
+        }
+
+        /// <summary>
         /// Get the location at which new sheets will be created.
         /// </summary>
         public string NewSheetLocation
