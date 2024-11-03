@@ -13,14 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMR.SSMgr.2022", "2022\AMR.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMR.SSMgr.2023", "2023\AMR.SSMgr.2023.csproj", "{25F2D131-79E9-4201-9605-A11CAF9BEC33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMR.SSMgr.2024", "AMR.SSMgr.2024\AMR.SSMgr.2024.csproj", "{24735339-2DBF-40F6-A84F-E98285E08612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMR.SSMgr.2025", "AMR.SSMgr.2025\AMR.SSMgr.2025.csproj", "{8043ED45-2B33-465F-9C3C-BAE287F4D170}"
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Core\AMR.SSMgr.Core.projitems*{25f2d131-79e9-4201-9605-a11caf9bec33}*SharedItemsImports = 4
-		Core\AMR.SSMgr.Core.projitems*{44f23ff0-9d20-4e3a-a01c-d7d4de13b394}*SharedItemsImports = 4
-		Core\AMR.SSMgr.Core.projitems*{539045b3-218f-4f68-a95d-fb5b6cebdd28}*SharedItemsImports = 13
-		Core\AMR.SSMgr.Core.projitems*{6cb062dd-0cc0-40b1-8169-f3654b020fc9}*SharedItemsImports = 4
-		Core\AMR.SSMgr.Core.projitems*{bf25efc7-0dd5-490e-8919-1e48b87ba0ab}*SharedItemsImports = 4
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -42,17 +39,34 @@ Global
 		{25F2D131-79E9-4201-9605-A11CAF9BEC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25F2D131-79E9-4201-9605-A11CAF9BEC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25F2D131-79E9-4201-9605-A11CAF9BEC33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24735339-2DBF-40F6-A84F-E98285E08612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24735339-2DBF-40F6-A84F-E98285E08612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24735339-2DBF-40F6-A84F-E98285E08612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24735339-2DBF-40F6-A84F-E98285E08612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8043ED45-2B33-465F-9C3C-BAE287F4D170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8043ED45-2B33-465F-9C3C-BAE287F4D170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8043ED45-2B33-465F-9C3C-BAE287F4D170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8043ED45-2B33-465F-9C3C-BAE287F4D170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {23BA21E8-332D-4053-9E5C-222C2C6EA884}
-		BuildVersion_BuildVersioningStyle = None.None.Increment.DeltaBaseDateInDays
-		BuildVersion_StartDate = 2020/6/1
-		BuildVersion_UpdateAssemblyVersion = True
-		BuildVersion_UpdateFileVersion = True
-		BuildVersion_BuildAction = Build
 		BuildVersion_DetectChanges = True
+		BuildVersion_BuildAction = Build
+		BuildVersion_UpdateFileVersion = True
+		BuildVersion_UpdateAssemblyVersion = True
+		BuildVersion_StartDate = 2020/6/1
+		BuildVersion_BuildVersioningStyle = None.None.Increment.DeltaBaseDateInDays
+		SolutionGuid = {23BA21E8-332D-4053-9E5C-222C2C6EA884}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Core\AMR.SSMgr.Core.projitems*{24735339-2dbf-40f6-a84f-e98285e08612}*SharedItemsImports = 4
+		Core\AMR.SSMgr.Core.projitems*{25f2d131-79e9-4201-9605-a11caf9bec33}*SharedItemsImports = 4
+		Core\AMR.SSMgr.Core.projitems*{44f23ff0-9d20-4e3a-a01c-d7d4de13b394}*SharedItemsImports = 4
+		Core\AMR.SSMgr.Core.projitems*{539045b3-218f-4f68-a95d-fb5b6cebdd28}*SharedItemsImports = 13
+		Core\AMR.SSMgr.Core.projitems*{6cb062dd-0cc0-40b1-8169-f3654b020fc9}*SharedItemsImports = 4
+		Core\AMR.SSMgr.Core.projitems*{8043ed45-2b33-465f-9c3c-bae287f4d170}*SharedItemsImports = 5
+		Core\AMR.SSMgr.Core.projitems*{bf25efc7-0dd5-490e-8919-1e48b87ba0ab}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
