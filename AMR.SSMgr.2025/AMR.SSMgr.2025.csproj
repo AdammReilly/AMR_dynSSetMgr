@@ -9,7 +9,9 @@
 	  <AssemblyName>AMR.SSMgr.2025</AssemblyName>
 	  <AssemblyTitle>AMR.SSMgr.2025</AssemblyTitle>
 	  <Company>AMR Consulting</Company>
-	  <AssemblyVersion>2025.1.0.0</AssemblyVersion>
+	  <AssemblyVersion>2025.3.54.0</AssemblyVersion>
+	  <Version>2025.3.54.0</Version>
+	  <FileVersion>2025.3.54.0</FileVersion>
 	  <Copyright>Copyright © AMR 2024</Copyright>
   </PropertyGroup>
 
@@ -54,14 +56,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoCAD.NET" Version="25.0.1" />
-    <PackageReference Include="DynamoVisualProgramming.Core" Version="3.4.0-beta6720" />
+    <PackageReference Include="DynamoVisualProgramming.Core" Version="3.3.0.6320" />
     <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="3.4.0-beta6720" />
-    <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="3.4.0-beta6720" />
+    <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="3.3.0.6320" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(AppData)\Autodesk\C3D 2023\Dynamo\3.2\packages\AMR Sheet Set Manager\bin\&quot;&#xD;&#xA;xcopy /Y &quot;$(ProjectDir)pkg.json&quot; &quot;$(AppData)\Autodesk\C3D 2023\Dynamo\3.2\packages\AMR Sheet Set Manager\&quot;" />
+    <Exec Command="xcopy /Y &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(AppData)\Autodesk\C3D 2025\Dynamo\3.2\packages\AMR Sheet Set Manager\bin\&quot;&#xD;&#xA;xcopy /Y &quot;$(ProjectDir)$(ProjectName)_DynamoCustomization.xml&quot; &quot;$(AppData)\Autodesk\C3D 2025\Dynamo\3.2\packages\AMR Sheet Set Manager\bin\&quot;&#xD;&#xA;xcopy /Y &quot;$(ProjectDir)pkg.json&quot; &quot;$(AppData)\Autodesk\C3D 2025\Dynamo\3.2\packages\AMR Sheet Set Manager\&quot;" />
   </Target>
 
 </Project>

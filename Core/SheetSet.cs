@@ -258,6 +258,7 @@ namespace AMR.dynSSetMgr
         /// Get the label block assigned to the Sheet Set
         /// </summary>
         /// <returns>The file name and path to the block, and the name of the block in the file, blank if the file itself. </returns>
+        /// 
         [NodeCategory("Query")]
         [MultiReturn(new[] { "FileName", "BlockName" })]
         public Dictionary<string, string> LabelBlock()
