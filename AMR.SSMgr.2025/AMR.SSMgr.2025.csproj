@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>AMR.SSMgr._2025</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <Description>A series of nodes to expose the AutoCAD Sheet Set Manager to Dynamo.</Description>
+	  <AssemblyName>AMR.SSMgr.2025</AssemblyName>
+	  <AssemblyTitle>AMR.SSMgr.2025</AssemblyTitle>
+	  <Company>AMR Consulting</Company>
+	  <AssemblyVersion>2025.3.54.0</AssemblyVersion>
+	  <Version>2025.3.54.0</Version>
+	  <FileVersion>2025.3.54.0</FileVersion>
+	  <Copyright>Copyright © AMR 2024</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);C3D2025</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);C3D2025</DefineConstants>
+  </PropertyGroup>
+
+  <Import Project="..\Core\AMR.SSMgr.Core.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <None Remove="AMR.SSMgr.2025_DynamoCustomization.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="ACSMCOMPONENTS25Lib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>1d699551-94ba-4d13-8c93-7afbf62a713e</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AXDBLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>0ea72311-df28-4318-a51b-92d7fc7df50b</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AMR.SSMgr.2025_DynamoCustomization.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoCAD.NET" Version="25.0.1" />
+    <PackageReference Include="DynamoVisualProgramming.Core" Version="3.3.0.6320" />
+    <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="3.4.0-beta6720" />
+    <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="3.3.0.6320" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(AppData)\Autodesk\C3D 2025\Dynamo\3.2\packages\AMR Sheet Set Manager\bin\&quot;&#xD;&#xA;xcopy /Y &quot;$(ProjectDir)$(ProjectName)_DynamoCustomization.xml&quot; &quot;$(AppData)\Autodesk\C3D 2025\Dynamo\3.2\packages\AMR Sheet Set Manager\bin\&quot;&#xD;&#xA;xcopy /Y &quot;$(ProjectDir)pkg.json&quot; &quot;$(AppData)\Autodesk\C3D 2025\Dynamo\3.2\packages\AMR Sheet Set Manager\&quot;" />
+  </Target>
+
+</Project>

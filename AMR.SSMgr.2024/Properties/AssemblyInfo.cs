@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AMR.SSMgr.2023")]
+[assembly: AssemblyTitle("AMR.SSMgr.2024")]
 [assembly: AssemblyDescription("A series of nodes to expose the AutoCAD Sheet Set Manager to Dynamo.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("AMR Consulting")]
-[assembly: AssemblyProduct("AMR.SSMgr.2023")]
-[assembly: AssemblyCopyright("Copyright © AMR 2024")]
+[assembly: AssemblyProduct("AMR.SSMgr.2024")]
+[assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("BED5754E-6D38-4928-AB55-921FEA9E0DFD")]
+[assembly: Guid("24735339-2dbf-40f6-a84f-e98285e08612")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,8 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2023.3.53.285")]
-[assembly: AssemblyFileVersion("2023.3.53.285")]
+[assembly: AssemblyVersion("2024.3.54.0")]
+[assembly: AssemblyFileVersion("2024.3.54.0")]

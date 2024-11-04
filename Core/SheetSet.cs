@@ -5,7 +5,9 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-#if C3D2023
+#if C3D2025
+using ACSMCOMPONENTS25Lib;
+#elif C3D2023 || C3D2024
 using ACSMCOMPONENTS24Lib;
 #elif C3D2022
 using ACSMCOMPONENTS24Lib;
@@ -256,6 +258,7 @@ namespace AMR.dynSSetMgr
         /// Get the label block assigned to the Sheet Set
         /// </summary>
         /// <returns>The file name and path to the block, and the name of the block in the file, blank if the file itself. </returns>
+        /// 
         [NodeCategory("Query")]
         [MultiReturn(new[] { "FileName", "BlockName" })]
         public Dictionary<string, string> LabelBlock()
