@@ -1,0 +1,787 @@
+{
+  "Uuid": "0c0df451-a4c2-4549-90bd-5533397029a5",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "01-Intro",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "a29f4e2f998243f2956d22c40ca02712",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e8d2bcc5edd1432b91a533305ff286e7",
+          "Name": "string",
+          "Description": "\"C:\\Program Files\\Autodesk\\AutoCAD 2021\\Sample\\Sheet Sets\\Civil\\Civil Sample Sheet Set.dst\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "// this is a sample sheet set that ships with AutoCAD\n// you can select your own file instead\n\"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2021\\\\Sample\\\\Sheet Sets\\\\Civil\\\\Civil Sample Sheet Set.dst\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "88e79040cdaf43138374fc4d164a84a1",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "976ce82f7042483a82df3a53ffd39588",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b1ebb454f63048bdbfb95967496f0123",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "84c7bfc78d5345bdb439503452068d13",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56257d5cb7ee472ea08a848f00c4bd8f",
+          "Name": "filename",
+          "Description": "The new Sheet Set .dst file name and path.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a80aca79367948eaad10c702b1e0aaf1",
+          "Name": "templatefilename",
+          "Description": "A template .dst file name and path.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "afda204305194191aae13cb856b18ef7",
+          "Name": "alwaysCreate",
+          "Description": "Allow overwriting of an existing file.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5e2ae0fe919149979ae69abc8f67c9d6",
+          "Name": "Database",
+          "Description": "Database object of the new .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.CreateDatabase@string,string,bool",
+      "Replication": "Auto",
+      "Description": "Create a new Sheet Set file.\n\nSheetSetMgr.CreateDatabase (filename: string, templatefilename: string = \"\", alwaysCreate: bool = true): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1d0a4f75b3c742ffbf922d62fef9c093",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "92d4a10660024e43b214e9a097e284c2",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef484356c4284f4ea72dd194111b8e77",
+          "Name": "filename",
+          "Description": "The .dst file name\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "33f09df7e5f1448f8ede58f153be7403",
+          "Name": "Database",
+          "Description": "Database object if found, null if not found.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.FindOpenDatabase@string",
+      "Replication": "Auto",
+      "Description": "Looks for the Sheet Set file currently opened in the Sheet Set Manager palette.\n\nSheetSetMgr.FindOpenDatabase (filename: string): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "66c9007c20e646be83602584b855e092",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9224466227104bc0be488594dd8724b3",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "769ce93ff8ba4b97ab543562e033623b",
+          "Name": "filename",
+          "Description": "Path and name of the .dst file to open.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d092b884c61a4da9ba5344cbd4c622f8",
+          "Name": "bFailIfAlreadyOpen",
+          "Description": "Throw an error if the .dst is already open.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "05f8d556e0c6415eb334435b18eb77ad",
+          "Name": "Database",
+          "Description": "A Database of the Sheet Set .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.OpenDatabase@string,bool",
+      "Replication": "Auto",
+      "Description": "Opens a Sheet Set .dst file.\n\nSheetSetMgr.OpenDatabase (filename: string, bFailIfAlreadyOpen: bool = false): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a8ad2c85793f4fd89434f08ebb18d2c9",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5e9e3c20bda641a2bbb1284921cfb63a",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3fa1b5059f4d441896736aa6458a6226",
+          "Name": "Database[]",
+          "Description": "A list of open Databases.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.Databases",
+      "Replication": "Auto",
+      "Description": "Lists each of the open sheet set databases.\n\nSheetSetMgr.Databases: Database[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f6b46c482b444defbe839e50c60db455",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "74421e1a476f4f10822537fe4e6587ca",
+          "Name": "sheetSetManager",
+          "Description": "The sheet set manager.\n\nSheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "638290c72082478a944ef61809cf8ee9",
+          "Name": "filename",
+          "Description": "Full path and name of the .dst file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8aef2b9fc55241bf948d3f4818931150",
+          "Name": "Database",
+          "Description": "Database in the .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.Database.ByFilename@AMR.dynSSetMgr.SheetSetMgr,string",
+      "Replication": "Auto",
+      "Description": "Open a .dst file.\n\nDatabase.ByFilename (sheetSetManager: SheetSetMgr, filename: string): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "fec2be310d0f45f7b03145e368c9641d",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "eb73d94367c546acbc06a46e1e05a973",
+          "Name": "boolean",
+          "Description": "true",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "true;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0d3acb6fbf3d4d5898d76d3f6c0d0bef",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "4483944fcc644791aee824e7f57db63e",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fe7a9b5af643415396bd6d4f5fe1c15b",
+          "Name": "doIt",
+          "Description": "Boolean choice to commit this command.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5fb771ed13dc4427aa978ca0e6253796",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.CloseAll@bool",
+      "Replication": "Auto",
+      "Description": "Close all open Databases.\n\nSheetSetMgr.CloseAll (doIt: bool = true): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6e4d921f1c45457185464318a50363ba",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6a1f0902d8c44881b8612d122c5bbb4d",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cb45d0ef0b6d473c8ec812b8c049c196",
+          "Name": "database",
+          "Description": "The Database to close.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ba52109b5ae24c4296f17128a99fd6e4",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.Close@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Close the selected Sheet Set database.\n\nSheetSetMgr.Close (database: Database): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "391e52aa433643bb99e1cac464b6427a",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cdfacd48ebd542f0a89b9256c26d8819",
+          "Name": "boolean",
+          "Description": "true",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "true;"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e8d2bcc5edd1432b91a533305ff286e7",
+      "End": "769ce93ff8ba4b97ab543562e033623b",
+      "Id": "3fc5faca31254fa980c357e69ebcafa5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e8d2bcc5edd1432b91a533305ff286e7",
+      "End": "638290c72082478a944ef61809cf8ee9",
+      "Id": "373635fecc6c4cecaa563ee46cda1a59",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e8d2bcc5edd1432b91a533305ff286e7",
+      "End": "ef484356c4284f4ea72dd194111b8e77",
+      "Id": "b04727920225490a90408cac9acc18b2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "976ce82f7042483a82df3a53ffd39588",
+      "End": "5e9e3c20bda641a2bbb1284921cfb63a",
+      "Id": "4272849d44f84b5bbd1280a2d8237a28",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8aef2b9fc55241bf948d3f4818931150",
+      "End": "cb45d0ef0b6d473c8ec812b8c049c196",
+      "Id": "c9e8db7c8eaa4bcd9cfe0929aae95c41",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eb73d94367c546acbc06a46e1e05a973",
+      "End": "afda204305194191aae13cb856b18ef7",
+      "Id": "873da4a01c0e4dc2a787d5cd9e3981a3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cdfacd48ebd542f0a89b9256c26d8819",
+      "End": "fe7a9b5af643415396bd6d4f5fe1c15b",
+      "Id": "212ed5ea335b4cbd9737aa7dbbd7ed4a",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "AMR Sheet Set Manager",
+      "Version": "0.3.14",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "88e79040cdaf43138374fc4d164a84a1",
+        "b1ebb454f63048bdbfb95967496f0123",
+        "1d0a4f75b3c742ffbf922d62fef9c093",
+        "66c9007c20e646be83602584b855e092",
+        "a8ad2c85793f4fd89434f08ebb18d2c9",
+        "f6b46c482b444defbe839e50c60db455",
+        "0d3acb6fbf3d4d5898d76d3f6c0d0bef",
+        "6e4d921f1c45457185464318a50363ba"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": false,
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.1",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.1.2.5356",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "a29f4e2f998243f2956d22c40ca02712",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -251.63815241624013,
+        "Y": 757.4052261582834
+      },
+      {
+        "Id": "88e79040cdaf43138374fc4d164a84a1",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 286.83366668588195,
+        "Y": 586.430558338941
+      },
+      {
+        "Id": "b1ebb454f63048bdbfb95967496f0123",
+        "Name": "SheetSetMgr.CreateDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 808.1098040010795,
+        "Y": 1515.4784938485263
+      },
+      {
+        "Id": "1d0a4f75b3c742ffbf922d62fef9c093",
+        "Name": "SheetSetMgr.FindOpenDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 798.1680836594917,
+        "Y": 1225.2402847712467
+      },
+      {
+        "Id": "66c9007c20e646be83602584b855e092",
+        "Name": "SheetSetMgr.OpenDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 799.3133873331644,
+        "Y": 928.0574649319473
+      },
+      {
+        "Id": "a8ad2c85793f4fd89434f08ebb18d2c9",
+        "Name": "SheetSetMgr.Databases",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 812.813371791169,
+        "Y": 328.9880765755997
+      },
+      {
+        "Id": "f6b46c482b444defbe839e50c60db455",
+        "Name": "Database.ByFilename",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 805.7990655319277,
+        "Y": 615.296073575732
+      },
+      {
+        "Id": "fec2be310d0f45f7b03145e368c9641d",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 601.9816927038154,
+        "Y": 1593.5806441573
+      },
+      {
+        "Id": "0d3acb6fbf3d4d5898d76d3f6c0d0bef",
+        "Name": "SheetSetMgr.CloseAll",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1410.4055463113875,
+        "Y": 889.4070300732869
+      },
+      {
+        "Id": "6e4d921f1c45457185464318a50363ba",
+        "Name": "SheetSetMgr.Close",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1396.6766341244388,
+        "Y": 727.0072457301956
+      },
+      {
+        "Id": "391e52aa433643bb99e1cac464b6427a",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1150.5135807161712,
+        "Y": 920.0616019596841
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "afac0b0b241045ec8012e501707ce872",
+        "Title": "The SheetSetMgr node is the key to accessing the Sheet Set data.\r\n\r\nIt is suggested that while working with the Sheet Set Manager Add-on, you have the Sheet Set Palette open so that you can observe your changes. You may also need to manually run the graphs as they develop in complexity.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 295.86051638870504,
+        "Top": 432.427472156518,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "13b88f39175147dcbaad0846c9152727",
+        "Title": "This node will return all of the open Databases in the Sheet Set Manager palette.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 811.9358255977749,
+        "Top": 270.08134791409753,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1fefbcf81e804b3c8a1ee9f958b06904",
+        "Title": "A Database is the actual .dst file. It stores all of the data. You can directly access a Database by providing the SheetSetMgr object and a file name.\r\n\r\nMany times it is simpler to use the SheetSetMgr functions to access an existing Database.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 805.7990655319275,
+        "Top": 499.0318261875734,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "521feae11c7f4052a646c17bf15de8b6",
+        "Title": "If you know the file name of a Database, and you want to get it from the currently open Databases, you can use this node.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 795.7953439168766,
+        "Top": 1150.498982878859,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "dd8754e3aa8b4f949f45c7284dc9c5d4",
+        "Title": "This node will open an existing Database. It does the same thing as the above node but if the Database is already open, the Sheet Set Manager can provide an error, which can be overridden with the bFailIfAlreadyOpen option.\r\nThis Add-On has made that option default to false, so a Database will always be returned.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 797.7839221236616,
+        "Top": 794.4923783884298,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "872436e59d6b4b80966babc478af7332",
+        "Title": "This node is for creating a new Database. Provide the filename to save to, and an optional template .dst file. The alwaysCreate flag will allow you to overwrite an existing .dst file.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 809.1932326464157,
+        "Top": 1427.0660975712249,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b2ff16051912404992f67f1ded36d598",
+        "Title": "These nodes are used to close a database file.\r\n\r\nDue to a limitation of the original API, closing a Database does not get reflected in the Sheet Set Manager palette.\r\n\r\nThese should only be used carefully.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1384.1836191207085,
+        "Top": 584.0385274382886,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -300.91991355928485,
+    "Y": -735.4983699475328,
+    "Zoom": 1.9899823066599867
+  }
+}

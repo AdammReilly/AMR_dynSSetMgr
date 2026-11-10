@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Year-independent Dynamo extension that loads the right bin\<year>\AMR.SSMgr.dll.
+    Targets the oldest supported .NET and Dynamo so it runs in every supported release.
+    Building this project also writes the package-level files (pkg.json, extension manifest, samples).
+  -->
+  <PropertyGroup>
+    <TargetFramework>$(LoaderTargetFramework)</TargetFramework>
+    <AssemblyName>AMR.SSMgr.Loader</AssemblyName>
+    <RootNamespace>AMR.SSMgr.Loader</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <Description>Loads the AMR Sheet Set Manager nodes built for the running AutoCAD release.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DynamoVisualProgramming.Core" Version="$(LoaderDynamoNuGetVersion)" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="AMR.SSMgr_ExtensionDefinition.xml" />
+    <None Include="..\..\package\pkg.template.json" Link="package\pkg.template.json" />
+  </ItemGroup>
+
+  <Target Name="LayoutDynamoPackage" AfterTargets="Build">
+    <PropertyGroup>
+      <_Years>$(SupportedAcadYears.Replace(';', ', '))</_Years>
+      <PkgJson>$([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)..\..\package\pkg.template.json'))</PkgJson>
+      <PkgJson>$(PkgJson.Replace('@PACKAGE_VERSION@', '$(AmrPackageVersion)'))</PkgJson>
+      <PkgJson>$(PkgJson.Replace('@ENGINE_VERSION@', '$(MinDynamoEngineVersion)'))</PkgJson>
+      <PkgJson>$(PkgJson.Replace('@SUPPORTED_YEARS@', '$(_Years)'))</PkgJson>
+    </PropertyGroup>
+    <ItemGroup>
+      <_PkgExtra Include="$(MSBuildThisFileDirectory)AMR.SSMgr_ExtensionDefinition.xml;$(MSBuildThisFileDirectory)..\..\Test Graphs\*.dyn" />
+    </ItemGroup>
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DynamoPackageDir)bin" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(_PkgExtra)" DestinationFolder="$(DynamoPackageDir)extra" SkipUnchangedFiles="true" />
+    <WriteLinesToFile File="$(DynamoPackageDir)pkg.json" Lines="$([MSBuild]::Escape($(PkgJson)))" Overwrite="true" WriteOnlyWhenDifferent="true" />
+    <Message Importance="high" Text="Package $(AmrPackageVersion) (Civil 3D $(_Years)) -> $(DynamoPackageDir)" />
+  </Target>
+
+</Project>

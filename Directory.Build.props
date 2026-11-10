@@ -1,0 +1,26 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)build\HostVersions.props" />
+
+  <PropertyGroup>
+    <!--
+      The one version number for every Civil 3D year. Dynamo Package Manager only accepts
+      versions higher than the last one published (2025.3.54), so "2025" is a fixed prefix
+      from now on; it does not mean AutoCAD 2025. Bump the middle number for feature
+      releases and the last number for fixes: 2025.4.0, 2025.4.1, 2025.5.0, ...
+    -->
+    <AmrPackageVersion>2025.4.0</AmrPackageVersion>
+
+    <Version>$(AmrPackageVersion)</Version>
+    <AssemblyVersion>$(AmrPackageVersion).0</AssemblyVersion>
+    <FileVersion>$(AmrPackageVersion).0</FileVersion>
+    <Company>AMR Consulting</Company>
+    <Copyright>Copyright © AMR 2024</Copyright>
+
+    <!-- Keep each year's intermediate and output files apart so years can build side by side. -->
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\$(AcadYear)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)bin\$(AcadYear)\$(MSBuildProjectName)\</BaseOutputPath>
+
+    <!-- The single Dynamo package that serves every year. -->
+    <DynamoPackageDir>$(MSBuildThisFileDirectory)dist\AMR Sheet Set Manager\</DynamoPackageDir>
+  </PropertyGroup>
+</Project>

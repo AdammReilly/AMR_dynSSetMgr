@@ -1,0 +1,3013 @@
+{
+  "Uuid": "0c0df451-a4c2-4549-90bd-5533397029a5",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "02-Working with the Sheet Set",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3cf5c4637ded40b6902dabce824548dc",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "718b5caa44ab4f4180520d731a230665",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "659d4597aecf4f43bd251af50ae77312",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "373698fd182146cca3230408f3196b3c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "2d5f1518d9134640b8af02848c1101a8",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6cb4230e33184413aec2f62b789feee6",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Name",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set name.\n\nSheetSet.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1bb6f39a49a14af5ad09c3e8859ccfdc",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d95bbab78b6d406a9f2da8878a7260e0",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6e2c0e7eae3743c89cb463365c732832",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Description",
+      "Replication": "Auto",
+      "Description": "Gets the Sheet Set description.\n\nSheetSet.Description: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "60efc9aac0834d8cb8a7bdcfa424ee8d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "f4c23b1b90fb4b0ca6ad98bbf10217ee",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f64fc570c36b409da8b5c254994d939f",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ProjectName",
+      "Replication": "Auto",
+      "Description": "Get the project name value.\n\nSheetSet.ProjectName: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "250264287a58419b90ca5f392f5dbac9",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c19324762fef474990bf406274049b4b",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bce5e6dc66e94c56b6e19d646a0958f0",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ProjectNumber",
+      "Replication": "Auto",
+      "Description": "Get the project number value.\n\nSheetSet.ProjectNumber: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "aeae5a249db5451e948f7439ac3075d8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "61e2829c214945d5ad518f6c33d22e76",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "808bb24ccfbf43b9abb51c9c8f74aef7",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ProjectPhase",
+      "Replication": "Auto",
+      "Description": "Get the project phase value.\n\nSheetSet.ProjectPhase: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a2cf586b10d747659bb6884bea30aa6c",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "edb353b40475451395578fad2ee1864c",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "09708e303b854856a7b560e6f5e6a7d2",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.PromptForTemplate",
+      "Replication": "Auto",
+      "Description": "Get the Prompt for Template setting.\n\nSheetSet.PromptForTemplate: bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "feb4ed6f6109401a8e2ec89027e73730",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c1d64fb4f8234d37bac08be0442458a6",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e88b29c2b43b4adb9ac80fbb347c3c22",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ProjectMilestone",
+      "Replication": "Auto",
+      "Description": "Get the project milestone value.\n\nSheetSet.ProjectMilestone: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3e0bca34948f48a69e323487ab8beb67",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "4de1ed0ad6f64283a33871493364a749",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "82d8900634f7455883d1a6231df43ca1",
+          "Name": "value",
+          "Description": "The new Description value.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a8ab3c9d51024ec782d008ccdea00bbc",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetDescription@string",
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set description.\n\nSheetSet.SetDescription (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ddc17ef993034c54832c51723be5c3ef",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "94e9e0341f144d3697c0914f83939a24",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2720dc769f814248883823635e75d089",
+          "Name": "value",
+          "Description": "The new sheet set name.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12adaf9eb6be41859b66e1b23a85d778",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetName@string",
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set Name.\n\nSheetSet.SetName (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e69c9d9a38c844dba18c9f5a0ec8a877",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ddced9c69d0f4a3eb69a1c14d5f44584",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "68f9ff1079134572973e7cd8a1652fe6",
+          "Name": "value",
+          "Description": "The new Project Phase value.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "997d0e110e7249cda744abf07f36c296",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetProjectPhase@string",
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set Project Phase.\n\nSheetSet.SetProjectPhase (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0cfa788c607d494d86fdb97f4dfdfc94",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1e085c49bb5f4089bdcbcbdf5c0c93ca",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fa0ffd44fd1540cbbceb9cdc35ec84a6",
+          "Name": "value",
+          "Description": "The new Project Number value.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "71dfabb5293447468597b6c706373e19",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetProjectNumber@string",
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set Project Number.\n\nSheetSet.SetProjectNumber (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "db2ef8d44050442b8c67063efa8cb527",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ce9affc919a74100a347941b256547f1",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cfdf440f73e2421ca098a35997b6930e",
+          "Name": "value",
+          "Description": "The new Project Name value.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6a38d6d814a84a9eb0ca746cf3f6db42",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetProjectName@string",
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set Project Name.\n\nSheetSet.SetProjectName (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f4d1d3e2bf9843e991effdebe6b1d98e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ad60e93e6dca4dba9b8cc86c5c4693e3",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f9a0b0b838b44fa4a764decd52f84378",
+          "Name": "prompt",
+          "Description": "Whether to prompt for a template or not.\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5bff079bdd1c47fe8722130139aac177",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetPromptForTemplate@bool",
+      "Replication": "Auto",
+      "Description": "Set the Prompt for Template option.\n\nSheetSet.SetPromptForTemplate (prompt: bool): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f6b671173d834194ab58a39ec761c277",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b1eb3bec9bb64a299396f63e718cdc3d",
+          "Name": "sheetSetManager",
+          "Description": "The sheet set manager.\n\nSheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "50b99a59c7624ea4987594cc067c8eec",
+          "Name": "filename",
+          "Description": "Full path and name of the .dst file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9c4f1d7a9ca94efc9afcc556c1d5cdf8",
+          "Name": "Database",
+          "Description": "Database in the .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.Database.ByFilename@AMR.dynSSetMgr.SheetSetMgr,string",
+      "Replication": "Auto",
+      "Description": "Open a .dst file.\n\nDatabase.ByFilename (sheetSetManager: SheetSetMgr, filename: string): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b4c784f19f964112988f2e6efcb7f93e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8006024af0df40d48b599d51aece3b0f",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9f1fea222a814f56aadcbc06c47e2680",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "b32587db38214c8f94d25fa35ee2c560",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8e5f21ba6965430ea753d4b69ff4ce9b",
+          "Name": "string",
+          "Description": "\"C:\\Program Files\\Autodesk\\AutoCAD 2025\\Sample\\Sheet Sets\\Civil\\Civil Sample Sheet Set.dst\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "// this is a sample sheet set that ships with AutoCAD\n// you can select your own file instead\n\"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2025\\\\Sample\\\\Sheet Sets\\\\Civil\\\\Civil Sample Sheet Set.dst\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2556de381a4044e585fa73af3299ccc9",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a6506e4735e24519ac26a4b84d95c770",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "94e573a6169d4c5283426a71a91e6924",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0ebf4fad17f44839a821803f6494605f",
+          "Name": "string",
+          "Description": "\"New Sheet Set Name\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d818ce0aed0141519bf56ddf3ae95321",
+          "Name": "string",
+          "Description": "\"New Description\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8d60b3f388804acb99755923c11e700a",
+          "Name": "string",
+          "Description": "\"New Project Name\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d58d6ecdbd54f90b16c599d12c3aa4e",
+          "Name": "string",
+          "Description": "\"New Project Number\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b50060bb30ea4683be714efe95462659",
+          "Name": "string",
+          "Description": "\"New Phase\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f40483c198e4cf1ba98fb378c1e318f",
+          "Name": "string",
+          "Description": "\"New Milestone\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "409ebdd4d4a04703b2ea2bc453a1bce8",
+          "Name": "boolean",
+          "Description": "true",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"New Sheet Set Name\";\n\"New Description\";\n\"New Project Name\";\n\"New Project Number\";\n\"New Phase\";\n\"New Milestone\";\ntrue;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "61065eb0d85e4349bacdbffaaee5967a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6d05ca24aa284a0089ce27ed1133a48d",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f6dbc85a814144c9b27a845773fc22d9",
+          "Name": "value",
+          "Description": "The new Project Milestone value.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b42cb3b81c3444ae81e4b277d19c5929",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetProjectMilestone@string",
+      "Replication": "Auto",
+      "Description": "Set the Sheet Set Project Milestone.\n\nSheetSet.SetProjectMilestone (value: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8c6ebc3ca1664087a5c94d476f97ae6d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "994000a1ed9142bc91f01a863ba33c83",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ad4d9df78a224c5994f3a642040ef8a3",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "54b30793a99d4b10af4d978931a5c9aa",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "00ee913d61834965b66850b9b98c8e5d",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "742f0eb0922a481ba5b04cc65c67d868",
+          "Name": "Sheet[]",
+          "Description": "Sheet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Sheets",
+      "Replication": "Auto",
+      "Description": "Get all the sheets in the sheet set.\n\nSheetSet.Sheets: Sheet[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b1af56c8d2bc405f9f7de780776da592",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "43b0ab50bc2b4c3bb959d78a2a49d6b5",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ab4658bac87246718dcec174229aa0de",
+          "Name": "SubSet[]",
+          "Description": "SubSet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Subsets",
+      "Replication": "Auto",
+      "Description": "Get the subsets.\n\nSheetSet.Subsets: SubSet[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2a5e0896a5dc488b9fa70a6b645bec47",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "e5f98ab2b6c44f648c3cedadc118947d",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ae628df967345059c85edee3cd49f3c",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b96c8b491f28488894869377d339e5f7",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "786688d980bc4f6487a309826c77bda2",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "671ddafbada54ced970a054a31ab0a41",
+          "Name": "var[]..[]",
+          "Description": "A list of FileName/BlockName pairs.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.CalloutBlocks",
+      "Replication": "Auto",
+      "Description": "Get the Callout Blocks for the Sheet Set\n\nSheetSet.CalloutBlocks ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "dfea3a3784df4dc3b5318a24e5870b7b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d8719b179a2d4907998b637710045a65",
+          "Name": "sheetSetManager",
+          "Description": "The sheet set manager.\n\nSheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ed5b63424c8047f2b83e659c46f1833a",
+          "Name": "filename",
+          "Description": "Full path and name of the .dst file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b773fd6ca1674c3b91d268ee780e1770",
+          "Name": "Database",
+          "Description": "Database in the .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.Database.ByFilename@AMR.dynSSetMgr.SheetSetMgr,string",
+      "Replication": "Auto",
+      "Description": "Open a .dst file.\n\nDatabase.ByFilename (sheetSetManager: SheetSetMgr, filename: string): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "50ee5753ccab47059bcd6d7018e98716",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "cb4fdab9c10f4734bcd5c14bf246a53b",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c7413321aa754689b45b089cfb0ba354",
+          "Name": "CustomProperty[]",
+          "Description": "CustomProperty[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.CustomProperties",
+      "Replication": "Auto",
+      "Description": "Get a list of all the custom properties in the set.\n\nSheetSet.CustomProperties: CustomProperty[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0408153ed0424ca092cd23636a9b0ee7",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c5d0fa61308d40d8843736a490004183",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "b54c5071cbe5469e9a778deef9c63025",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "919b7dc584f14e9089f2e78b65efbfcb",
+          "Name": "string",
+          "Description": "\"C:\\Program Files\\Autodesk\\AutoCAD 2025\\Sample\\Sheet Sets\\Civil\\Civil Sample Sheet Set.dst\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "// this is a sample sheet set that ships with AutoCAD\n// you can select your own file instead\n\"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2025\\\\Sample\\\\Sheet Sets\\\\Civil\\\\Civil Sample Sheet Set.dst\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "4dd2ba35062343578f4707e0194b98a5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "a464157add0a49128cd66539ca627a7c",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "86cd4a20be104d83bd1790287665c467",
+          "Name": "SheetSelectionSet[]",
+          "Description": "SheetSelectionSet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SheetSelectionSets",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Selection Sets for the Sheet Set.\n\nSheetSet.SheetSelectionSets: SheetSelectionSet[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "345f254c7be340a585fcbcb871c17caf",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "f4de00b76d914e5c8ea9fd6b281cc637",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b0a6b15ca9894114baecfe21b93387b1",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.NewSheetLocation",
+      "Replication": "Auto",
+      "Description": "Get the location new sheets are stored in.\n\nSheetSet.NewSheetLocation: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c2d071d1b03e4e5ca72ce16e8a75dbd1",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "0ec2e391e36943a180e90bb5db9c60ff",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8118b5aa6ef04fefbc6753bc9e6dde16",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.NewSheetTemplateFilename",
+      "Replication": "Auto",
+      "Description": "Get the new sheet .dwt template file name.\n\nSheetSet.NewSheetTemplateFilename: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5ffbea797fa4461eaf078f2886d1c99e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "4175a22f968f498cbbfb8ff66255aac3",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "079405975c7347c6aaa77cb83b011734",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.NewSheetTemplateLayout",
+      "Replication": "Auto",
+      "Description": "Get the new sheet layout name in the .dwt file.\n\nSheetSet.NewSheetTemplateLayout: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "74c9fe98321f4b5b834e7fdf27624ee1",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7955a3e7975e4774a6fdab7bef1ba5a5",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9fd23205778842ff814778a06c4f3d9f",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.PageSetupOverridesFile",
+      "Replication": "Auto",
+      "Description": "Get the Page Setup Overrides file name\n\nSheetSet.PageSetupOverridesFile: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "306516aa964f456ca1921b65aa4d000a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "906304e3ab4e4260969cc930b9a8b489",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d5e1264a6fa74ffbb866ca7b4c6969cb",
+          "Name": "string[]",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ModelViews",
+      "Replication": "Auto",
+      "Description": "Get a list of paths in the Model Views tab.\n\nSheetSet.ModelViews: string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e1870c2a0d1340668e3acb4106e52f43",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "bea2557890a846c69d56eb528d16c243",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "201bcc4d8ac5459c9333c1d4f4b48960",
+          "Name": "FileName",
+          "Description": "The file name and path to the block, and the name of the block in the file, blank if the file itself.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab0aa4e94df147a4bab4db854b8569bd",
+          "Name": "BlockName",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.LabelBlock",
+      "Replication": "Auto",
+      "Description": "Get the label block assigned to the Sheet Set\n\nSheetSet.LabelBlock ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ca4b892691874aaabbe59c9940349e4f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c6d5295abd75435a923af4f643edaf19",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9858d3cac5044285865d9847d4167c2b",
+          "Name": "folderName",
+          "Description": "The folder path to store new sheets.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4a4e0299aa5c4be5929637ffa07d888d",
+          "Name": "SheetSet",
+          "Description": "The updated SheetSet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetNewSheetLocation@string",
+      "Replication": "Auto",
+      "Description": "Set the location for new sheets to be created in.\n\nSheetSet.SetNewSheetLocation (folderName: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "02b811515f07455289c4c91913f1d31f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8600cac9d9384595b4c607102a00f6aa",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef9d503f9e114767a089a134b20894e5",
+          "Name": "fileName",
+          "Description": "The file name and path containing the block.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f47768840052466cade32bf406b1469a",
+          "Name": "blockName",
+          "Description": "The block name, blank if using the file itself.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1d4e3a66b576420298cfed5db05cf428",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetLabelBlock@string,string",
+      "Replication": "Auto",
+      "Description": "Add a label block to the sheet set.\n\nSheetSet.SetLabelBlock (fileName: string, blockName: string = \"\"): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "42e6536e97e74b7f92c55f3208bcef90",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7819cab10f6343448048ce48a4a31a0e",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b42e9871c28c48b89e57c7ea4be9976b",
+          "Name": "templatePath",
+          "Description": "The path to the template file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "56043bbff0804340bce10d71ea2b539e",
+          "Name": "layoutName",
+          "Description": "The layout name in the template to use for new sheets.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "927e44cc74bd4427888a2267faa44073",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetNewSheetTemplate@string,string",
+      "Replication": "Auto",
+      "Description": "Set the template to create new sheets from.\n\nSheetSet.SetNewSheetTemplate (templatePath: string, layoutName: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "cb6b326cc7db401f8560b5b02537d1b9",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "f42694b55afd4671ac8c50732c35f81d",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd3e832ac34f40fcb63c0b317c801f77",
+          "Name": "filename",
+          "Description": "The folder path to the page setup overrides file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "46625e99d9c345a98b5d5bf7d0259248",
+          "Name": "SheetSet",
+          "Description": "The updated SheetSet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.SetPageSetupOverride@string",
+      "Replication": "Auto",
+      "Description": "Set the location for the page setup overrides file.\n\nSheetSet.SetPageSetupOverride (filename: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "400e2b7e89914123bef92218749f9e71",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "691189e68ed24f4bb992685337312458",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1c1b41ef6b634d7389ecf978b3cdc453",
+          "Name": "filepath",
+          "Description": "The folder path to add.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ce030a8ab8854bbb8caf8327816d9a08",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.AddModelView@string",
+      "Replication": "Auto",
+      "Description": "Add a new path to the Model View tab\n\nSheetSet.AddModelView (filepath: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "3e32e5eaf30c4f6295e70672bb36199f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6092e17f499b47b493718343e40bcfea",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eac73a1f9bb845fd89d5ef9485d4c685",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "f6b46c482b444defbe839e50c60db455",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "393188af302548b08ee4da456ea009c5",
+          "Name": "sheetSetManager",
+          "Description": "The sheet set manager.\n\nSheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f3e9e31c2654471886a312fc7680d407",
+          "Name": "filename",
+          "Description": "Full path and name of the .dst file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "60b2e140d4984f968821ad70cef726fd",
+          "Name": "Database",
+          "Description": "Database in the .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.Database.ByFilename@AMR.dynSSetMgr.SheetSetMgr,string",
+      "Replication": "Auto",
+      "Description": "Open a .dst file.\n\nDatabase.ByFilename (sheetSetManager: SheetSetMgr, filename: string): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "88e79040cdaf43138374fc4d164a84a1",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7816a4a16adf4072b188ada81dd41ff8",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "a29f4e2f998243f2956d22c40ca02712",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e43673d6bf30440988ca25404c46e01b",
+          "Name": "string",
+          "Description": "\"C:\\Program Files\\Autodesk\\AutoCAD 2025\\Sample\\Sheet Sets\\Civil\\Civil Sample Sheet Set.dst\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "// this is a sample sheet set that ships with AutoCAD\n// you can select your own file instead\n\"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2025\\\\Sample\\\\Sheet Sets\\\\Civil\\\\Civil Sample Sheet Set.dst\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "77d3bae245c34031a767c696c91ec895",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "060932269dec4702a55394c1b2c6d36a",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "207136f77fe647d5ae589033dbd607b2",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c19d2b4b11844449b359647dd0c4f7c7",
+          "Name": "string",
+          "Description": "\"C:\\Program Files\\Autodesk\\AutoCAD 2025\\Sample\\Sheet Sets\\Civil\\Civil Sample Sheet Set.dst\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "// this is a sample sheet set that ships with AutoCAD\n// you can select your own file instead\n\"C:\\\\Program Files\\\\Autodesk\\\\AutoCAD 2025\\\\Sample\\\\Sheet Sets\\\\Civil\\\\Civil Sample Sheet Set.dst\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5e41ac5929924b6ea9318efb6af535db",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9f341d55a76540759e82ea13df612f97",
+          "Name": "sheetSetManager",
+          "Description": "The sheet set manager.\n\nSheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b97d7ab5b7934c89bb63b694de9db6f8",
+          "Name": "filename",
+          "Description": "Full path and name of the .dst file.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b58ca287718e4aa68da1e7400ddf4f89",
+          "Name": "Database",
+          "Description": "Database in the .dst file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.Database.ByFilename@AMR.dynSSetMgr.SheetSetMgr,string",
+      "Replication": "Auto",
+      "Description": "Open a .dst file.\n\nDatabase.ByFilename (sheetSetManager: SheetSetMgr, filename: string): Database"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b5010f595db6431191456458188d6d88",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "df21ca648775435386f72a47e7315d2f",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1b848c006093436cae39cc35b159b4c8",
+          "Name": "filepath",
+          "Description": "The path to remove.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "228a0e08a96f4da4a6d2ed592b7c76c9",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.RemoveModelView@string",
+      "Replication": "Auto",
+      "Description": "Remove a location from the Model View tab.\n\nSheetSet.RemoveModelView (filepath: string): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "97010bc8e8f542b9b593e181de13bf89",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "314b3886e8fb49f588b533e97e687bef",
+          "Name": "string",
+          "Description": "\"C:\\Program Files\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "// A full path to a folder is required\n\"C:\\\\Program Files\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "1c38dd9d250746b08b915f77cc756619",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3466b3c1966f4a03afd17094c26f2344",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "01df3be3634849a29b3ad3e44319fb5d",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c4c65ef8f30c4095b5c6b8e3288a9fb8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "7efd8bffce854e71bfedd5eff3dc0663",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bfa057a27d244c03a00139c51a2d1928",
+          "Name": "fileName",
+          "Description": "Path and filename where the block is located.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9ccc46ab34204f4e978c01d89546c529",
+          "Name": "blockName",
+          "Description": "The block name. Leave blank if using the file.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "07a09dd3b67a4a03835e3dfe6af9a383",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.AddCalloutBlock@string,string",
+      "Replication": "Auto",
+      "Description": "Add a Callout Block to the Sheet Set\n\nSheetSet.AddCalloutBlock (fileName: string, blockName: string = \"\"): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6518ac81725845e9a1bd2e6b8116220e",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "bbc2d91d0ab44f9daec26feb12bf9812",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6b610a45e8df491d958425b7ecfaf846",
+          "Name": "fileName",
+          "Description": "File and path to the block.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "221f2f3b72824ca888b0d2548a4441e3",
+          "Name": "blockName",
+          "Description": "The block name. Leave blank if using the file.\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f92b4174898942aaab848bf7e9325b7d",
+          "Name": "SheetSet",
+          "Description": "The updated Sheet Set.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.RemoveCalloutBlock@string,string",
+      "Replication": "Auto",
+      "Description": "Remove a Callout Block from the Sheet Set\n\nSheetSet.RemoveCalloutBlock (fileName: string, blockName: string = \"\"): SheetSet"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "2d5f1518d9134640b8af02848c1101a8",
+      "Id": "6606ecc39b7f4012b7acfcc37efb840a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "d95bbab78b6d406a9f2da8878a7260e0",
+      "Id": "93c333f78590442bbbcd87c6bb9f79d6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "f4c23b1b90fb4b0ca6ad98bbf10217ee",
+      "Id": "fdd83aecf8e242dea1377fda8d4ff765",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "c19324762fef474990bf406274049b4b",
+      "Id": "6fb2f164b4e6405ebe477c9ad199f9e0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "61e2829c214945d5ad518f6c33d22e76",
+      "Id": "ece3234b6d7040d9922ab8a695ea62bd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "c1d64fb4f8234d37bac08be0442458a6",
+      "Id": "c53fc7b911eb4aac970f4b3fa211138d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "659d4597aecf4f43bd251af50ae77312",
+      "End": "edb353b40475451395578fad2ee1864c",
+      "Id": "1743657bcfca4f9cbcad4b8b1ecd1b5e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "94e9e0341f144d3697c0914f83939a24",
+      "Id": "4bd2e8cc7ad2494ca306031ff38dc689",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "4de1ed0ad6f64283a33871493364a749",
+      "Id": "3b3dca3bcf744bf4bf00d3af452ad66c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "ce9affc919a74100a347941b256547f1",
+      "Id": "ab4e0ad5a0ee419db9d33b810c0c897d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "1e085c49bb5f4089bdcbcbdf5c0c93ca",
+      "Id": "5af12aad8bd34e70be9eb860a512cb09",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "ddced9c69d0f4a3eb69a1c14d5f44584",
+      "Id": "efaa3c38a0b6477fa53156d6e0708a79",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "ad60e93e6dca4dba9b8cc86c5c4693e3",
+      "Id": "b1dd47699c5c4636a7847920750d6866",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9f1fea222a814f56aadcbc06c47e2680",
+      "End": "6d05ca24aa284a0089ce27ed1133a48d",
+      "Id": "1715bc80ca644a42993f5905b9380e19",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8e5f21ba6965430ea753d4b69ff4ce9b",
+      "End": "50b99a59c7624ea4987594cc067c8eec",
+      "Id": "748802753b29471bbe03c0ac1e76c56e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a6506e4735e24519ac26a4b84d95c770",
+      "End": "b1eb3bec9bb64a299396f63e718cdc3d",
+      "Id": "796703e964c2409880acff71b2d21555",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0ebf4fad17f44839a821803f6494605f",
+      "End": "2720dc769f814248883823635e75d089",
+      "Id": "bd3ee293710f4a588c8edb635c6e8195",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d818ce0aed0141519bf56ddf3ae95321",
+      "End": "82d8900634f7455883d1a6231df43ca1",
+      "Id": "3397e4523d104b74855cb4fd301d26a0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8d60b3f388804acb99755923c11e700a",
+      "End": "cfdf440f73e2421ca098a35997b6930e",
+      "Id": "9fcf936b051a4965abd7f11306ea4426",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1d58d6ecdbd54f90b16c599d12c3aa4e",
+      "End": "fa0ffd44fd1540cbbceb9cdc35ec84a6",
+      "Id": "f4bc0f8d183242cf9ec2387819cdec45",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b50060bb30ea4683be714efe95462659",
+      "End": "68f9ff1079134572973e7cd8a1652fe6",
+      "Id": "7888611f2b584deab9036bce112dbec6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0f40483c198e4cf1ba98fb378c1e318f",
+      "End": "f6dbc85a814144c9b27a845773fc22d9",
+      "Id": "468f843241ab4460b245c1b20541d5fb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "409ebdd4d4a04703b2ea2bc453a1bce8",
+      "End": "f9a0b0b838b44fa4a764decd52f84378",
+      "Id": "8355829e87f5498e89f4c3b9dccf92ca",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ad4d9df78a224c5994f3a642040ef8a3",
+      "End": "4175a22f968f498cbbfb8ff66255aac3",
+      "Id": "95fbb7f8cfc14186bdf03a4da0ce6715",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ad4d9df78a224c5994f3a642040ef8a3",
+      "End": "0ec2e391e36943a180e90bb5db9c60ff",
+      "Id": "9e8d6a6e3578434e9fce3e04d579c260",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ad4d9df78a224c5994f3a642040ef8a3",
+      "End": "7819cab10f6343448048ce48a4a31a0e",
+      "Id": "e3c8e148c9934ce5b3219aee87babec1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2ae628df967345059c85edee3cd49f3c",
+      "End": "00ee913d61834965b66850b9b98c8e5d",
+      "Id": "a98ec006cab54f28bbe41708ce18a426",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2ae628df967345059c85edee3cd49f3c",
+      "End": "43b0ab50bc2b4c3bb959d78a2a49d6b5",
+      "Id": "07c396e66f954353ac7b778366067e7e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2ae628df967345059c85edee3cd49f3c",
+      "End": "cb4fdab9c10f4734bcd5c14bf246a53b",
+      "Id": "a568ef9b4228434c81bab1d0a21a50da",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2ae628df967345059c85edee3cd49f3c",
+      "End": "a464157add0a49128cd66539ca627a7c",
+      "Id": "514a37e3efe649d88b7b4d2ead2b82d5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b773fd6ca1674c3b91d268ee780e1770",
+      "End": "e5f98ab2b6c44f648c3cedadc118947d",
+      "Id": "69d101cfcbbb4bfeb4fc23efa284c489",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c5d0fa61308d40d8843736a490004183",
+      "End": "d8719b179a2d4907998b637710045a65",
+      "Id": "3bf4e653cbed487daa3ab313c315ac98",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "919b7dc584f14e9089f2e78b65efbfcb",
+      "End": "ed5b63424c8047f2b83e659c46f1833a",
+      "Id": "22b2237eb10e4995862b938456deb2c5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b0a6b15ca9894114baecfe21b93387b1",
+      "End": "9858d3cac5044285865d9847d4167c2b",
+      "Id": "f1d6136c358f49968960838ffe858774",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8118b5aa6ef04fefbc6753bc9e6dde16",
+      "End": "b42e9871c28c48b89e57c7ea4be9976b",
+      "Id": "c145db05da654d629ff1d052d274b633",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "079405975c7347c6aaa77cb83b011734",
+      "End": "56043bbff0804340bce10d71ea2b539e",
+      "Id": "3c388e4a4674487ab4501bb5aed24a6c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9fd23205778842ff814778a06c4f3d9f",
+      "End": "bd3e832ac34f40fcb63c0b317c801f77",
+      "Id": "4eb54296ca9a4f90a12b9664caa0a864",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eac73a1f9bb845fd89d5ef9485d4c685",
+      "End": "f42694b55afd4671ac8c50732c35f81d",
+      "Id": "01f5920c032345fa9708cab5c968146f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eac73a1f9bb845fd89d5ef9485d4c685",
+      "End": "7955a3e7975e4774a6fdab7bef1ba5a5",
+      "Id": "249d8b10b359471ba80ac8ef51d21b7d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eac73a1f9bb845fd89d5ef9485d4c685",
+      "End": "906304e3ab4e4260969cc930b9a8b489",
+      "Id": "73a3e1a54f9448008b574157133d1154",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eac73a1f9bb845fd89d5ef9485d4c685",
+      "End": "691189e68ed24f4bb992685337312458",
+      "Id": "75065932ad894c4d89f409971134800d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eac73a1f9bb845fd89d5ef9485d4c685",
+      "End": "df21ca648775435386f72a47e7315d2f",
+      "Id": "d602144861434913bb3c7ae5fe42e158",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "60b2e140d4984f968821ad70cef726fd",
+      "End": "718b5caa44ab4f4180520d731a230665",
+      "Id": "ab3607685c9a43c3b35b8565dc4cb1b7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7816a4a16adf4072b188ada81dd41ff8",
+      "End": "393188af302548b08ee4da456ea009c5",
+      "Id": "168944b4f92c4c2d92e565cf16de2d50",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e43673d6bf30440988ca25404c46e01b",
+      "End": "f3e9e31c2654471886a312fc7680d407",
+      "Id": "602f06e316744cf8939e1a1f92daa5b6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "060932269dec4702a55394c1b2c6d36a",
+      "End": "9f341d55a76540759e82ea13df612f97",
+      "Id": "6c16a0acd6d0495ea9f8509bef27424b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c19d2b4b11844449b359647dd0c4f7c7",
+      "End": "b97d7ab5b7934c89bb63b694de9db6f8",
+      "Id": "1ce1676ee53f4d7195449da470f4e862",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b58ca287718e4aa68da1e7400ddf4f89",
+      "End": "994000a1ed9142bc91f01a863ba33c83",
+      "Id": "6aeed3826b9a4c23868af26ad109a63a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b58ca287718e4aa68da1e7400ddf4f89",
+      "End": "6092e17f499b47b493718343e40bcfea",
+      "Id": "2269f1e23c4a41d6a47d5e8e7f714013",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b58ca287718e4aa68da1e7400ddf4f89",
+      "End": "3466b3c1966f4a03afd17094c26f2344",
+      "Id": "5752511a8a704c5eba3e9e74ef4028f5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "314b3886e8fb49f588b533e97e687bef",
+      "End": "1c1b41ef6b634d7389ecf978b3cdc453",
+      "Id": "8c7b860fa6f94c37afbe0512254c3a08",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "314b3886e8fb49f588b533e97e687bef",
+      "End": "1b848c006093436cae39cc35b159b4c8",
+      "Id": "5a5aa4ef64554056849acaecc85eade1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01df3be3634849a29b3ad3e44319fb5d",
+      "End": "f4de00b76d914e5c8ea9fd6b281cc637",
+      "Id": "48bd3a025f884a33a72d0c707c3ad7e7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01df3be3634849a29b3ad3e44319fb5d",
+      "End": "c6d5295abd75435a923af4f643edaf19",
+      "Id": "47aa14e9330345b3abcf16e5fcd19e32",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01df3be3634849a29b3ad3e44319fb5d",
+      "End": "bea2557890a846c69d56eb528d16c243",
+      "Id": "a04f943b515648e3b5e800ba900a1dfc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01df3be3634849a29b3ad3e44319fb5d",
+      "End": "8600cac9d9384595b4c607102a00f6aa",
+      "Id": "ac055fcd43c5419fb6f4134d7e1e60b5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01df3be3634849a29b3ad3e44319fb5d",
+      "End": "786688d980bc4f6487a309826c77bda2",
+      "Id": "09aa5b4784b4489698aec2d051ff3ea5",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "AMR Sheet Set Manager",
+      "Version": "0.3.14",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "3cf5c4637ded40b6902dabce824548dc",
+        "373698fd182146cca3230408f3196b3c",
+        "1bb6f39a49a14af5ad09c3e8859ccfdc",
+        "60efc9aac0834d8cb8a7bdcfa424ee8d",
+        "250264287a58419b90ca5f392f5dbac9",
+        "aeae5a249db5451e948f7439ac3075d8",
+        "a2cf586b10d747659bb6884bea30aa6c",
+        "feb4ed6f6109401a8e2ec89027e73730",
+        "3e0bca34948f48a69e323487ab8beb67",
+        "ddc17ef993034c54832c51723be5c3ef",
+        "e69c9d9a38c844dba18c9f5a0ec8a877",
+        "0cfa788c607d494d86fdb97f4dfdfc94",
+        "db2ef8d44050442b8c67063efa8cb527",
+        "f4d1d3e2bf9843e991effdebe6b1d98e",
+        "f6b671173d834194ab58a39ec761c277",
+        "b4c784f19f964112988f2e6efcb7f93e",
+        "2556de381a4044e585fa73af3299ccc9",
+        "61065eb0d85e4349bacdbffaaee5967a",
+        "8c6ebc3ca1664087a5c94d476f97ae6d",
+        "54b30793a99d4b10af4d978931a5c9aa",
+        "b1af56c8d2bc405f9f7de780776da592",
+        "2a5e0896a5dc488b9fa70a6b645bec47",
+        "b96c8b491f28488894869377d339e5f7",
+        "dfea3a3784df4dc3b5318a24e5870b7b",
+        "50ee5753ccab47059bcd6d7018e98716",
+        "0408153ed0424ca092cd23636a9b0ee7",
+        "4dd2ba35062343578f4707e0194b98a5",
+        "345f254c7be340a585fcbcb871c17caf",
+        "c2d071d1b03e4e5ca72ce16e8a75dbd1",
+        "5ffbea797fa4461eaf078f2886d1c99e",
+        "74c9fe98321f4b5b834e7fdf27624ee1",
+        "306516aa964f456ca1921b65aa4d000a",
+        "e1870c2a0d1340668e3acb4106e52f43",
+        "ca4b892691874aaabbe59c9940349e4f",
+        "02b811515f07455289c4c91913f1d31f",
+        "42e6536e97e74b7f92c55f3208bcef90",
+        "cb6b326cc7db401f8560b5b02537d1b9",
+        "400e2b7e89914123bef92218749f9e71",
+        "3e32e5eaf30c4f6295e70672bb36199f",
+        "f6b46c482b444defbe839e50c60db455",
+        "88e79040cdaf43138374fc4d164a84a1",
+        "77d3bae245c34031a767c696c91ec895",
+        "5e41ac5929924b6ea9318efb6af535db",
+        "b5010f595db6431191456458188d6d88",
+        "1c38dd9d250746b08b915f77cc756619",
+        "c4c65ef8f30c4095b5c6b8e3288a9fb8",
+        "6518ac81725845e9a1bd2e6b8116220e"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": false,
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.1",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.1.2.5356",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "3cf5c4637ded40b6902dabce824548dc",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1121.0834563921314,
+        "Y": 149.9346758482527
+      },
+      {
+        "Id": "373698fd182146cca3230408f3196b3c",
+        "Name": "SheetSet.Name",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1524.6105336798519,
+        "Y": -234.66055486427166
+      },
+      {
+        "Id": "1bb6f39a49a14af5ad09c3e8859ccfdc",
+        "Name": "SheetSet.Description",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1515.308219578813,
+        "Y": -96.41657648823917
+      },
+      {
+        "Id": "60efc9aac0834d8cb8a7bdcfa424ee8d",
+        "Name": "SheetSet.ProjectName",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1509.2122281288166,
+        "Y": 57.90772191786721
+      },
+      {
+        "Id": "250264287a58419b90ca5f392f5dbac9",
+        "Name": "SheetSet.ProjectNumber",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1499.848769367335,
+        "Y": 191.3201553714291
+      },
+      {
+        "Id": "aeae5a249db5451e948f7439ac3075d8",
+        "Name": "SheetSet.ProjectPhase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1506.6010989884412,
+        "Y": 324.4126075471521
+      },
+      {
+        "Id": "a2cf586b10d747659bb6884bea30aa6c",
+        "Name": "SheetSet.PromptForTemplate",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1514.0636378807694,
+        "Y": 632.0763110564999
+      },
+      {
+        "Id": "feb4ed6f6109401a8e2ec89027e73730",
+        "Name": "SheetSet.ProjectMilestone",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1516.7923833688722,
+        "Y": 472.5148860899168
+      },
+      {
+        "Id": "3e0bca34948f48a69e323487ab8beb67",
+        "Name": "SheetSet.SetDescription",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1528.536569436603,
+        "Y": 899.5254442772618
+      },
+      {
+        "Id": "ddc17ef993034c54832c51723be5c3ef",
+        "Name": "SheetSet.SetName",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1561.0724596799794,
+        "Y": 731.5706016987657
+      },
+      {
+        "Id": "e69c9d9a38c844dba18c9f5a0ec8a877",
+        "Name": "SheetSet.SetProjectPhase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1485.4605929114766,
+        "Y": 1467.9524069282986
+      },
+      {
+        "Id": "0cfa788c607d494d86fdb97f4dfdfc94",
+        "Name": "SheetSet.SetProjectNumber",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1475.7921424030058,
+        "Y": 1295.7848597554387
+      },
+      {
+        "Id": "db2ef8d44050442b8c67063efa8cb527",
+        "Name": "SheetSet.SetProjectName",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1496.0870893458252,
+        "Y": 1099.8175918578663
+      },
+      {
+        "Id": "f4d1d3e2bf9843e991effdebe6b1d98e",
+        "Name": "SheetSet.SetPromptForTemplate",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1477.0440133910597,
+        "Y": 1819.279945037311
+      },
+      {
+        "Id": "f6b671173d834194ab58a39ec761c277",
+        "Name": "Database.ByFilename",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 702.1687500040782,
+        "Y": 1272.3513649703084
+      },
+      {
+        "Id": "b4c784f19f964112988f2e6efcb7f93e",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1073.046334729109,
+        "Y": 1276.8083064622165
+      },
+      {
+        "Id": "b32587db38214c8f94d25fa35ee2c560",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -133.80668590268874,
+        "Y": 1382.8619428831405
+      },
+      {
+        "Id": "2556de381a4044e585fa73af3299ccc9",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 294.40878200154,
+        "Y": 1233.2782865978681
+      },
+      {
+        "Id": "94e573a6169d4c5283426a71a91e6924",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1009.6325989266097,
+        "Y": 1449.2730942624955
+      },
+      {
+        "Id": "61065eb0d85e4349bacdbffaaee5967a",
+        "Name": "SheetSet.SetProjectMilestone",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1478.0855527961849,
+        "Y": 1639.6869337249
+      },
+      {
+        "Id": "8c6ebc3ca1664087a5c94d476f97ae6d",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 947.2102550573801,
+        "Y": 2295.4569439708503
+      },
+      {
+        "Id": "54b30793a99d4b10af4d978931a5c9aa",
+        "Name": "SheetSet.Sheets",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1547.71621526216,
+        "Y": 4827.271094821334
+      },
+      {
+        "Id": "b1af56c8d2bc405f9f7de780776da592",
+        "Name": "SheetSet.Subsets",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1540.90710636827,
+        "Y": 4953.504191856865
+      },
+      {
+        "Id": "2a5e0896a5dc488b9fa70a6b645bec47",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1154.405140940426,
+        "Y": 5025.857008175003
+      },
+      {
+        "Id": "b96c8b491f28488894869377d339e5f7",
+        "Name": "SheetSet.CalloutBlocks",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1357.6020166960648,
+        "Y": 4085.1815534906164
+      },
+      {
+        "Id": "dfea3a3784df4dc3b5318a24e5870b7b",
+        "Name": "Database.ByFilename",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 806.5080270578378,
+        "Y": 5021.740841857643
+      },
+      {
+        "Id": "50ee5753ccab47059bcd6d7018e98716",
+        "Name": "SheetSet.CustomProperties",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1536.629021285704,
+        "Y": 5107.416293592196
+      },
+      {
+        "Id": "0408153ed0424ca092cd23636a9b0ee7",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 272.86675049108555,
+        "Y": 5017.504233785209
+      },
+      {
+        "Id": "b54c5071cbe5469e9a778deef9c63025",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -75.22677040895246,
+        "Y": 5212.932399363146
+      },
+      {
+        "Id": "4dd2ba35062343578f4707e0194b98a5",
+        "Name": "SheetSet.SheetSelectionSets",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1535.4248275604402,
+        "Y": 5262.311877316196
+      },
+      {
+        "Id": "345f254c7be340a585fcbcb871c17caf",
+        "Name": "SheetSet.NewSheetLocation",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1391.2840626908658,
+        "Y": 3313.8758964228186
+      },
+      {
+        "Id": "c2d071d1b03e4e5ca72ce16e8a75dbd1",
+        "Name": "SheetSet.NewSheetTemplateFilename",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1339.0333746121134,
+        "Y": 2168.0909582264403
+      },
+      {
+        "Id": "5ffbea797fa4461eaf078f2886d1c99e",
+        "Name": "SheetSet.NewSheetTemplateLayout",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1315.713976755458,
+        "Y": 2391.5953592295723
+      },
+      {
+        "Id": "74c9fe98321f4b5b834e7fdf27624ee1",
+        "Name": "SheetSet.PageSetupOverridesFile",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1348.9549483816002,
+        "Y": 2628.593673833932
+      },
+      {
+        "Id": "306516aa964f456ca1921b65aa4d000a",
+        "Name": "SheetSet.ModelViews",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1316.35913844437,
+        "Y": 2925.0868510440387
+      },
+      {
+        "Id": "e1870c2a0d1340668e3acb4106e52f43",
+        "Name": "SheetSet.LabelBlock",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1515.5040705685062,
+        "Y": 3682.8867418913646
+      },
+      {
+        "Id": "ca4b892691874aaabbe59c9940349e4f",
+        "Name": "SheetSet.SetNewSheetLocation",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1810.224212021446,
+        "Y": 3300.015854565928
+      },
+      {
+        "Id": "02b811515f07455289c4c91913f1d31f",
+        "Name": "SheetSet.SetLabelBlock",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1829.9674768173622,
+        "Y": 3643.35417566868
+      },
+      {
+        "Id": "42e6536e97e74b7f92c55f3208bcef90",
+        "Name": "SheetSet.SetNewSheetTemplate",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1770.9774290065245,
+        "Y": 2257.1240597129095
+      },
+      {
+        "Id": "cb6b326cc7db401f8560b5b02537d1b9",
+        "Name": "SheetSet.SetPageSetupOverride",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1816.1893829402507,
+        "Y": 2611.377714466229
+      },
+      {
+        "Id": "400e2b7e89914123bef92218749f9e71",
+        "Name": "SheetSet.AddModelView",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1763.0328162752862,
+        "Y": 2899.708325794396
+      },
+      {
+        "Id": "3e32e5eaf30c4f6295e70672bb36199f",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 907.2562174692757,
+        "Y": 2763.9127417394957
+      },
+      {
+        "Id": "f6b46c482b444defbe839e50c60db455",
+        "Name": "Database.ByFilename",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 750.2058716671003,
+        "Y": 145.47773435634485
+      },
+      {
+        "Id": "88e79040cdaf43138374fc4d164a84a1",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 327.1487117999932,
+        "Y": 99.52708925713011
+      },
+      {
+        "Id": "a29f4e2f998243f2956d22c40ca02712",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -85.76956423966658,
+        "Y": 255.98831226917696
+      },
+      {
+        "Id": "77d3bae245c34031a767c696c91ec895",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 17.47418072632854,
+        "Y": 2777.437722352332
+      },
+      {
+        "Id": "207136f77fe647d5ae589033dbd607b2",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -478.05261932076587,
+        "Y": 2917.395113611457
+      },
+      {
+        "Id": "5e41ac5929924b6ea9318efb6af535db",
+        "Name": "Database.ByFilename",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 356.0360738003495,
+        "Y": 2780.470136699502
+      },
+      {
+        "Id": "b5010f595db6431191456458188d6d88",
+        "Name": "SheetSet.RemoveModelView",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1763.2665175646948,
+        "Y": 3062.01040895739
+      },
+      {
+        "Id": "97010bc8e8f542b9b593e181de13bf89",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1055.9510944392998,
+        "Y": 3082.3654043371694
+      },
+      {
+        "Id": "1c38dd9d250746b08b915f77cc756619",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1031.3372489216536,
+        "Y": 3407.2074064764265
+      },
+      {
+        "Id": "c4c65ef8f30c4095b5c6b8e3288a9fb8",
+        "Name": "SheetSet.AddCalloutBlock",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1791.3223372566283,
+        "Y": 3988.2868968661264
+      },
+      {
+        "Id": "6518ac81725845e9a1bd2e6b8116220e",
+        "Name": "SheetSet.RemoveCalloutBlock",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1786.3825802394833,
+        "Y": 4210.204895728326
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6bdbdc65be134d7aaef171627c278568",
+        "Title": "Once you have the Database, you can access the content of the file.\r\nThis content is known as the Sheet Set.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1097.4582448499289,
+        "Top": 64.62141194585524,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "af0ff357c5aa4c9c8622a6f0fe15ed82",
+        "Title": "You can access any of the built-in properties of the Sheet Set.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1490.9971563551837,
+        "Top": -306.27203261778254,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3457c04dd07f4321bdce043af9f404bf",
+        "Title": "You can also set any of the built-in property values.\r\nConnect the Database.ByFilename output port to the SheetSet.ByDatabase input port to apply these changes.\r\n\r\nIf the return values are null, the changes were not able to be made. The sheet set file being opened in this example is a sample file included with AutoCAD and may not be accessible.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1018.2087334691928,
+        "Top": 1067.711376194324,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "25d9067b04d24d05b940e661f6a49a4e",
+        "Title": "Object collections\r\nThere are many sub-objects to the Sheet Set.\r\nSee the appropriate samples for handling these types of objects.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1135.3317738887567,
+        "Top": 4917.2951228335905,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "711179b9d826490bbd0e0c7201ae0e4a",
+        "Title": "These nodes allow you to view or change the template and layout that will be used to create new sheets.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1509.7004069289383,
+        "Top": 2141.6230491531032,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "05864da6b5254c76adbafaac5963a005",
+        "Title": "These nodes are for viewing or editing the Page Setup Overrides file.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1539.309677204286,
+        "Top": 2538.6485805564103,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ede67406ea874831a27b1470b14d8147",
+        "Title": "These nodes are for viewing or editing the list of Model View locations.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1541.1101542031313,
+        "Top": 2820.1606637111245,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "8183b262e1184541b9017d2367f72ad1",
+        "Title": "These nodes are for viewing or editing the location that new Sheets will be saved to when created.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1481.225788193764,
+        "Top": 3233.133424028211,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "45c7f0a9dfef4b4c93959352c5d31291",
+        "Title": "These nodes are for viewing or editing the Sheet View Label Block.\r\nA Label Block is defined by a full path and filename, and an optional block name. If a block name is not provided, the file is assumed to be the block.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1665.8975285286624,
+        "Top": 3528.2588597817535,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "58fb083e62c6468bbb859a7c7ab784f5",
+        "Title": "These nodes are for viewing and editing the Sheet View Callout Blocks.\r\nA Callout Block is defined by a full path and filename, and an optional block name. If a block name is not provided, the file is assumed to be the block.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1484.636295339909,
+        "Top": 3922.5166483984112,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 295.5034263444388,
+    "Y": 132.3392989543199,
+    "Zoom": 0.3573975242000432
+  }
+}

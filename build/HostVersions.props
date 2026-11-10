@@ -1,0 +1,60 @@
+<Project>
+  <!--
+    The one place that knows about AutoCAD / Civil 3D releases.
+
+    Every release is built into ONE Dynamo package: bin\<year>\AMR.SSMgr.dll per year, plus a
+    loader extension (bin\AMR.SSMgr.Loader.dll) that loads the right one at startup.
+
+    To add a new release:
+      1. Put that year's API files in $(AcadReferencesRoot)\<year>\
+         (accoremgd.dll, acdbmgd.dll, acmgd.dll, AcSmComponents.Interop.dll).
+      2. Add <year> to SupportedAcadYears and copy a PropertyGroup below.
+      3. Set AcadTargetFramework to the .NET version that release's Dynamo runs on,
+         and DynamoNuGetVersion to the LOWEST Dynamo build shipped for that year
+         (assemblies compiled against a newer Dynamo can fail to load in an older one).
+    The loader needs no change: it matches each build to AutoCAD by the acdbmgd version
+    the build was compiled against.
+
+    To drop a release: remove it from SupportedAcadYears and delete its PropertyGroup. If it
+    was the oldest year, move the Loader* values below up to the new oldest year.
+
+    Build one year:   dotnet build src\AMR.SSMgr -c Release -p:AcadYear=2026
+    Build the package: .\build.ps1
+  -->
+  <PropertyGroup>
+    <SupportedAcadYears>2025;2026;2027</SupportedAcadYears>
+    <!-- Default year when nothing is passed (e.g. building inside Visual Studio). -->
+    <AcadYear Condition="'$(AcadYear)' == ''">2027</AcadYear>
+
+    <!-- Folder holding per-year AutoCAD API files. Override with an environment variable
+         or -p:AcadReferencesRoot=... on another machine. -->
+    <AcadReferencesRoot Condition="'$(AcadReferencesRoot)' == ''">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\..\References'))</AcadReferencesRoot>
+
+    <!-- The loader and pkg.json must work in the OLDEST supported release. -->
+    <LoaderTargetFramework>net8.0</LoaderTargetFramework>
+    <LoaderDynamoNuGetVersion>3.2.2.5494</LoaderDynamoNuGetVersion>
+    <MinDynamoEngineVersion>3.2.2</MinDynamoEngineVersion>
+  </PropertyGroup>
+
+  <!-- Civil 3D 2025: Dynamo 3.2-3.3, .NET 8, SSM interop 25.0, acdbmgd 25.0 -->
+  <PropertyGroup Condition="'$(AcadYear)' == '2025'">
+    <AcadTargetFramework>net8.0</AcadTargetFramework>
+    <DynamoNuGetVersion>3.2.2.5494</DynamoNuGetVersion>
+  </PropertyGroup>
+
+  <!-- Civil 3D 2026: Dynamo 3.4-3.7 (3.7 runs on .NET 10, but .NET 8 builds still load), SSM interop 25.1, acdbmgd 25.1 -->
+  <PropertyGroup Condition="'$(AcadYear)' == '2026'">
+    <AcadTargetFramework>net8.0</AcadTargetFramework>
+    <DynamoNuGetVersion>3.4.1.7055</DynamoNuGetVersion>
+  </PropertyGroup>
+
+  <!-- Civil 3D 2027: Dynamo 4.1, .NET 10, SSM interop 26.0, acdbmgd 26.0 -->
+  <PropertyGroup Condition="'$(AcadYear)' == '2027'">
+    <AcadTargetFramework>net10.0</AcadTargetFramework>
+    <DynamoNuGetVersion>4.1.2.5356</DynamoNuGetVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AcadReferenceDir>$(AcadReferencesRoot)\$(AcadYear)</AcadReferenceDir>
+  </PropertyGroup>
+</Project>

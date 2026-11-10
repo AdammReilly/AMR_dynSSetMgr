@@ -1,0 +1,2089 @@
+{
+  "Uuid": "0c0df451-a4c2-4549-90bd-5533397029a5",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "05-Working with Custom Properties",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "82292bb4b9a246f4b0ccb06856a18ba7",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2bdf3dca40414ac2a8d488376cb797b6",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c2322f61953c498b815a9a2621bce091",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5f8f3422127e4d16ac62a24dca617bea",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4a6794d16f1d4f10ae76d4c33716fdc8",
+          "Name": "Database[]",
+          "Description": "A list of open Databases.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.Databases",
+      "Replication": "Auto",
+      "Description": "Lists each of the open sheet set databases.\n\nSheetSetMgr.Databases: Database[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "90835e4b739d4cf0974674fed93e380f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "da80ab9fa67345ba87eb7751b53ec574",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5ff3bef0613b4408b1692da8bbd8c2e0",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "194f90cafd17469a846666c424846fb9",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d2032f8ebba64255bb0262a4b3d59b37",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "acb927900f084b6cb213e2b2c5900632",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f256b7bfccac4e59b6db92caca0960be",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "42115dfc8c8940be97ac70ff4f1564df",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "25daa32d5e5d433db2c8d9e90c443028",
+          "Name": "string",
+          "Description": "\"TestProp\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "45107c7edd794a168c1e29ba3b650f04",
+          "Name": "string",
+          "Description": "\"[TestProp]\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"TestProp\";\n\"[TestProp]\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "11bffe1098ec4eec90a212a5a9d6850b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "80819d09bdb649399b06088ac3ba336a",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d2eded03eb5b4c02861222cc2cf79f4f",
+          "Name": "sheetSet",
+          "Description": "The sheet set to update.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "35cd93245419406cb55e6bf1a82c8037",
+          "Name": "CustomProperty",
+          "Description": "The new custom property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.AddAsSheetSetProperty@AMR.dynSSetMgr.SheetSet",
+      "Replication": "Auto",
+      "Description": "Add the Custom Property to the sheet set as a Sheet Set property.\n\nCustomProperty.AddAsSheetSetProperty (sheetSet: SheetSet): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6c5b8e75178d4f71a0befdc9226390af",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "36e7fd6337cb428d91492bea9031d3c2",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "99820358ede54731b22fef9a5328ddfd",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "015740a282704135ba023641fbfdb117",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "823c280625054800815189956912daa0",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2b1ce6d216d1422caf999e9a62657145",
+          "Name": "string",
+          "Description": "\"TestProp\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7880338a7784d64b83a834aa151b9ec",
+          "Name": "string",
+          "Description": "\"[TestProp]\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"TestProp\";\n\"[TestProp]\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "0ab615c96e47494ea03a7f1aec41bba0",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "2d28d21524174c71a1439ce0c3d30bd4",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "77061a6ff9dc4cb284f3944fcb70aa36",
+          "Name": "sheetSet",
+          "Description": "The sheet set to update.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "35de5a2d8f854d89bc5cd33dfc0990fa",
+          "Name": "CustomProperty",
+          "Description": "The new custom property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.AddAsSheetProperty@AMR.dynSSetMgr.SheetSet",
+      "Replication": "Auto",
+      "Description": "Add the Custom Property to the sheet set as a Sheet property.\n\nCustomProperty.AddAsSheetProperty (sheetSet: SheetSet): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "162710b076db40f29e2572fee7fb50e4",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "9f1e836505394612b19c5418c4e53b4a",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35f4360ae17e4418b2d179ee20b7794c",
+          "Name": "sheetSet",
+          "Description": "The sheet set containing the custom property.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e90d80ebc754c0ba38a06d2219426d8",
+          "Name": "value",
+          "Description": "The new value to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6bc363f2bf9a48f2ae775ef2bba55625",
+          "Name": "CustomProperty",
+          "Description": "The updated Custom Property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.EditValue@AMR.dynSSetMgr.SheetSet,string",
+      "Replication": "Auto",
+      "Description": "Set the value of a custom property\n\nCustomProperty.EditValue (sheetSet: SheetSet, value: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c7aed73a7fde4eb4a2251d98f3a60569",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5147b47c26c14f8cbd6254f46ea9c83d",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8710150ec9b740d9aed80cba2b82f19f",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "15e8ab55125a41c6a3d54191894da479",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ab526ce7c4774455acde119728fb79d8",
+          "Name": "string",
+          "Description": "\"SHEET_SET_CUSTOM\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "44ec432382da4d659464aa3265319f1c",
+          "Name": "string",
+          "Description": "\"[SHEET_SET_CUSTOM]\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"SHEET_SET_CUSTOM\";\n\"[SHEET_SET_CUSTOM]\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "5378f0826a4a45299bc20a83a294d446",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "01b26611fbf14e71bec51fe354474320",
+          "Name": "string",
+          "Description": "\"New Value\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"New Value\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2dec5d73411d4388a2caf1ddb759340b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5473db2080e442c98da75449274bfe0e",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7bc1ba777814c0b9a5c8e5fa7ffac92",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2e2a8361f13442a7ab403285a549b02d",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "318e446838ba427d815b7fb2ae86e2e8",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7fecfa144cc845ac8c613c5cb18ccce4",
+          "Name": "string",
+          "Description": "\"New Value\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"New Value\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "ffdb47f54cea4a5da00b64f86df3973b",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5cadb1c3530a4c0f985d5f5c66999830",
+          "Name": "string",
+          "Description": "\"SHEET_CUSTOM\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1a053d9974824e1ea578b98eea171301",
+          "Name": "string",
+          "Description": "\"[SHEET_CUSTOM]\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"SHEET_CUSTOM\";\n\"[SHEET_CUSTOM]\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "224b35b13ce04b579a54b0fb1171cb63",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "fcde8ee56f314606bca45fe79ca621ca",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "704c3aa375994918b151f5ef088b8628",
+          "Name": "sheetSet",
+          "Description": "The sheet set containing the custom property.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4431f3bfd5fc4d55baa1905bdb4f0f1f",
+          "Name": "sheet",
+          "Description": "The sheet containing the property to edit.\n\nSheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c2d85d8a993242b9b7181c2d38fd5d63",
+          "Name": "value",
+          "Description": "The new value to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e3231157975b49d8af954448dcb317a6",
+          "Name": "CustomProperty",
+          "Description": "The updated Custom Property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.EditSheetValue@AMR.dynSSetMgr.SheetSet,AMR.dynSSetMgr.Sheet,string",
+      "Replication": "Auto",
+      "Description": "Set the value of a custom property associated with a specific sheet.\n\nCustomProperty.EditSheetValue (sheetSet: SheetSet, sheet: Sheet, value: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "8c9b1d1ef7a445cf941c77b18fec21c6",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ed664d2ef4e4407aa04cbc63b244a82d",
+          "Name": "string",
+          "Description": "\"COUNT\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "58ca63f263594de2a6d008d8b14519b5",
+          "Name": "string",
+          "Description": "\"[COUNT]\"",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "\"COUNT\";\n\"[COUNT]\";"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "4c00cfc1333848dc9c1617807f72ffa3",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "51eee5792f784660a564dbeb7bf57a04",
+          "Name": "propName",
+          "Description": "The name of the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "88ae657323284336aa9dfc2d4e3ecb05",
+          "Name": "propValue",
+          "Description": "The value to assign the property.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e435c9ecd20c46e9a8fb5ea01d56bd5b",
+          "Name": "CustomProperty",
+          "Description": "A Custom Property object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.ByNameValue@string,string",
+      "Replication": "Auto",
+      "Description": "Create a Custom Property with the provided name and value.\n\nCustomProperty.ByNameValue (propName: string, propValue: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2f3312616472457e9a81fdca3e3c03dc",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "f72847bbb21042a580e139cad078ae89",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0548adcac9b84648a6f01a65fee6bab7",
+          "Name": "sheetSet",
+          "Description": "The sheet set containing the custom property.\n\nSheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f8a4710a0a247e3a4a153f8d728e7ae",
+          "Name": "value",
+          "Description": "The new value to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1726b631a9944c048866a19dff845ed3",
+          "Name": "CustomProperty",
+          "Description": "The updated Custom Property.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.EditValue@AMR.dynSSetMgr.SheetSet,string",
+      "Replication": "Auto",
+      "Description": "Set the value of a custom property\n\nCustomProperty.EditValue (sheetSet: SheetSet, value: string): CustomProperty"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c41c44be7b2e410ea9c674548da0d040",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "1d05d6357c3a471d834837c0c3c76d59",
+          "Name": "list",
+          "Description": "List to get the first item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7aa9b7a06df84c218dd6961be8aef3e7",
+          "Name": "item",
+          "Description": "First item in the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.FirstItem@var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns the first item in a list.\n\nList.FirstItem (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e6e3239aadfa40138a8c091f9209b51f",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3df9794e701a40a2857c2dcda7fb0fa0",
+          "Name": "sheetSet",
+          "Description": "AMR.dynSSetMgr.SheetSet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "901d365e7a564fa883afb238e91c9e93",
+          "Name": "Sheet[]",
+          "Description": "Sheet[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.Sheets",
+      "Replication": "Auto",
+      "Description": "Get all the sheets in the sheet set.\n\nSheetSet.Sheets: Sheet[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "Id": "639e2f941ef240a490a27ba309917106",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "409468a5f60d44c09163a29d8037467d",
+          "Name": "obj",
+          "Description": "Object to be serialized",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "237071daed9a45d4ac011d2e251ac360",
+          "Name": "str",
+          "Description": "Result of math computation",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Converts an object to a string representation"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2fa5445f5ed34a259d0b50e1062f2a84",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ade3a701cf1144bd9e568cbffabcaf48",
+          "Name": "list",
+          "Description": "List to get the item count of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4e1dd93053fb468fa044604b9ba1809a",
+          "Name": "int",
+          "Description": "List length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.List.Count@var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns the number of items stored in the given list.\n\nList.Count (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "82d8b92d69334789bea10d35a39997ce",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "f9202e0c653e490a85ca56d2145a92a1",
+          "Name": "database",
+          "Description": "The Database to read the Sheet Set out of.\n\nDatabase",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "09de15d29ba7418e9503a1beaef4c5a4",
+          "Name": "SheetSet",
+          "Description": "The Sheet Set from the database.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSet.ByDatabase@AMR.dynSSetMgr.Database",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set from the database.\n\nSheetSet.ByDatabase (database: Database): SheetSet"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "abc63c11341740dbb2adcf7c2f0d215a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d2bfdc1291d649ca8c8104ad43bba88f",
+          "Name": "sheetSetMgr",
+          "Description": "AMR.dynSSetMgr.SheetSetMgr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f90cac9604e24eb6ad6a7bebadda06bd",
+          "Name": "Database[]",
+          "Description": "A list of open Databases.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.Databases",
+      "Replication": "Auto",
+      "Description": "Lists each of the open sheet set databases.\n\nSheetSetMgr.Databases: Database[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "68c0552ea30149dd848dd0c635c577af",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f9e0f05d6d6d4fb38b63ee4d7b8c7d0b",
+          "Name": "SheetSetMgr",
+          "Description": "A Sheet Set Manager object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.SheetSetMgr.SheetSetManager",
+      "Replication": "Auto",
+      "Description": "Get the Sheet Set Manager object.\n\nSheetSetMgr.SheetSetManager ( ): SheetSetMgr"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "34830b313b514297b46552bf6acc67ec",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "71ae8fa55e5f4ce1aade1609d411db8e",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f801f1634fc3420cb07b9601d5aa34d7",
+          "Name": "Name",
+          "Description": "The Name and Value as separate ports.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "854562577c99489bae6e1d9908c3aa9a",
+          "Name": "Value",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Properties",
+      "Replication": "Auto",
+      "Description": "Get the name and value separately\n\nCustomProperty.Properties ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "ef5b023f3e774877a64e09fb1ab822b5",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "3ec31f71949e442da122cec4284541e2",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "28a7f5cc797b4adca58af508ac4c4155",
+          "Name": "Name",
+          "Description": "The Name and Value as separate ports.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "28df5b3b724a418a81dc0fdb538ae5cb",
+          "Name": "Value",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Properties",
+      "Replication": "Auto",
+      "Description": "Get the name and value separately\n\nCustomProperty.Properties ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "a3f235f158224470a2cf6d9b88c1c0e3",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "2ef439a8cb274d79b00fb67bbbcaaf55",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ae5cd73722a243a282665b805f05ddab",
+          "Name": "Name",
+          "Description": "The Name and Value as separate ports.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3680ad42a10840e59693fa76b4add09a",
+          "Name": "Value",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Properties",
+      "Replication": "Auto",
+      "Description": "Get the name and value separately\n\nCustomProperty.Properties ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "bcde72ba7a3b42a0b7f019aadc0561ad",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "67399f66741c4d4fa5282a9cdb02aa69",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6f70aa6ed13b435abfe3eac364b739f3",
+          "Name": "Name",
+          "Description": "The Name and Value as separate ports.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5d620794acbf439397cdd433490a4462",
+          "Name": "Value",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Properties",
+      "Replication": "Auto",
+      "Description": "Get the name and value separately\n\nCustomProperty.Properties ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "211ef3422c2444b5be57881e321de829",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5709b1117c9c4f7cbea82b13bc69fc44",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "90741deb1a924af2b44ecb49d3d39cd2",
+          "Name": "Name",
+          "Description": "The Name and Value as separate ports.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "333b1eee28f146cd864fe87162b5dd65",
+          "Name": "Value",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Properties",
+      "Replication": "Auto",
+      "Description": "Get the name and value separately\n\nCustomProperty.Properties ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "e899a93da76b48fc991afdbb5421b73a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "ede3e116a88d467bb982ed0fbc4e0ce1",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "381d6485b30b4453b6ce4817a8d2fab3",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Type",
+      "Replication": "Auto",
+      "Description": "Gets the type of property flag.\n\nCustomProperty.Type: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "74ca108e79664753afb3fe650cb18b44",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b866ad00b52d47b6bb8404f0eee4a78a",
+          "Name": "customProperty",
+          "Description": "AMR.dynSSetMgr.CustomProperty",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f50c3454672145c7aa88182db2303e0f",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "AMR.dynSSetMgr.CustomProperty.Type",
+      "Replication": "Auto",
+      "Description": "Gets the type of property flag.\n\nCustomProperty.Type: string"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2bdf3dca40414ac2a8d488376cb797b6",
+      "End": "5f8f3422127e4d16ac62a24dca617bea",
+      "Id": "800c0520a2be4a75aef56e2fb89a6ee7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4a6794d16f1d4f10ae76d4c33716fdc8",
+      "End": "f9202e0c653e490a85ca56d2145a92a1",
+      "Id": "0a9c7378719d48aea6694b050311bcc0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5ff3bef0613b4408b1692da8bbd8c2e0",
+      "End": "3df9794e701a40a2857c2dcda7fb0fa0",
+      "Id": "cf3ecf6e9aff457fa9d0873b3989d206",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5ff3bef0613b4408b1692da8bbd8c2e0",
+      "End": "0548adcac9b84648a6f01a65fee6bab7",
+      "Id": "7753a5b025e54a04bda28fe7c54d810a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f256b7bfccac4e59b6db92caca0960be",
+      "End": "80819d09bdb649399b06088ac3ba336a",
+      "Id": "93d5573232b6488fb0c4df754c5edb62",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "25daa32d5e5d433db2c8d9e90c443028",
+      "End": "d2032f8ebba64255bb0262a4b3d59b37",
+      "Id": "2dffc413217c4cd3b33aa9f6d612b0d8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "45107c7edd794a168c1e29ba3b650f04",
+      "End": "acb927900f084b6cb213e2b2c5900632",
+      "Id": "256e978ebc8b4462bf7e734a97e4160c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "35cd93245419406cb55e6bf1a82c8037",
+      "End": "71ae8fa55e5f4ce1aade1609d411db8e",
+      "Id": "772d70f034fe424c985a5ffea1179c40",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "35cd93245419406cb55e6bf1a82c8037",
+      "End": "b866ad00b52d47b6bb8404f0eee4a78a",
+      "Id": "24428d06975745a3a90c9fd9af7a4228",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "015740a282704135ba023641fbfdb117",
+      "End": "2d28d21524174c71a1439ce0c3d30bd4",
+      "Id": "4bd61b7c89d44752a8f8ede9c019464a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2b1ce6d216d1422caf999e9a62657145",
+      "End": "36e7fd6337cb428d91492bea9031d3c2",
+      "Id": "d77c7066ff894fabbb7734b721ade3c7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b7880338a7784d64b83a834aa151b9ec",
+      "End": "99820358ede54731b22fef9a5328ddfd",
+      "Id": "7ab112d4f4894095b8a23703f95a9b7d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "35de5a2d8f854d89bc5cd33dfc0990fa",
+      "End": "3ec31f71949e442da122cec4284541e2",
+      "Id": "8a97e1f5fd5749e9b0744308d6965c67",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "35de5a2d8f854d89bc5cd33dfc0990fa",
+      "End": "ede3e116a88d467bb982ed0fbc4e0ce1",
+      "Id": "9f348a93aadc4f0986cb5d7bb61001c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6bc363f2bf9a48f2ae775ef2bba55625",
+      "End": "2ef439a8cb274d79b00fb67bbbcaaf55",
+      "Id": "a6e379aed5fc481fa5f1018bb64ec5f5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8710150ec9b740d9aed80cba2b82f19f",
+      "End": "9f1e836505394612b19c5418c4e53b4a",
+      "Id": "9bdec042b24f45a18c717bb9792c6542",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ab526ce7c4774455acde119728fb79d8",
+      "End": "c7aed73a7fde4eb4a2251d98f3a60569",
+      "Id": "ffac3ef225504acc895d6e672bbfedf1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "44ec432382da4d659464aa3265319f1c",
+      "End": "5147b47c26c14f8cbd6254f46ea9c83d",
+      "Id": "4e6ae2655ae448fc80d9ab261567a0b3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "01b26611fbf14e71bec51fe354474320",
+      "End": "2e90d80ebc754c0ba38a06d2219426d8",
+      "Id": "033186e8c74645dcbe0654001990609c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2e2a8361f13442a7ab403285a549b02d",
+      "End": "fcde8ee56f314606bca45fe79ca621ca",
+      "Id": "ecf297f2cbcc4e2cbaf84ca6d8ffee73",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7fecfa144cc845ac8c613c5cb18ccce4",
+      "End": "c2d85d8a993242b9b7181c2d38fd5d63",
+      "Id": "d9be67d86fc8458c90e2408e76e2fe25",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5cadb1c3530a4c0f985d5f5c66999830",
+      "End": "5473db2080e442c98da75449274bfe0e",
+      "Id": "d8dc300c4f5e4651beddf28062c7dafa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1a053d9974824e1ea578b98eea171301",
+      "End": "b7bc1ba777814c0b9a5c8e5fa7ffac92",
+      "Id": "959165d9e5894be2afebf0dbb5fc0f88",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e3231157975b49d8af954448dcb317a6",
+      "End": "67399f66741c4d4fa5282a9cdb02aa69",
+      "Id": "05e6557a66e9458a95a59779039c6d85",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ed664d2ef4e4407aa04cbc63b244a82d",
+      "End": "51eee5792f784660a564dbeb7bf57a04",
+      "Id": "07d39492226e444f8e637c7e941f4120",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "58ca63f263594de2a6d008d8b14519b5",
+      "End": "88ae657323284336aa9dfc2d4e3ecb05",
+      "Id": "b6306d04b7a04ef8991dac101c768479",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e435c9ecd20c46e9a8fb5ea01d56bd5b",
+      "End": "f72847bbb21042a580e139cad078ae89",
+      "Id": "cc6fc2ae3b824795b4cbfb0d5721953f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1726b631a9944c048866a19dff845ed3",
+      "End": "5709b1117c9c4f7cbea82b13bc69fc44",
+      "Id": "bc038bf50b6343509eebd6537660c3e0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7aa9b7a06df84c218dd6961be8aef3e7",
+      "End": "ade3a701cf1144bd9e568cbffabcaf48",
+      "Id": "fd28913a6a2d498282168ce7206df4dc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "901d365e7a564fa883afb238e91c9e93",
+      "End": "1d05d6357c3a471d834837c0c3c76d59",
+      "Id": "0555708d0e6f4af6b1ee2223c51b5692",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "237071daed9a45d4ac011d2e251ac360",
+      "End": "3f8a4710a0a247e3a4a153f8d728e7ae",
+      "Id": "f4d29d920b864a9bba7b2894598546d6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4e1dd93053fb468fa044604b9ba1809a",
+      "End": "409468a5f60d44c09163a29d8037467d",
+      "Id": "0d9c831cfd3a464e816b7205d641bc96",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f9e0f05d6d6d4fb38b63ee4d7b8c7d0b",
+      "End": "d2bfdc1291d649ca8c8104ad43bba88f",
+      "Id": "43bf91aef76a4d898873a15ad75f55b9",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "AMR Sheet Set Manager",
+      "Version": "0.3.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "82292bb4b9a246f4b0ccb06856a18ba7",
+        "c2322f61953c498b815a9a2621bce091",
+        "90835e4b739d4cf0974674fed93e380f",
+        "194f90cafd17469a846666c424846fb9",
+        "11bffe1098ec4eec90a212a5a9d6850b",
+        "6c5b8e75178d4f71a0befdc9226390af",
+        "0ab615c96e47494ea03a7f1aec41bba0",
+        "162710b076db40f29e2572fee7fb50e4",
+        "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+        "2dec5d73411d4388a2caf1ddb759340b",
+        "224b35b13ce04b579a54b0fb1171cb63",
+        "4c00cfc1333848dc9c1617807f72ffa3",
+        "2f3312616472457e9a81fdca3e3c03dc",
+        "e6e3239aadfa40138a8c091f9209b51f",
+        "82d8b92d69334789bea10d35a39997ce"
+      ]
+    },
+    {
+      "Name": "AMR Sheet Set Manager",
+      "Version": "0.3.14",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "abc63c11341740dbb2adcf7c2f0d215a",
+        "68c0552ea30149dd848dd0c635c577af"
+      ]
+    },
+    {
+      "Name": "AMR Sheet Set Manager",
+      "Version": "0.3.17",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "34830b313b514297b46552bf6acc67ec",
+        "ef5b023f3e774877a64e09fb1ab822b5",
+        "a3f235f158224470a2cf6d9b88c1c0e3",
+        "bcde72ba7a3b42a0b7f019aadc0561ad",
+        "211ef3422c2444b5be57881e321de829",
+        "e899a93da76b48fc991afdbb5421b73a",
+        "74ca108e79664753afb3fe650cb18b44"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": false,
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "4.1",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "4.1.2.5356",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "82292bb4b9a246f4b0ccb06856a18ba7",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -353.57658316375864,
+        "Y": 3801.751161194929
+      },
+      {
+        "Id": "c2322f61953c498b815a9a2621bce091",
+        "Name": "SheetSetMgr.Databases",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 69.08814755160984,
+        "Y": 3797.496256777804
+      },
+      {
+        "Id": "90835e4b739d4cf0974674fed93e380f",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 768.8343791712589,
+        "Y": 5643.188077796222
+      },
+      {
+        "Id": "194f90cafd17469a846666c424846fb9",
+        "Name": "CustomProperty.ByNameValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1178.183440375869,
+        "Y": 3381.4267206407294
+      },
+      {
+        "Id": "42115dfc8c8940be97ac70ff4f1564df",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 953.3400761875187,
+        "Y": 3383.5187266311623
+      },
+      {
+        "Id": "11bffe1098ec4eec90a212a5a9d6850b",
+        "Name": "CustomProperty.AddAsSheetSetProperty",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1532.6139590416967,
+        "Y": 3395.841724469082
+      },
+      {
+        "Id": "6c5b8e75178d4f71a0befdc9226390af",
+        "Name": "CustomProperty.ByNameValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1190.5574841417613,
+        "Y": 3821.27613430095
+      },
+      {
+        "Id": "823c280625054800815189956912daa0",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 944.6750257001931,
+        "Y": 3825.280785223491
+      },
+      {
+        "Id": "0ab615c96e47494ea03a7f1aec41bba0",
+        "Name": "CustomProperty.AddAsSheetProperty",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1534.6543863526947,
+        "Y": 3819.6598494960795
+      },
+      {
+        "Id": "162710b076db40f29e2572fee7fb50e4",
+        "Name": "CustomProperty.EditValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1702.2520734508557,
+        "Y": 4372.855346799088
+      },
+      {
+        "Id": "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+        "Name": "CustomProperty.ByNameValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1213.8823291561903,
+        "Y": 4370.056666316023
+      },
+      {
+        "Id": "15e8ab55125a41c6a3d54191894da479",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 872.4622522539532,
+        "Y": 4375.165885681436
+      },
+      {
+        "Id": "5378f0826a4a45299bc20a83a294d446",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1157.0950832985473,
+        "Y": 4517.361317910991
+      },
+      {
+        "Id": "2dec5d73411d4388a2caf1ddb759340b",
+        "Name": "CustomProperty.ByNameValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1062.6974802376585,
+        "Y": 4904.342431103945
+      },
+      {
+        "Id": "318e446838ba427d815b7fb2ae86e2e8",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1138.8171050933556,
+        "Y": 5063.618533867122
+      },
+      {
+        "Id": "ffdb47f54cea4a5da00b64f86df3973b",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 799.5108918255762,
+        "Y": 4917.7201990451495
+      },
+      {
+        "Id": "224b35b13ce04b579a54b0fb1171cb63",
+        "Name": "CustomProperty.EditSheetValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1494.9417309328778,
+        "Y": 4927.523290371557
+      },
+      {
+        "Id": "8c9b1d1ef7a445cf941c77b18fec21c6",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 795.1688159916012,
+        "Y": 5462.506401678602
+      },
+      {
+        "Id": "4c00cfc1333848dc9c1617807f72ffa3",
+        "Name": "CustomProperty.ByNameValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 990.8317676771835,
+        "Y": 5453.794452920234
+      },
+      {
+        "Id": "2f3312616472457e9a81fdca3e3c03dc",
+        "Name": "CustomProperty.EditValue",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2032.7067624321835,
+        "Y": 5651.393324681641
+      },
+      {
+        "Id": "c41c44be7b2e410ea9c674548da0d040",
+        "Name": "List.FirstItem",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1328.6176267645885,
+        "Y": 5777.270338381525
+      },
+      {
+        "Id": "e6e3239aadfa40138a8c091f9209b51f",
+        "Name": "SheetSet.Sheets",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1056.5286939974856,
+        "Y": 5782.231208022029
+      },
+      {
+        "Id": "639e2f941ef240a490a27ba309917106",
+        "Name": "String from Object",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1781.787906087653,
+        "Y": 5782.6323287859
+      },
+      {
+        "Id": "2fa5445f5ed34a259d0b50e1062f2a84",
+        "Name": "List.Count",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1563.5859532510924,
+        "Y": 5780.965639348707
+      },
+      {
+        "Id": "82d8b92d69334789bea10d35a39997ce",
+        "Name": "SheetSet.ByDatabase",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 438.6855208588221,
+        "Y": 3795.698984994484
+      },
+      {
+        "Id": "abc63c11341740dbb2adcf7c2f0d215a",
+        "Name": "SheetSetMgr.Databases",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 366.5591125635623,
+        "Y": 5617.208448852268
+      },
+      {
+        "Id": "68c0552ea30149dd848dd0c635c577af",
+        "Name": "SheetSetMgr.SheetSetManager",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -60.01305183389468,
+        "Y": 5615.1916514713785
+      },
+      {
+        "Id": "34830b313b514297b46552bf6acc67ec",
+        "Name": "CustomProperty.Properties",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2068.068495275692,
+        "Y": 3348.9944893283014
+      },
+      {
+        "Id": "ef5b023f3e774877a64e09fb1ab822b5",
+        "Name": "CustomProperty.Properties",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1950.3525329787556,
+        "Y": 3821.3327696017514
+      },
+      {
+        "Id": "a3f235f158224470a2cf6d9b88c1c0e3",
+        "Name": "CustomProperty.Properties",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2098.363840022941,
+        "Y": 4379.1433225494575
+      },
+      {
+        "Id": "bcde72ba7a3b42a0b7f019aadc0561ad",
+        "Name": "CustomProperty.Properties",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1900.2707187779292,
+        "Y": 4935.156678702468
+      },
+      {
+        "Id": "211ef3422c2444b5be57881e321de829",
+        "Name": "CustomProperty.Properties",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2459.759870823074,
+        "Y": 5655.7685528359125
+      },
+      {
+        "Id": "e899a93da76b48fc991afdbb5421b73a",
+        "Name": "CustomProperty.Type",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1978.8123221849282,
+        "Y": 3987.803787394889
+      },
+      {
+        "Id": "74ca108e79664753afb3fe650cb18b44",
+        "Name": "CustomProperty.Type",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2067.5151511333706,
+        "Y": 3519.6042111812876
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "6fe65599ad474137bdb8f8982c164c11",
+        "Title": "Add Custom Property to Sheet Set as Sheet Set Property",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "194f90cafd17469a846666c424846fb9",
+          "42115dfc8c8940be97ac70ff4f1564df",
+          "11bffe1098ec4eec90a212a5a9d6850b",
+          "34830b313b514297b46552bf6acc67ec",
+          "74ca108e79664753afb3fe650cb18b44"
+        ],
+        "HasNestedGroups": false,
+        "Left": 943.3400761875187,
+        "Top": 3275.9944893283014,
+        "Width": 1409.7284190881733,
+        "Height": 375.60972185298624,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3348.9944893283014,
+        "InitialHeight": 273.49092332331475,
+        "TextblockHeight": 63.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "99bf771afbd44872877578c4ce87fa72",
+        "Title": "Add Custom Property to Sheet Set as Sheet Property",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "6c5b8e75178d4f71a0befdc9226390af",
+          "823c280625054800815189956912daa0",
+          "0ab615c96e47494ea03a7f1aec41bba0",
+          "ef5b023f3e774877a64e09fb1ab822b5",
+          "e899a93da76b48fc991afdbb5421b73a"
+        ],
+        "HasNestedGroups": false,
+        "Left": 934.6750257001931,
+        "Top": 3746.6598494960795,
+        "Width": 1311.137296484735,
+        "Height": 373.1439378988093,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3819.6598494960795,
+        "InitialHeight": 266.6314177926215,
+        "TextblockHeight": 63.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1b872a85a26f49dda015ec464fd8922f",
+        "Title": "Edit Sheet Set Custom Property ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "162710b076db40f29e2572fee7fb50e4",
+          "8a6d6b6f1d324ffd9cd8e5ea94447aea",
+          "15e8ab55125a41c6a3d54191894da479",
+          "5378f0826a4a45299bc20a83a294d446",
+          "a3f235f158224470a2cf6d9b88c1c0e3"
+        ],
+        "HasNestedGroups": false,
+        "Left": 862.4622522539532,
+        "Top": 4297.056666316023,
+        "Width": 1520.9015877689878,
+        "Height": 352.30465159496725,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 4370.056666316023,
+        "InitialHeight": 304.4092366185514,
+        "TextblockHeight": 63.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b87fe5c45f7749b7af5a02627fcfcf4c",
+        "Title": "Edit Custom Property on a Sheet",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "2dec5d73411d4388a2caf1ddb759340b",
+          "318e446838ba427d815b7fb2ae86e2e8",
+          "ffdb47f54cea4a5da00b64f86df3973b",
+          "224b35b13ce04b579a54b0fb1171cb63",
+          "bcde72ba7a3b42a0b7f019aadc0561ad"
+        ],
+        "HasNestedGroups": false,
+        "Left": 789.5108918255762,
+        "Top": 4831.342431103945,
+        "Width": 1395.759826952353,
+        "Height": 364.2761027631768,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 4904.342431103945,
+        "InitialHeight": 285.43783061523027,
+        "TextblockHeight": 63.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e11690ce78714103bbf9d5f402e973cc",
+        "Title": "Edit a Sheet Count Custom Property",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [
+          "90835e4b739d4cf0974674fed93e380f",
+          "8c9b1d1ef7a445cf941c77b18fec21c6",
+          "4c00cfc1333848dc9c1617807f72ffa3",
+          "2f3312616472457e9a81fdca3e3c03dc",
+          "c41c44be7b2e410ea9c674548da0d040",
+          "e6e3239aadfa40138a8c091f9209b51f",
+          "639e2f941ef240a490a27ba309917106",
+          "2fa5445f5ed34a259d0b50e1062f2a84",
+          "211ef3422c2444b5be57881e321de829"
+        ],
+        "HasNestedGroups": false,
+        "Left": 758.8343791712589,
+        "Top": 5380.794452920234,
+        "Width": 1985.925491651815,
+        "Height": 533.8378758656663,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 5453.794452920234,
+        "InitialHeight": 522.5820361348415,
+        "TextblockHeight": 63.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "531c6819049f483881573c8638f4ad46",
+        "Title": "This group demonstrates one of the most common uses for Custom Properties in a Sheet Set.\r\n\r\nCreating and/or editing a Custom Property that tracks the total count of the Sheets in the Sheet Set.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1456.1399276935185,
+        "Top": 5279.275976549013,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "75fa0e0229674f7bb815c0f77ef0deb5",
+        "Title": "This group demonstrates how to Add or Edit a Custom Property for a specific Sheet.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1309.5527820840564,
+        "Top": 4740.433483057118,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "be644970c6a44dc28b138f7193cf71f4",
+        "Title": "This group demonstrates how to Add or Edit a Custom Property for the Sheet Set.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1469.1177343497766,
+        "Top": 4208.078582265444,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1061f04e4a9f4da0be66843f09b226a5",
+        "Title": "This group demonstrates how to Add a new Custom Property as a Sheet Property.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1489.0939081769384,
+        "Top": 3668.5943540605485,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "74449098c97d4f108f2f0f23c4a4d2d2",
+        "Title": "This group demonstrates how to Add a new Custom Property as a Sheet Set Property.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "UserSetWidth": 0.0,
+        "UserSetHeight": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1498.946813245793,
+        "Top": 3171.9417317461334,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "IsOptionalInPortsCollapsed": false,
+        "IsUnconnectedOutPortsCollapsed": false,
+        "HasToggledOptionalInPorts": false,
+        "HasToggledUnconnectedOutPorts": false,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -1989.1814421861764,
+    "Y": -4530.058364324461,
+    "Zoom": 1.5582292441620966
+  }
+}

@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The node library. Built once per AutoCAD year (see build\HostVersions.props). -->
+  <PropertyGroup>
+    <TargetFramework>$(AcadTargetFramework)-windows</TargetFramework>
+    <!-- AutoCAD's managed API references WPF and WinForms. -->
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>AMR.SSMgr</AssemblyName>
+    <RootNamespace>AMR.dynSSetMgr</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Missing XML comments on public members; not worth failing over. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <!-- Dynamo hosts its own runtime; don't produce a deps/runtimeconfig for the package. -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DefineConstants>$(DefineConstants);C3D$(AcadYear)</DefineConstants>
+
+    <Description>A series of nodes to expose the AutoCAD Sheet Set Manager to Dynamo.</Description>
+    <InformationalVersion>$(AmrPackageVersion)+C3D$(AcadYear)</InformationalVersion>
+    <ApplicationIcon>Resources\AMR.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <!-- Old helper files that were never compiled; kept for reference until reviewed. -->
+  <ItemGroup>
+    <Compile Remove="Database_Statics.cs;SheetSet_Statics.cs;Sheet_Statics.cs" />
+    <None Include="Database_Statics.cs;SheetSet_Statics.cs;Sheet_Statics.cs" />
+  </ItemGroup>
+
+  <!-- AutoCAD API, from the References folder. Compile-only: AutoCAD supplies these at runtime. -->
+  <ItemGroup>
+    <Reference Include="accoremgd" HintPath="$(AcadReferenceDir)\accoremgd.dll" Private="false" />
+    <Reference Include="acdbmgd" HintPath="$(AcadReferenceDir)\acdbmgd.dll" Private="false" />
+    <Reference Include="acmgd" HintPath="$(AcadReferenceDir)\acmgd.dll" Private="false" />
+    <!-- Sheet Set Manager COM interop. Types are embedded, so nothing extra ships with the package. -->
+    <Reference Include="AcSmComponents.Interop" HintPath="$(AcadReferenceDir)\AcSmComponents.Interop.dll" Private="false" EmbedInteropTypes="true" />
+  </ItemGroup>
+
+  <!-- Dynamo API. Compile-only: Dynamo supplies these at runtime. -->
+  <ItemGroup>
+    <PackageReference Include="DynamoVisualProgramming.Core" Version="$(DynamoNuGetVersion)" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="$(DynamoNuGetVersion)" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- COM calls that use interop enums live here so the enums don't show in the Dynamo library. -->
+  <ItemGroup>
+    <ProjectReference Include="..\AMR.SSMgr.ComHelpers\AMR.SSMgr.ComHelpers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="AMR.SSMgr_DynamoCustomization.xml" />
+  </ItemGroup>
+
+  <Target Name="CheckAcadReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(AcadTargetFramework)' == ''" Text="AcadYear '$(AcadYear)' is not in build\HostVersions.props. Supported: $(SupportedAcadYears)" />
+    <Error Condition="!Exists('$(AcadReferenceDir)\AcSmComponents.Interop.dll')" Text="Missing AutoCAD $(AcadYear) API files in '$(AcadReferenceDir)'. Set AcadReferencesRoot or copy the files there." />
+  </Target>
+
+  <!-- Drop this year's build into the shared package: dist\AMR Sheet Set Manager\bin\<year>\ -->
+  <Target Name="CopyToDynamoPackage" AfterTargets="Build">
+    <ItemGroup>
+      <_YearFiles Include="$(TargetPath);$(TargetDir)$(AssemblyName).xml;$(TargetDir)AMR.SSMgr.ComHelpers.dll;$(MSBuildThisFileDirectory)AMR.SSMgr_DynamoCustomization.xml" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_YearFiles)" DestinationFolder="$(DynamoPackageDir)bin\$(AcadYear)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="Civil 3D $(AcadYear) nodes -> $(DynamoPackageDir)bin\$(AcadYear)\" />
+  </Target>
+
+</Project>

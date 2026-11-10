@@ -1,0 +1,5 @@
+<ExtensionDefinition>
+  <!-- Relative to this file, which ships in the package's extra\ folder. -->
+  <AssemblyPath>..\bin\AMR.SSMgr.Loader.dll</AssemblyPath>
+  <TypeName>AMR.SSMgr.Loader.SheetSetManagerLoader</TypeName>
+</ExtensionDefinition>

@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+# Consolidated build output
+/dist/
+/obj/
+/bin/

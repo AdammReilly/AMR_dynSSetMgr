@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Holds the Sheet Set COM calls that use interop enums, so those enums are embedded here
+    instead of in AMR.SSMgr.dll (where Dynamo would list them). Built per AutoCAD year,
+    alongside AMR.SSMgr, and shipped next to it in bin\<year>\.
+  -->
+  <PropertyGroup>
+    <TargetFramework>$(AcadTargetFramework)</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>AMR.SSMgr.ComHelpers</AssemblyName>
+    <RootNamespace>AMR.SSMgr.ComHelpers</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <InformationalVersion>$(AmrPackageVersion)+C3D$(AcadYear)</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="AcSmComponents.Interop" HintPath="$(AcadReferenceDir)\AcSmComponents.Interop.dll" Private="false" EmbedInteropTypes="true" />
+  </ItemGroup>
+
+</Project>
